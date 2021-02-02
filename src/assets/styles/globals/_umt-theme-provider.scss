@@ -1,0 +1,50 @@
+@use "sass:map";
+
+@mixin setTheme($config, $variable) {
+    // Warnings
+    @if not map.has-key($variable, 'font') { @error "Falta variable color 'font'."; }
+    @if not map.has-key($variable, 'background') { @error "Falta variable color 'background'."; }
+    @if not map.has-key($variable, 'anchor-link') { @error "Falta variable color 'anchor-link'."; }
+    @if not map.has-key($variable, 'anchor-link-hover') { @error "Falta variable color 'anchor-link-hover'."; }
+    @if not map.has-key($variable, 'button-bkg-color-left') { @error "Falta variable color 'button-bkg-color-left'."; }
+    @if not map.has-key($variable, 'button-bkg-color-right') { @error "Falta variable color 'button-bkg-color-right'."; }
+    @if not map.has-key($variable, 'button-bkg-color-right-alt') { @error "Falta variable color 'button-bkg-color-right-alt'."; }
+    @if not map.has-key($variable, 'button-bkg-color-hover') { @error "Falta variable color 'button-bkg-color-hover'."; }
+    @if not map.has-key($variable, 'button-font-color') { @error "Falta variable color 'button-font-color'."; }
+    @if not map.has-key($variable, 'button-border-color') { @error "Falta variable color 'button-border-color'."; }
+
+    // Setup
+    #theme-provider[umt-theme="#{map.get($config, 'name')}"] {
+        --color-font: #{map.get($variable, 'font')};
+        --color-background: #{map.get($variable, 'background')};
+        --color-anchor-link: #{map.get($variable, 'anchor-link')};
+        --color-anchor-link-hover: #{map.get($variable, 'anchor-link-hover')};
+        --button-bkg-color-left: #{map.get($variable, 'button-bkg-color-left')};
+        --button-bkg-color-right: #{map.get($variable, 'button-bkg-color-right')};
+        --button-bkg-color-right-alt: #{map.get($variable, 'button-bkg-color-right-alt')};
+        --button-bkg-color-hover: #{map.get($variable, 'button-bkg-color-hover')};
+        --button-font-color: #{map.get($variable, 'button-font-color')};
+        --button-border-color: #{map.get($variable, 'button-border-color')};
+    }
+
+    #theme-provider {
+        background-color: var(--color-background);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+    }
+}
+
+$color-font: var(--color-font);
+$color-background: var(--color-background);
+$color-anchor-link: var(--color-anchor-link);
+$color-anchor-link-hover: var(--color-anchor-link-hover);
+$button-bkg-color-left: var(--button-bkg-color-left);
+$button-bkg-color-right: var(--button-bkg-color-right);
+$button-bkg-color-right-alt: var(--button-bkg-color-right-alt);
+$button-bkg-color-hover: var(--button-bkg-color-hover);
+$button-font-color: var(--button-font-color);
+$button-border-color: var(--button-border-color);
