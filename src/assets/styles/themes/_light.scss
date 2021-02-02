@@ -1,0 +1,21 @@
+// THEME: LIGHT
+$config: (
+    'name': 'light'
+);
+
+$variable: (
+    'font': $color-main-3,
+    'background': $color-main-2,
+    'anchor-link': $color-main-6,
+    'anchor-link-hover': lighten($color-main-6, 20%),
+
+    // button
+    'button-bkg-color-left': $color-main-6,
+    'button-bkg-color-right': $color-main-7,
+    'button-bkg-color-right-alt': $color-main-9,
+    'button-font-color': $color-main-1,
+    'button-border-color': $color-main-6,
+    'button-bkg-color-hover': $color-main-8,
+);
+
+@include setTheme($config, $variable);

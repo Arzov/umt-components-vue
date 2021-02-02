@@ -1,0 +1,39 @@
+.umt-button {
+    @extend %font-props;
+    text-transform: uppercase;
+    text-align: center;
+    transition-duration: 0.3s;
+    user-select: none;
+    cursor: pointer;
+
+    // Styles
+    &[umt-type='primary'] {
+        color: $button-font-color;
+        font-style : italic;
+        background: linear-gradient(45deg, $button-bkg-color-left, $button-bkg-color-right);
+        padding: 12px;
+    }
+
+    &[umt-type='rounded'] {
+        display: inline-block;
+        color: $button-border-color;
+        border: solid 2px $button-border-color;
+        border-radius: 25px;
+        padding: 4px 15px;
+        font-weight: $font-weight-bold;
+    }
+
+    // Sizes
+    &[umt-size='small'] {
+        font-size: 0.85rem;
+    }
+
+    // With Icon
+    &[umt-icon] {
+        padding: 0;
+
+        img {
+            height: 3rem;
+        }
+    }
+}
