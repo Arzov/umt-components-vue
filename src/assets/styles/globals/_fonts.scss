@@ -63,6 +63,8 @@ html {
 @mixin h-sizes {
     @each $key, $value in $h-sizes {
         h#{$key} {
+            color: var(--color-font);
+            font-family: 'PublicSans', sans-serif;
             font-size: map-get($value, 'size');
             font-weight: map-get($value, 'weight');
             text-transform: map-get($value, 'text-transform');
@@ -81,10 +83,11 @@ a {
     @extend %font-props;
     font-weight: $font-weight-bold !important;
     color: var(--color-anchor-link) !important;
+    user-select: none;
 
     &:hover,
     &:active {
-        color: var(--color-anchor-link-hover) !important;
+        color: var(--color-anchor-link-hover);
     }
 }
 

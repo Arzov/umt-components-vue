@@ -1,0 +1,50 @@
+.umt-input {
+    margin-bottom: 20px;
+    position: relative;
+
+    input {
+        @extend %font-props;
+        padding: 12px;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+        outline: none;
+        background-color: $input-bkg-color;
+        color: $input-font-color;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button,
+        &::-webkit-calendar-picker-indicator,
+        &::-webkit-clear-button {
+            display: none;
+            -webkit-appearance: none;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $input-font-color;
+            text-align: start !important;
+        }
+    }
+
+    .placeholder-date {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        box-shadow: none;
+    }
+
+    // Div que permite esconder flecha en dispositivos móviles
+    .hide-arrow {
+        width: 12px;
+        background-color: $input-bkg-color;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    // Styles
+
+}

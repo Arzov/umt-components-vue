@@ -5,10 +5,12 @@ import './src/assets/styles/styles.css';
 // COMPONENTS
 import { default as UmtThemeProvider } from "./src/components/UmtThemeProvider.vue";
 import { default as UmtButton } from "./src/components/UmtButton.vue";
+import { default as UmtInput } from "./src/components/UmtInput.vue";
 
 const components = [
     UmtThemeProvider,
-    UmtButton
+    UmtButton,
+    UmtInput
 ]
 
 const UmtComponents = {
@@ -32,7 +34,8 @@ if (typeof window !== 'undefined' && window.Vue) {
 export {
     // Components
     UmtThemeProvider,
-    UmtButton
+    UmtButton,
+    UmtInput
 };
 
 export default UmtComponents;

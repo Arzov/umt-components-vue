@@ -12,8 +12,14 @@
     @if not map.has-key($variable, 'button-bkg-color-hover') { @error "Falta variable color 'button-bkg-color-hover'."; }
     @if not map.has-key($variable, 'button-font-color') { @error "Falta variable color 'button-font-color'."; }
     @if not map.has-key($variable, 'button-border-color') { @error "Falta variable color 'button-border-color'."; }
+    @if not map.has-key($variable, 'input-bkg-color') { @error "Falta variable color 'input-bkg-color'."; }
+    @if not map.has-key($variable, 'input-font-color') { @error "Falta variable color 'input-font-color'."; }
 
     // Setup
+    body {
+        background-color: #{map.get($variable, 'background')};
+    }
+
     #theme-provider[umt-theme="#{map.get($config, 'name')}"] {
         --color-font: #{map.get($variable, 'font')};
         --color-background: #{map.get($variable, 'background')};
@@ -25,6 +31,8 @@
         --button-bkg-color-hover: #{map.get($variable, 'button-bkg-color-hover')};
         --button-font-color: #{map.get($variable, 'button-font-color')};
         --button-border-color: #{map.get($variable, 'button-border-color')};
+        --input-bkg-color: #{map.get($variable, 'input-bkg-color')};
+        --input-font-color: #{map.get($variable, 'input-font-color')};
     }
 
     #theme-provider {
@@ -48,3 +56,5 @@ $button-bkg-color-right-alt: var(--button-bkg-color-right-alt);
 $button-bkg-color-hover: var(--button-bkg-color-hover);
 $button-font-color: var(--button-font-color);
 $button-border-color: var(--button-border-color);
+$input-bkg-color: var(--input-bkg-color);
+$input-font-color: var(--input-font-color);

@@ -16,6 +16,10 @@ $variable: (
     'button-font-color': $color-main-1,
     'button-border-color': $color-main-6,
     'button-bkg-color-hover': $color-main-8,
+
+    // input
+    'input-bkg-color': $color-main-1,
+    'input-font-color': $color-main-3,
 );
 
 @include setTheme($config, $variable);
