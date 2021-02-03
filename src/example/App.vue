@@ -2,15 +2,20 @@
   <div id="app">
     <umt-theme-provider>
       <button-section></button-section>
+      <input-section></input-section>
     </umt-theme-provider>
   </div>
 </template>
 
 <script>
 import ButtonSection from './components/ButtonSection.vue'
+import InputSection from './components/InputSection.vue'
 
 export default {
-  components: { ButtonSection },
+  components: { 
+    ButtonSection,
+    InputSection
+  },
   name: 'App'
 }
 </script>
