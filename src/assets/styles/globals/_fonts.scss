@@ -75,7 +75,8 @@ html {
 
 @include h-sizes;
 
-p {
+p,
+label {
     @extend %font-props;
 }
 

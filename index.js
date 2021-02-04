@@ -6,11 +6,15 @@ import './src/assets/styles/styles.css';
 import { default as UmtThemeProvider } from "./src/components/UmtThemeProvider.vue";
 import { default as UmtButton } from "./src/components/UmtButton.vue";
 import { default as UmtInput } from "./src/components/UmtInput.vue";
+import { default as UmtRadio } from "./src/components/UmtRadio.vue";
+import { default as UmtRadioGroup } from "./src/components/UmtRadioGroup.vue";
 
 const components = [
     UmtThemeProvider,
     UmtButton,
-    UmtInput
+    UmtInput,
+    UmtRadio,
+    UmtRadioGroup
 ]
 
 const UmtComponents = {
@@ -35,7 +39,9 @@ export {
     // Components
     UmtThemeProvider,
     UmtButton,
-    UmtInput
+    UmtInput,
+    UmtRadio,
+    UmtRadioGroup
 };
 
 export default UmtComponents;
