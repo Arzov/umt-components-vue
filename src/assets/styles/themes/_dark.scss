@@ -20,6 +20,12 @@ $variable: (
     // input
     'input-bkg-color': $color-main-4,
     'input-font-color': $color-main-1,
+
+    // radio
+    'radio-bkg-color': $color-main-4,
+    'radio-font-color': $color-main-1,
+    'radio-border-color': $color-main-1,
+    'radio-checked-color': $color-main-1,
 );
 
 @include setTheme($config, $variable);
