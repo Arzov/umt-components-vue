@@ -3,6 +3,7 @@
 @mixin setTheme($config, $variable) {
     // Warnings
     @if not map.has-key($variable, 'font') { @error "Falta variable color 'font'."; }
+    @if not map.has-key($variable, 'placeholder') { @error "Falta variable color 'placeholder'."; }
     @if not map.has-key($variable, 'background') { @error "Falta variable color 'background'."; }
     @if not map.has-key($variable, 'anchor-link') { @error "Falta variable color 'anchor-link'."; }
     @if not map.has-key($variable, 'anchor-link-hover') { @error "Falta variable color 'anchor-link-hover'."; }
@@ -18,6 +19,9 @@
     @if not map.has-key($variable, 'radio-font-color') { @error "Falta variable color 'radio-font-color'."; }
     @if not map.has-key($variable, 'radio-border-color') { @error "Falta variable color 'radio-border-color'."; }
     @if not map.has-key($variable, 'radio-checked-color') { @error "Falta variable color 'radio-checked-color'."; }
+    @if not map.has-key($variable, 'code-input-border-color') { @error "Falta variable color 'code-input-border-color'."; }
+    @if not map.has-key($variable, 'code-input-font-color') { @error "Falta variable color 'code-input-font-color'."; }
+    @if not map.has-key($variable, 'code-input-border-focus-color') { @error "Falta variable color 'code-input-border-focus-color'."; }
 
     // Setup
     body {
@@ -26,6 +30,7 @@
 
     #theme-provider[umt-theme="#{map.get($config, 'name')}"] {
         --color-font: #{map.get($variable, 'font')};
+        --color-placeholder: #{map.get($variable, 'placeholder')};
         --color-background: #{map.get($variable, 'background')};
         --color-anchor-link: #{map.get($variable, 'anchor-link')};
         --color-anchor-link-hover: #{map.get($variable, 'anchor-link-hover')};
@@ -41,6 +46,9 @@
         --radio-font-color: #{map.get($variable, 'radio-font-color')};
         --radio-border-color: #{map.get($variable, 'radio-border-color')};
         --radio-checked-color: #{map.get($variable, 'radio-checked-color')};
+        --code-input-border-color: #{map.get($variable, 'code-input-border-color')};
+        --code-input-font-color: #{map.get($variable, 'code-input-font-color')};
+        --code-input-border-focus-color: #{map.get($variable, 'code-input-border-focus-color')};
     }
 
     #theme-provider {
@@ -55,6 +63,7 @@
 }
 
 $color-font: var(--color-font);
+$color-placeholder: var(--color-placeholder);
 $color-background: var(--color-background);
 $color-anchor-link: var(--color-anchor-link);
 $color-anchor-link-hover: var(--color-anchor-link-hover);
@@ -70,3 +79,6 @@ $radio-bkg-color: var(--radio-bkg-color);
 $radio-font-color: var(--radio-font-color);
 $radio-border-color: var(--radio-border-color);
 $radio-checked-color: var(--radio-checked-color);
+$code-input-border-color: var(--code-input-border-color);
+$code-input-font-color: var(--code-input-font-color);
+$code-input-border-focus-color: var(--code-input-border-focus-color);

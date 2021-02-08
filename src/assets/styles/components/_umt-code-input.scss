@@ -1,0 +1,34 @@
+.umt-code-input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+
+    input {
+        padding: 6px;
+        font-size: 1.5rem;
+        max-width: 2rem;
+        text-align: center;
+        background: none;
+        border: none;
+        border-bottom: 2px solid $code-input-border-color;
+        color: $code-input-font-color;
+        outline: none;
+        caret-color: transparent;
+        transition-duration: 0.3s;
+
+        &::placeholder {
+            transition-duration: 0.3s;
+            color: $color-placeholder;
+        }
+
+        &:focus {
+            border-bottom: 2px solid $code-input-border-focus-color;
+
+            &::placeholder {
+                color: $color-placeholder;
+            }
+        }
+    }
+}

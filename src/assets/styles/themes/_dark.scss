@@ -5,6 +5,7 @@ $config: (
 
 $variable: (
     'font': $color-main-1,
+    'placeholder': rgba($color-main-1, 0.5),
     'background': $color-main-3,
     'anchor-link': $color-main-5,
     'anchor-link-hover': lighten($color-main-5, 30%),
@@ -26,6 +27,11 @@ $variable: (
     'radio-font-color': $color-main-1,
     'radio-border-color': $color-main-1,
     'radio-checked-color': $color-main-1,
+
+    // code input
+    'code-input-border-color': $color-main-1,
+    'code-input-font-color': $color-main-1,
+    'code-input-border-focus-color': $color-main-5,
 );
 
 @include setTheme($config, $variable);
