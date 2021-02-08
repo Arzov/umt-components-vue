@@ -54,7 +54,7 @@ $h-sizes: (
   3: (size: 1rem, weight: $font-weight-black, text-transform: uppercase),
   4: (size: 0.75rem, weight: $font-weight-bold, text-transform: uppercase)
 );
-$p-size: 16px;
+$p-size: 14px;
 
 html {
     font-size: $p-size;
@@ -78,6 +78,10 @@ html {
 p,
 label {
     @extend %font-props;
+}
+
+p {
+    margin-bottom: 20px;
 }
 
 a {
