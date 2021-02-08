@@ -1,11 +1,15 @@
 <template>
-    <div class="umt-component umt-input">
+    <div class="umt-component umt-input" :umt-type="type">
         <input :placeholder="placeholder" :type="_type" :value="value" @input="onInput" @focus="onFocus"/>
+
+        <div v-if="type == 'password'" class="eye-icon" @click="isHide = !isHide">
+            <img :src="_srcEye" />
+        </div>
     </div>
 </template>
 
 <script>
-    const TYPES = [ 'text', 'email', 'tel' ]
+    const TYPES = [ 'text', 'email', 'tel', 'password' ]
 
     export default {
         name: 'UmtInput',
@@ -26,11 +30,24 @@
                 required: false,
                 type: String,
                 default: undefined
+            },
+
+            defaultHidePassword: {
+                required: false,
+                type: Boolean,
+                default: true
+            },
+
+            mode: {
+                required: false,
+                type: String,
+                default: 'lm'
             }
         },
         data() {
             return {
-                placeholderIsFocused: false
+                placeholderIsFocused: false,
+                isHide: this.defaultHidePassword
             }
         },
         computed: {
@@ -38,6 +55,11 @@
                 if (!TYPES.includes(this.type))
                     throw new Error('Propiedad type incorrecta, revise TYPES permitidos.')
 
+                if (this.type === 'password') {
+                    if (!this.isHide)
+                        return 'text'
+                }                    
+console.log(this.type)
                 return this.type
             },
 
@@ -45,6 +67,11 @@
                 const isDate = this._type === 'date'
                 const hasValue = this.value != '' && this.value != null
                 return isDate && !hasValue && !this.placeholderIsFocused
+            },
+
+            _srcEye() {
+                let icon = this.isHide ? 'eye' : 'eye-slash'
+                return require(`./../assets/images/${this.mode}-${icon}.svg`)
             }
         },
         methods: {
