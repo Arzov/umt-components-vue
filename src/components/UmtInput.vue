@@ -1,15 +1,17 @@
 <template>
-    <div class="umt-component umt-input" :umt-type="type">
+    <div class="umt-component umt-input" :umt-type="type" :umt-has-suffix="suffix != undefined">
         <input :placeholder="placeholder" :type="_type" :value="value" @input="onInput" @focus="onFocus"/>
 
         <div v-if="type == 'password'" class="eye-icon" @click="isHide = !isHide">
             <img :src="_srcEye" />
         </div>
+
+        <span v-if="suffix" class="suffix"><b>{{suffix}}</b></span>
     </div>
 </template>
 
 <script>
-    const TYPES = [ 'text', 'email', 'tel', 'password' ]
+    const TYPES = [ 'text', 'email', 'tel', 'password', 'number' ]
 
     export default {
         name: 'UmtInput',
@@ -38,6 +40,12 @@
                 default: true
             },
 
+            suffix: {
+                required: false,
+                type: String,
+                default: undefined
+            },
+
             mode: {
                 required: false,
                 type: String,
@@ -59,7 +67,7 @@
                     if (!this.isHide)
                         return 'text'
                 }                    
-console.log(this.type)
+
                 return this.type
             },
 

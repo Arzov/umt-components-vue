@@ -9,6 +9,7 @@ import { default as UmtInput } from "./src/components/UmtInput.vue";
 import { default as UmtRadio } from "./src/components/UmtRadio.vue";
 import { default as UmtRadioGroup } from "./src/components/UmtRadioGroup.vue";
 import { default as UmtCodeInput } from "./src/components/UmtCodeInput.vue";
+import { default as UmtPositionBadge } from "./src/components/UmtPositionBadge.vue";
 
 const components = [
     UmtThemeProvider,
@@ -16,7 +17,8 @@ const components = [
     UmtInput,
     UmtRadio,
     UmtRadioGroup,
-    UmtCodeInput
+    UmtCodeInput,
+    UmtPositionBadge
 ]
 
 const UmtComponents = {
@@ -44,7 +46,8 @@ export {
     UmtInput,
     UmtRadio,
     UmtRadioGroup,
-    UmtCodeInput
+    UmtCodeInput,
+    UmtPositionBadge
 };
 
 export default UmtComponents;
