@@ -65,4 +65,12 @@
             }
         }
     }
+
+    &[umt-has-suffix] {
+        .suffix {
+            display: flex;
+            align-items: center;
+            padding: 2px 12px 2px 0px;
+        }
+    }
 }

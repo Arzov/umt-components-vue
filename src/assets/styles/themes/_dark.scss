@@ -5,6 +5,7 @@ $config: (
 
 $variable: (
     'font': $color-main-1,
+    'font-rgb': $color-main-1-rgb,
     'placeholder': rgba($color-main-1, 0.5),
     'background': $color-main-3,
     'anchor-link': $color-main-5,
@@ -32,6 +33,18 @@ $variable: (
     'code-input-border-color': $color-main-1,
     'code-input-font-color': $color-main-1,
     'code-input-border-focus-color': $color-main-5,
+
+    // position badge
+    'pos-po-bkg-color': $color-main-5-rgb,
+    'pos-dfi-bkg-color': $color-main-8-rgb,
+    'pos-dfc-bkg-color': $color-main-8-rgb,
+    'pos-dfd-bkg-color': $color-main-8-rgb,
+    'pos-mi-bkg-color': $color-main-7-rgb,
+    'pos-mc-bkg-color': $color-main-7-rgb,
+    'pos-md-bkg-color': $color-main-7-rgb,
+    'pos-di-bkg-color': $color-main-6-rgb,
+    'pos-dc-bkg-color': $color-main-6-rgb,
+    'pos-dd-bkg-color': $color-main-6-rgb,
 );
 
 @include setTheme($config, $variable);

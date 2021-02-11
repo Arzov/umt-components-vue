@@ -76,7 +76,8 @@ html {
 @include h-sizes;
 
 p,
-label {
+label,
+span {
     @extend %font-props;
 }
 
@@ -86,7 +87,6 @@ p {
 
 a {
     @extend %font-props;
-    font-weight: $font-weight-bold !important;
     color: var(--color-anchor-link) !important;
     user-select: none;
 

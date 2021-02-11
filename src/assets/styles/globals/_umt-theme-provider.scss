@@ -3,6 +3,7 @@
 @mixin setTheme($config, $variable) {
     // Warnings
     @if not map.has-key($variable, 'font') { @error "Falta variable color 'font'."; }
+    @if not map.has-key($variable, 'font-rgb') { @error "Falta variable color 'font-rgb'."; }
     @if not map.has-key($variable, 'placeholder') { @error "Falta variable color 'placeholder'."; }
     @if not map.has-key($variable, 'background') { @error "Falta variable color 'background'."; }
     @if not map.has-key($variable, 'anchor-link') { @error "Falta variable color 'anchor-link'."; }
@@ -22,6 +23,16 @@
     @if not map.has-key($variable, 'code-input-border-color') { @error "Falta variable color 'code-input-border-color'."; }
     @if not map.has-key($variable, 'code-input-font-color') { @error "Falta variable color 'code-input-font-color'."; }
     @if not map.has-key($variable, 'code-input-border-focus-color') { @error "Falta variable color 'code-input-border-focus-color'."; }
+    @if not map.has-key($variable, 'pos-po-bkg-color') { @error "Falta variable color 'pos-po-bkg-color'."; }
+    @if not map.has-key($variable, 'pos-dfi-bkg-color') { @error "Falta variable color 'pos-dfi-bkg-color'."; }
+    @if not map.has-key($variable, 'pos-dfc-bkg-color') { @error "Falta variable color 'pos-dfc-bkg-color'."; }
+    @if not map.has-key($variable, 'pos-dfd-bkg-color') { @error "Falta variable color 'pos-dfd-bkg-color'."; }
+    @if not map.has-key($variable, 'pos-mi-bkg-color') { @error "Falta variable color 'pos-mi-bkg-color'."; }
+    @if not map.has-key($variable, 'pos-mc-bkg-color') { @error "Falta variable color 'pos-mc-bkg-color'."; }
+    @if not map.has-key($variable, 'pos-md-bkg-color') { @error "Falta variable color 'pos-md-bkg-color'."; }
+    @if not map.has-key($variable, 'pos-di-bkg-color') { @error "Falta variable color 'pos-di-bkg-color'."; }
+    @if not map.has-key($variable, 'pos-dc-bkg-color') { @error "Falta variable color 'pos-dc-bkg-color'."; }
+    @if not map.has-key($variable, 'pos-dd-bkg-color') { @error "Falta variable color 'pos-dd-bkg-color'."; }
 
     // Setup
     body {
@@ -30,6 +41,7 @@
 
     #theme-provider[umt-theme="#{map.get($config, 'name')}"] {
         --color-font: #{map.get($variable, 'font')};
+        --color-font-rgb: #{map.get($variable, 'font-rgb')};
         --color-placeholder: #{map.get($variable, 'placeholder')};
         --color-background: #{map.get($variable, 'background')};
         --color-anchor-link: #{map.get($variable, 'anchor-link')};
@@ -49,6 +61,16 @@
         --code-input-border-color: #{map.get($variable, 'code-input-border-color')};
         --code-input-font-color: #{map.get($variable, 'code-input-font-color')};
         --code-input-border-focus-color: #{map.get($variable, 'code-input-border-focus-color')};
+        --pos-po-bkg-color: #{map.get($variable, 'pos-po-bkg-color')};
+        --pos-dfi-bkg-color: #{map.get($variable, 'pos-dfi-bkg-color')};
+        --pos-dfc-bkg-color: #{map.get($variable, 'pos-dfc-bkg-color')};
+        --pos-dfd-bkg-color: #{map.get($variable, 'pos-dfd-bkg-color')};
+        --pos-mi-bkg-color: #{map.get($variable, 'pos-mi-bkg-color')};
+        --pos-mc-bkg-color: #{map.get($variable, 'pos-mc-bkg-color')};
+        --pos-md-bkg-color: #{map.get($variable, 'pos-md-bkg-color')};
+        --pos-di-bkg-color: #{map.get($variable, 'pos-di-bkg-color')};
+        --pos-dc-bkg-color: #{map.get($variable, 'pos-dc-bkg-color')};
+        --pos-dd-bkg-color: #{map.get($variable, 'pos-dd-bkg-color')};
     }
 
     #theme-provider {
@@ -63,6 +85,7 @@
 }
 
 $color-font: var(--color-font);
+$color-font-rgb: var(--color-font-rgb);
 $color-placeholder: var(--color-placeholder);
 $color-background: var(--color-background);
 $color-anchor-link: var(--color-anchor-link);
@@ -82,3 +105,13 @@ $radio-checked-color: var(--radio-checked-color);
 $code-input-border-color: var(--code-input-border-color);
 $code-input-font-color: var(--code-input-font-color);
 $code-input-border-focus-color: var(--code-input-border-focus-color);
+$pos-po-bkg-color: var(--pos-po-bkg-color);
+$pos-dfi-bkg-color: var(--pos-dfi-bkg-color);
+$pos-dfc-bkg-color: var(--pos-dfc-bkg-color);
+$pos-dfd-bkg-color: var(--pos-dfd-bkg-color);
+$pos-mi-bkg-color: var(--pos-mi-bkg-color);
+$pos-mc-bkg-color: var(--pos-mc-bkg-color);
+$pos-md-bkg-color: var(--pos-md-bkg-color);
+$pos-di-bkg-color: var(--pos-di-bkg-color);
+$pos-dc-bkg-color: var(--pos-dc-bkg-color);
+$pos-dd-bkg-color: var(--pos-dd-bkg-color);

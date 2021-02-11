@@ -8,15 +8,22 @@
 
     // Styles
     &[umt-type='primary'] {
-        color: $button-font-color;
+        span {
+            color: $button-font-color;
+            font-style: italic;
+        }
+        
         font-style : italic;
         background: linear-gradient(45deg, $button-bkg-color-left, $button-bkg-color-right);
         padding: 12px;
     }
 
     &[umt-type='rounded'] {
+        span {
+            color: $button-border-color;
+        }
+
         display: inline-block;
-        color: $button-border-color;
         border: solid 2px $button-border-color;
         border-radius: 25px;
         padding: 4px 15px;
