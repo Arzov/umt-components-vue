@@ -48,6 +48,11 @@ $variable: (
 
     // modal
     'modal-bkg-color': $color-main-1,
+
+    // range
+    'range-track-color': $color-main-6,
+    'range-step-color': $color-main-7,
+    'range-handle-color': $color-main-1,
 );
 
 @include setTheme($config, $variable);

@@ -1,0 +1,23 @@
+.ant-slider-tooltip {
+    display: none;
+}
+
+.umt-range {
+    margin-bottom: 20px;
+    
+    .slider {
+        .ant-slider-rail {
+            background-color: $range-track-color;
+        }
+
+        .ant-slider-track {
+            background-color: $range-step-color;
+        }
+
+        .ant-slider-handle {
+            background-color: $range-handle-color;
+            border: none;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+    }
+}
