@@ -33,6 +33,7 @@
     @if not map.has-key($variable, 'pos-di-bkg-color') { @error "Falta variable color 'pos-di-bkg-color'."; }
     @if not map.has-key($variable, 'pos-dc-bkg-color') { @error "Falta variable color 'pos-dc-bkg-color'."; }
     @if not map.has-key($variable, 'pos-dd-bkg-color') { @error "Falta variable color 'pos-dd-bkg-color'."; }
+    @if not map.has-key($variable, 'modal-bkg-color') { @error "Falta variable color 'modal-bkg-color'."; }
 
     // Setup
     body {
@@ -71,6 +72,7 @@
         --pos-di-bkg-color: #{map.get($variable, 'pos-di-bkg-color')};
         --pos-dc-bkg-color: #{map.get($variable, 'pos-dc-bkg-color')};
         --pos-dd-bkg-color: #{map.get($variable, 'pos-dd-bkg-color')};
+        --modal-bkg-color: #{map.get($variable, 'modal-bkg-color')};
     }
 
     #theme-provider {
@@ -115,3 +117,4 @@ $pos-md-bkg-color: var(--pos-md-bkg-color);
 $pos-di-bkg-color: var(--pos-di-bkg-color);
 $pos-dc-bkg-color: var(--pos-dc-bkg-color);
 $pos-dd-bkg-color: var(--pos-dd-bkg-color);
+$modal-bkg-color: var(--modal-bkg-color);

@@ -45,6 +45,9 @@ $variable: (
     'pos-di-bkg-color': $color-main-6-rgb,
     'pos-dc-bkg-color': $color-main-6-rgb,
     'pos-dd-bkg-color': $color-main-6-rgb,
+
+    // modal
+    'modal-bkg-color': $color-main-1,
 );
 
 @include setTheme($config, $variable);
