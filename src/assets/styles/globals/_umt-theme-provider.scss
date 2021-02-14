@@ -37,6 +37,8 @@
     @if not map.has-key($variable, 'range-track-color') { @error "Falta variable color 'range-track-color'."; }
     @if not map.has-key($variable, 'range-step-color') { @error "Falta variable color 'range-step-color'."; }
     @if not map.has-key($variable, 'range-handle-color') { @error "Falta variable color 'range-handle-color'."; }
+    @if not map.has-key($variable, 'navigation-bar-bkg-color') { @error "Falta variable color 'navigation-bar-bkg-color'."; }
+    @if not map.has-key($variable, 'navigation-bar-color-active') { @error "Falta variable color 'navigation-bar-color-active'."; }
 
     // Setup
     body {
@@ -79,6 +81,8 @@
         --range-track-color: #{map.get($variable, 'range-track-color')};
         --range-step-color: #{map.get($variable, 'range-step-color')};
         --range-handle-color: #{map.get($variable, 'range-handle-color')};
+        --navigation-bar-bkg-color: #{map.get($variable, 'navigation-bar-bkg-color')};
+        --navigation-bar-color-active: #{map.get($variable, 'navigation-bar-color-active')};
     }
 
     #theme-provider {
@@ -127,3 +131,5 @@ $modal-bkg-color: var(--modal-bkg-color);
 $range-track-color: var(--range-track-color);
 $range-step-color: var(--range-step-color);
 $range-handle-color: var(--range-handle-color);
+$navigation-bar-bkg-color: var(--navigation-bar-bkg-color);
+$navigation-bar-color-active: var(--navigation-bar-color-active);
