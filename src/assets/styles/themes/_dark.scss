@@ -53,6 +53,10 @@ $variable: (
     'range-track-color': $color-main-10,
     'range-step-color': $color-main-5,
     'range-handle-color': $color-main-1,
+
+    // navigation
+    'navigation-bar-bkg-color': $color-main-4,
+    'navigation-bar-color-active': $color-main-5,
 );
 
 @include setTheme($config, $variable);
