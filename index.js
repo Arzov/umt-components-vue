@@ -13,6 +13,7 @@ import { default as UmtPositionBadge } from "./src/components/UmtPositionBadge.v
 import { default as UmtModal } from "./src/components/UmtModal.vue";
 import { default as UmtRange } from "./src/components/UmtRange.vue";
 import { default as UmtNavigationBar } from "./src/components/UmtNavigationBar.vue";
+import { default as UmtProfile } from "./src/components/UmtProfile.vue";
 
 const components = [
     UmtThemeProvider,
@@ -24,7 +25,8 @@ const components = [
     UmtPositionBadge,
     UmtModal,
     UmtRange,
-    UmtNavigationBar
+    UmtNavigationBar,
+    UmtProfile
 ]
 
 const UmtComponents = {
@@ -56,7 +58,8 @@ export {
     UmtPositionBadge,
     UmtModal,
     UmtRange,
-    UmtNavigationBar
+    UmtNavigationBar,
+    UmtProfile
 };
 
 export default UmtComponents;
