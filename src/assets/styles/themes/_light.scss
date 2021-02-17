@@ -57,6 +57,9 @@ $variable: (
     // navigation
     'navigation-bar-bkg-color': $color-main-1,
     'navigation-bar-color-active': $color-main-6,
+
+    // transfer cell
+    'transfer-bkg-color': $color-main-1,
 );
 
 @include setTheme($config, $variable);

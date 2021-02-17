@@ -8,8 +8,11 @@
 </template>
 
 <script>
+    import UmtThemeMixin from './../mixins/theme' 
+
     export default {
         name: 'UmtProfile',
+        mixins: [ UmtThemeMixin ],
         props: {
             profileSrc: {
                 required: false,
@@ -17,10 +20,10 @@
                 default: undefined
             },
 
-            mode: {
+            theme: {
                 required: false,
                 type: String,
-                default: 'lm'
+                default: undefined
             },
 
             type: {
@@ -46,7 +49,7 @@
                 else
                     defaultImage = 'avatar'
                 
-                return require(`./../assets/images/${this.mode}-${defaultImage}.svg`)
+                return require(`./../assets/images/${this._theme}-${defaultImage}.svg`)
             }
         }
     }
