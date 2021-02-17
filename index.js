@@ -2,6 +2,9 @@ import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
 import './src/assets/styles/styles.css';
 
+// PROTOTYPES
+import { default as themeSetup } from "./src/prototypes/theme.js";
+
 // COMPONENTS
 import { default as UmtThemeProvider } from "./src/components/UmtThemeProvider.vue";
 import { default as UmtButton } from "./src/components/UmtButton.vue";
@@ -14,6 +17,7 @@ import { default as UmtModal } from "./src/components/UmtModal.vue";
 import { default as UmtRange } from "./src/components/UmtRange.vue";
 import { default as UmtNavigationBar } from "./src/components/UmtNavigationBar.vue";
 import { default as UmtProfile } from "./src/components/UmtProfile.vue";
+import { default as UmtTransferCell } from "./src/components/UmtTransferCell.vue";
 
 const components = [
     UmtThemeProvider,
@@ -26,7 +30,8 @@ const components = [
     UmtModal,
     UmtRange,
     UmtNavigationBar,
-    UmtProfile
+    UmtProfile,
+    UmtTransferCell
 ]
 
 const UmtComponents = {
@@ -39,6 +44,9 @@ const UmtComponents = {
         });
 
         Vue.prototype.$umtMode = options.mode && ['desktop', 'mobile'].includes(options.mode) ? options.mode : 'desktop';
+
+        // Call prototypes
+        themeSetup(Vue, setup);
     }
 };
 
@@ -59,7 +67,8 @@ export {
     UmtModal,
     UmtRange,
     UmtNavigationBar,
-    UmtProfile
+    UmtProfile,
+    UmtTransferCell
 };
 
 export default UmtComponents;

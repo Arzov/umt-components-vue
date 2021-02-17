@@ -11,10 +11,13 @@
 </template>
 
 <script>
+    import UmtThemeMixin from './../mixins/theme' 
+
     const TYPES = [ 'text', 'email', 'tel', 'password', 'number' ]
 
     export default {
         name: 'UmtInput',
+        mixins: [ UmtThemeMixin ],
         props: {
             placeholder: {
                 required: false,
@@ -46,10 +49,10 @@
                 default: undefined
             },
 
-            mode: {
+            theme: {
                 required: false,
                 type: String,
-                default: 'lm'
+                default: undefined
             }
         },
         data() {
@@ -79,7 +82,7 @@
 
             _srcEye() {
                 let icon = this.isHide ? 'eye' : 'eye-slash'
-                return require(`./../assets/images/${this.mode}-${icon}.svg`)
+                return require(`./../assets/images/${this._theme}-${icon}.svg`)
             }
         },
         methods: {
