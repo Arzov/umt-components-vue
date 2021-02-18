@@ -60,6 +60,9 @@ $variable: (
 
     // transfer cell
     'transfer-bkg-color': $color-main-4,
+
+    // slide
+    'navigator-pin-color': $color-main-1-rgb,
 );
 
 @include setTheme($config, $variable);
