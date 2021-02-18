@@ -2,12 +2,14 @@
     background-color: $transfer-bkg-color;
     padding: 8px 16px;
     box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    margin: 2px 5px 10px 5px;
 
     .team-image,
     .profile-image {
         max-height: 50px;
         width: 100%;
         border-radius: 50%;
+        object-fit: contain;
     }
 
     .transfer-info {

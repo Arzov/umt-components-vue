@@ -40,6 +40,7 @@
     @if not map.has-key($variable, 'navigation-bar-bkg-color') { @error "Falta variable color 'navigation-bar-bkg-color'."; }
     @if not map.has-key($variable, 'navigation-bar-color-active') { @error "Falta variable color 'navigation-bar-color-active'."; }
     @if not map.has-key($variable, 'transfer-bkg-color') { @error "Falta variable color 'transfer-bkg-color'."; }
+    @if not map.has-key($variable, 'navigator-pin-color') { @error "Falta variable color 'navigator-pin-color'."; }
 
     // Setup
     body {
@@ -85,6 +86,7 @@
         --navigation-bar-bkg-color: #{map.get($variable, 'navigation-bar-bkg-color')};
         --navigation-bar-color-active: #{map.get($variable, 'navigation-bar-color-active')};
         --transfer-bkg-color: #{map.get($variable, 'transfer-bkg-color')};
+        --navigator-pin-color: #{map.get($variable, 'navigator-pin-color')};
     }
 
     #theme-provider {
@@ -136,3 +138,4 @@ $range-handle-color: var(--range-handle-color);
 $navigation-bar-bkg-color: var(--navigation-bar-bkg-color);
 $navigation-bar-color-active: var(--navigation-bar-color-active);
 $transfer-bkg-color: var(--transfer-bkg-color);
+$navigator-pin-color: var(--navigator-pin-color);
