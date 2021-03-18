@@ -19,6 +19,8 @@ import { default as UmtNavigationBar } from "./src/components/UmtNavigationBar.v
 import { default as UmtProfile } from "./src/components/UmtProfile.vue";
 import { default as UmtTransferCell } from "./src/components/UmtTransferCell.vue";
 import { default as UmtSlide } from "./src/components/UmtSlide.vue";
+import { default as UmtTabPanel } from "./src/components/UmtTabPanel.vue";
+import { default as UmtTabs } from "./src/components/UmtTabs.vue";
 
 const components = [
     UmtThemeProvider,
@@ -33,7 +35,9 @@ const components = [
     UmtNavigationBar,
     UmtProfile,
     UmtTransferCell,
-    UmtSlide
+    UmtSlide,
+    UmtTabPanel,
+    UmtTabs
 ]
 
 const UmtComponents = {
@@ -71,7 +75,9 @@ export {
     UmtNavigationBar,
     UmtProfile,
     UmtTransferCell,
-    UmtSlide
+    UmtSlide,
+    UmtTabPanel,
+    UmtTabs
 };
 
 export default UmtComponents;
