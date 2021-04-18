@@ -27,19 +27,24 @@
                 newOrigin: 0,
                 swipCount: 0,
                 lastKey: 0,
-                observer: undefined,
                 isAplyingChanges: false
             }
         },
         mounted() {
             this.setup()
         },
+        beforeDestroy() {
+            this.observer.disconnect()
+            this.observerContent.disconnect()
+        },
         watch: {
             currentItem() {
                 this.items.forEach((i) => {
                     i.checked = false
                 })
-                this.items[this.currentItem].checked = true
+
+                if (this.items[this.currentItem])
+                    this.items[this.currentItem].checked = true
             }
         },
         methods: {
@@ -183,12 +188,10 @@
             },
 
             setGestures() {
-                const mc = new Hammer(this.$refs['component'], {
-                    domEvents: true
-                })
+                const mc = new Hammer(this.$refs['component'])
 
                 mc.get('pan').set({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 0 })
-                mc.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 100 });
+                mc.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 100 })
 
                 mc.on("panend", () => {
                     this.endTransition = true

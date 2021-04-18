@@ -1,0 +1,14 @@
+%animation-skeleton {
+    background-size: 400% 100% !important;
+    animation: ant-skeleton-loading 1.4s ease infinite !important;
+    -webkit-animation: ant-skeleton-loading 1.4s ease infinite !important;
+}
+
+%animation-skeleton-gradient {
+    background: linear-gradient(
+                90deg,
+                $animation-bkg-color-1 4%,
+                $animation-bkg-color-2 50%,
+                $animation-bkg-color-1
+            );
+}
