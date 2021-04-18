@@ -42,7 +42,9 @@
                 this.items.forEach((i) => {
                     i.checked = false
                 })
-                this.items[this.currentItem].checked = true
+
+                if (this.items[this.currentItem])
+                    this.items[this.currentItem].checked = true
             }
         },
         methods: {
