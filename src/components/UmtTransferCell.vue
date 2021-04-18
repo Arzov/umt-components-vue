@@ -20,7 +20,7 @@
             </a-col>
 
             <a-col :span="3">
-                <img class="profile-image" :src="profile.image"/>
+                <img class="profile-image" :src="profile.image" @error="onErrorLoadImage"/>
             </a-col>
         </a-row>
     </div>
@@ -49,6 +49,9 @@
                 type: undefined
             },
 
+            /*
+             * @Obsolete
+             */
             theme: {
                 required: false,
                 type: String,
@@ -58,6 +61,11 @@
         computed: {
             _date() {
                 return moment(this.date).format('DD/MM')
+            }
+        },
+        methods: {
+            onErrorLoadImage(evt) {
+                evt.target.src = require(`./../assets/images/${this._theme}-avatar.svg`)
             }
         }
     }
