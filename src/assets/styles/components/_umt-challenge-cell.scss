@@ -1,0 +1,73 @@
+.umt-challenge-cell,
+.umt-challenge-skeleton {
+    background-color: $challenge-cell-bkg-color;
+    padding: 8px 16px;
+    box-shadow: $box-shadow-dir $color-box-shadow;
+    margin: 2px 0px 10px 0px;
+
+    .row {
+        flex-wrap: nowrap;
+    }
+
+    .team-image {
+        max-height: 50px;
+        width: 100%;
+        border-radius: 50%;
+        object-fit: contain;
+
+        &-skt {
+            height: 0;
+            padding-bottom: 100%;
+            @extend %animation-skeleton-gradient;
+            @extend %animation-skeleton;
+        }
+    }
+
+    .info {
+        margin: 0 15px;
+        min-width: 0;
+
+        .team-name {
+            margin-bottom: -5px;
+
+            h3 {
+                @extend %ellipsis;
+                font-weight: $font-weight-bold;
+            }
+
+            &-skt {
+                height: 0;
+                padding-bottom: 6%;
+                margin-bottom: 5px;
+    
+                .square {
+                    height: 100%;
+                    padding-bottom: 6%;
+                    @extend %animation-skeleton-gradient;
+                    @extend %animation-skeleton;
+                }
+            }
+        }
+
+        .distance {
+            max-width: 100%;
+
+            span {
+                @extend %ellipsis;
+            }
+
+            &-skt {
+                height: 0;
+                padding-bottom: 6%;
+    
+                .square {
+                    height: 100%;
+                    width: 70%;
+                    padding-bottom: 6%;
+                    @extend %animation-skeleton-gradient;
+                    @extend %animation-skeleton;
+                }
+            }
+        }
+    }
+}

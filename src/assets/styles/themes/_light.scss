@@ -10,6 +10,8 @@ $variable: (
     'background': $color-main-2,
     'anchor-link': $color-main-6,
     'anchor-link-hover': lighten($color-main-6, 20%),
+    'box-shadow': rgba($color-main-3, 0.1),
+    'box-shadow-dir': 0px 5px 5px,
 
     // button
     'button-bkg-color-left': $color-main-6,
@@ -67,6 +69,9 @@ $variable: (
 
     // slide
     'navigator-pin-color': $color-main-3-rgb,
+
+    // challenge cell
+    'challenge-cell-bkg-color': $color-main-1,
 );
 
 @include setTheme($config, $variable);

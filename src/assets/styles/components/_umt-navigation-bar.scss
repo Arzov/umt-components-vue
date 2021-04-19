@@ -1,7 +1,7 @@
 .umt-navigation-bar {
     background-color: $navigation-bar-bkg-color;
     padding: 10px;
-    box-shadow: 0 -5px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 -5px 5px $color-box-shadow;;
 
     .tab {
         display: flex;

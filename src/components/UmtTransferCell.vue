@@ -1,13 +1,13 @@
 <template>
     <div class="umt-component umt-transfer-cell">
-        <a-row type="flex" align="middle">
+        <a-row type="flex" align="middle" class="row">
             <a-col :span="3">
-                <img class="team-image" :src="team.image"/>
+                <img class="team-image" :src="team.image" @error="onErrorLoadTeamImage"/>
             </a-col>
 
             <a-col :flex="1" class="transfer-info">
                 <div class="info">
-                    <h3>{{ team.name }}</h3>
+                    <h3>{{ team.name.toUpperCase() }}</h3>
                     <span class="transfer-info-date"><i>{{ _date }}</i></span>
                 </div>
                 <div class="info-to">
@@ -20,7 +20,7 @@
             </a-col>
 
             <a-col :span="3">
-                <img class="profile-image" :src="profile.image" @error="onErrorLoadImage"/>
+                <img class="profile-image" :src="profile.image" @error="onErrorLoadProfileImage"/>
             </a-col>
         </a-row>
     </div>
@@ -64,8 +64,12 @@
             }
         },
         methods: {
-            onErrorLoadImage(evt) {
+            onErrorLoadProfileImage(evt) {
                 evt.target.src = require(`./../assets/images/${this._theme}-avatar.svg`)
+            },
+
+            onErrorLoadTeamImage(evt) {
+                evt.target.src = require(`./../assets/images/${this._theme}-team-profile.svg`)
             }
         }
     }

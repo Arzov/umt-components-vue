@@ -2,8 +2,12 @@
 .umt-transfer-cell-skeleton {
     background-color: $transfer-bkg-color;
     padding: 8px 16px;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
-    margin: 2px 5px 10px 5px;
+    box-shadow: $box-shadow-dir $color-box-shadow;
+    margin: 2px 0px 10px 0px;
+
+    .row {
+        flex-wrap: nowrap;
+    }
 
     .team-image,
     .profile-image {
@@ -22,9 +26,11 @@
 
     .transfer-info {
         margin: 0 15px;
+        min-width: 0;
 
         &-date {
             color: $color-anchor-link;
+            margin-left: 5px;
         }
     }
 
@@ -38,10 +44,18 @@
 
     .info {
         margin-bottom: -5px;
+        display: flex;
+        flex-wrap: nowrap;
 
         h3 {
-            display: inline-block;
+            @extend %ellipsis;
             font-weight: $font-weight-bold;
+        }
+
+        &-to {
+            span {
+                @extend %ellipsis;
+            }
         }
 
         &-skt {
