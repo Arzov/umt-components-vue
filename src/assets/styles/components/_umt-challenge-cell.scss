@@ -1,5 +1,4 @@
-.umt-challenge-cell,
-.umt-challenge-skeleton {
+.umt-challenge-cell {
     background-color: $challenge-cell-bkg-color;
     padding: 8px 16px;
     box-shadow: $box-shadow-dir $color-box-shadow;
@@ -14,18 +13,17 @@
         width: 100%;
         border-radius: 50%;
         object-fit: contain;
+    }
 
-        &-skt {
-            height: 0;
-            padding-bottom: 100%;
-            @extend %animation-skeleton-gradient;
-            @extend %animation-skeleton;
-        }
+    .transfer-info {
+        margin: 0 15px;
+        min-width: 0;
     }
 
     .info {
         margin: 0 15px;
         min-width: 0;
+        flex-grow: 1;
 
         .team-name {
             margin-bottom: -5px;
@@ -34,19 +32,6 @@
                 @extend %ellipsis;
                 font-weight: $font-weight-bold;
             }
-
-            &-skt {
-                height: 0;
-                padding-bottom: 6%;
-                margin-bottom: 5px;
-    
-                .square {
-                    height: 100%;
-                    padding-bottom: 6%;
-                    @extend %animation-skeleton-gradient;
-                    @extend %animation-skeleton;
-                }
-            }
         }
 
         .distance {
@@ -54,19 +39,6 @@
 
             span {
                 @extend %ellipsis;
-            }
-
-            &-skt {
-                height: 0;
-                padding-bottom: 6%;
-    
-                .square {
-                    height: 100%;
-                    width: 70%;
-                    padding-bottom: 6%;
-                    @extend %animation-skeleton-gradient;
-                    @extend %animation-skeleton;
-                }
             }
         }
     }

@@ -1,5 +1,4 @@
-.umt-transfer-cell,
-.umt-transfer-cell-skeleton {
+.umt-transfer-cell {
     background-color: $transfer-bkg-color;
     padding: 8px 16px;
     box-shadow: $box-shadow-dir $color-box-shadow;
@@ -15,13 +14,6 @@
         width: 100%;
         border-radius: 50%;
         object-fit: contain;
-
-        &-skt {
-            height: 0;
-            padding-bottom: 100%;
-            @extend %animation-skeleton-gradient;
-            @extend %animation-skeleton;
-        }
     }
 
     .transfer-info {
@@ -38,14 +30,11 @@
         margin-right: 15px;
     }
 
-    .square {
-        padding-bottom: 6%;
-    }
-
     .info {
         margin-bottom: -5px;
         display: flex;
         flex-wrap: nowrap;
+        flex-grow: 1;
 
         h3 {
             @extend %ellipsis;
@@ -56,30 +45,6 @@
             span {
                 @extend %ellipsis;
             }
-        }
-
-        &-skt {
-            height: 0;
-            padding-bottom: 6%;
-            margin-bottom: 5px;
-
-            .square {
-                height: 100%;
-                @extend %animation-skeleton-gradient;
-                @extend %animation-skeleton;
-            }
-        }
-    }
-
-    .info-to-skt {
-        height: 0;
-        padding-bottom: 6%;
-
-        .square {
-            height: 100%;
-            width: 70%;
-            @extend %animation-skeleton-gradient;
-            @extend %animation-skeleton;
         }
     }
 }

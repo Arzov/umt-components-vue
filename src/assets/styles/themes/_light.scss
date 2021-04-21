@@ -72,6 +72,9 @@ $variable: (
 
     // challenge cell
     'challenge-cell-bkg-color': $color-main-1,
+
+    // skeleton
+    'skeleton-bkg-color': $color-main-1,
 );
 
 @include setTheme($config, $variable);
