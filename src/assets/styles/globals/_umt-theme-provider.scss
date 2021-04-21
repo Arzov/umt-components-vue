@@ -6,6 +6,8 @@
     @if not map.has-key($variable, 'font-rgb') { @error "Falta variable color 'font-rgb'."; }
     @if not map.has-key($variable, 'placeholder') { @error "Falta variable color 'placeholder'."; }
     @if not map.has-key($variable, 'background') { @error "Falta variable color 'background'."; }
+    @if not map.has-key($variable, 'box-shadow') { @error "Falta variable color 'box-shadow'."; }
+    @if not map.has-key($variable, 'box-shadow-dir') { @error "Falta variable color 'box-shadow-dir'."; }
     @if not map.has-key($variable, 'anchor-link') { @error "Falta variable color 'anchor-link'."; }
     @if not map.has-key($variable, 'anchor-link-hover') { @error "Falta variable color 'anchor-link-hover'."; }
     @if not map.has-key($variable, 'button-bkg-color-left') { @error "Falta variable color 'button-bkg-color-left'."; }
@@ -43,6 +45,8 @@
     @if not map.has-key($variable, 'animation-bkg-color-1') { @error "Falta variable color 'animation-bkg-color-1'."; }
     @if not map.has-key($variable, 'animation-bkg-color-2') { @error "Falta variable color 'animation-bkg-color-2'."; }
     @if not map.has-key($variable, 'navigator-pin-color') { @error "Falta variable color 'navigator-pin-color'."; }
+    @if not map.has-key($variable, 'challenge-cell-bkg-color') { @error "Falta variable color 'challenge-cell-bkg-color'."; }
+    @if not map.has-key($variable, 'skeleton-bkg-color') { @error "Falta variable color 'skeleton-bkg-color'."; }
 
     // Setup
     body {
@@ -54,6 +58,8 @@
         --color-font-rgb: #{map.get($variable, 'font-rgb')};
         --color-placeholder: #{map.get($variable, 'placeholder')};
         --color-background: #{map.get($variable, 'background')};
+        --color-box-shadow: #{map.get($variable, 'box-shadow')};
+        --box-shadow-dir: #{map.get($variable, 'box-shadow-dir')};
         --color-anchor-link: #{map.get($variable, 'anchor-link')};
         --color-anchor-link-hover: #{map.get($variable, 'anchor-link-hover')};
         --button-bkg-color-left: #{map.get($variable, 'button-bkg-color-left')};
@@ -91,6 +97,8 @@
         --animation-bkg-color-1: #{map.get($variable, 'animation-bkg-color-1')};
         --animation-bkg-color-2: #{map.get($variable, 'animation-bkg-color-2')};
         --navigator-pin-color: #{map.get($variable, 'navigator-pin-color')};
+        --challenge-cell-bkg-color: #{map.get($variable, 'challenge-cell-bkg-color')};
+        --skeleton-bkg-color: #{map.get($variable, 'skeleton-bkg-color')};
     }
 
     #theme-provider {
@@ -108,6 +116,8 @@ $color-font: var(--color-font);
 $color-font-rgb: var(--color-font-rgb);
 $color-placeholder: var(--color-placeholder);
 $color-background: var(--color-background);
+$color-box-shadow: var(--color-box-shadow);
+$box-shadow-dir: var(--box-shadow-dir);
 $color-anchor-link: var(--color-anchor-link);
 $color-anchor-link-hover: var(--color-anchor-link-hover);
 $button-bkg-color-left: var(--button-bkg-color-left);
@@ -145,3 +155,5 @@ $transfer-bkg-color: var(--transfer-bkg-color);
 $animation-bkg-color-1: var(--animation-bkg-color-1);
 $animation-bkg-color-2: var(--animation-bkg-color-2);
 $navigator-pin-color: var(--navigator-pin-color);
+$challenge-cell-bkg-color: var(--challenge-cell-bkg-color);
+$skeleton-bkg-color: var(--skeleton-bkg-color);

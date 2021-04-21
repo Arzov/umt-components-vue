@@ -1,7 +1,7 @@
 .umt-input {
     margin-bottom: 20px;
     position: relative;
-    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: $box-shadow-dir $color-box-shadow;
     display: flex;
     background-color: $input-bkg-color;
 
