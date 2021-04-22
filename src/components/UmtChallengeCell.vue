@@ -2,7 +2,7 @@
     <div class="umt-component umt-challenge-cell">
         <a-row type="flex" align="middle" class="row">
             <a-col :span="3">
-                <img class="team-image" :src="team.image" @error="onErrorLoadImage"/>
+                <img class="team-image" :src="team.image" @error="onErrorLoadTeamImage"/>
             </a-col>
 
             <a-col class="info">
@@ -15,7 +15,7 @@
             </a-col>
 
             <a-col>
-                <umt-button type="rounded" size="small" @click="onClick">SOLICITAR</umt-button>
+                <umt-button type="rounded" size="small" @click="onSubmit">DESAFIAR</umt-button>
             </a-col>
         </a-row>
     </div>
@@ -23,25 +23,15 @@
 
 <script>
     import UmtThemeMixin from './../mixins/theme'
-    import UmtButton from './UmtButton.vue'
+    import UmtCellMixin from './../mixins/cells'
 
     export default {
-        components: { UmtButton },
         name: 'UmtChallengeCell',
-        mixins: [ UmtThemeMixin ],
+        mixins: [ UmtThemeMixin, UmtCellMixin ],
         props: {
             team: {
                 required: true,
                 type: Object
-            }
-        },
-        methods: {
-            onErrorLoadImage(evt) {
-                evt.target.src = require(`./../assets/images/${this._theme}-team-profile.svg`)
-            },
-
-            onClick(evt) {
-                this.$emit('challenge', evt)
             }
         }
     }

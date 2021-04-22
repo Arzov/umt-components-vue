@@ -3,6 +3,7 @@
 @import "./globals/fonts";
 @import "./globals/umt-theme-provider";
 @import "./globals/animations";
+@import "./globals/reusables";
 
 // THEMES
 @import "./themes/light";
@@ -23,3 +24,4 @@
 @import "./components/umt-slide";
 @import "./components/umt-tabs";
 @import "./components/umt-challenge-cell";
+@import "./components/umt-patch-cell";

@@ -10,10 +10,7 @@
 
     .team-image,
     .profile-image {
-        max-height: 50px;
-        width: 100%;
-        border-radius: 50%;
-        object-fit: contain;
+        @extend %avatar;
     }
 
     .transfer-info {

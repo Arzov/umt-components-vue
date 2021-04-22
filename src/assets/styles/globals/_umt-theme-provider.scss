@@ -47,6 +47,8 @@
     @if not map.has-key($variable, 'navigator-pin-color') { @error "Falta variable color 'navigator-pin-color'."; }
     @if not map.has-key($variable, 'challenge-cell-bkg-color') { @error "Falta variable color 'challenge-cell-bkg-color'."; }
     @if not map.has-key($variable, 'skeleton-bkg-color') { @error "Falta variable color 'skeleton-bkg-color'."; }
+    @if not map.has-key($variable, 'patch-cell-bkg-color') { @error "Falta variable color 'patch-cell-bkg-color'."; }
+    @if not map.has-key($variable, 'patch-left-border-color') { @error "Falta variable color 'patch-left-border-color'."; }
 
     // Setup
     body {
@@ -99,6 +101,8 @@
         --navigator-pin-color: #{map.get($variable, 'navigator-pin-color')};
         --challenge-cell-bkg-color: #{map.get($variable, 'challenge-cell-bkg-color')};
         --skeleton-bkg-color: #{map.get($variable, 'skeleton-bkg-color')};
+        --patch-cell-bkg-color: #{map.get($variable, 'patch-cell-bkg-color')};
+        --patch-left-border-color: #{map.get($variable, 'patch-left-border-color')};
     }
 
     #theme-provider {
@@ -157,3 +161,5 @@ $animation-bkg-color-2: var(--animation-bkg-color-2);
 $navigator-pin-color: var(--navigator-pin-color);
 $challenge-cell-bkg-color: var(--challenge-cell-bkg-color);
 $skeleton-bkg-color: var(--skeleton-bkg-color);
+$patch-cell-bkg-color: var(--patch-cell-bkg-color);
+$patch-left-border-color: var(--patch-left-border-color);

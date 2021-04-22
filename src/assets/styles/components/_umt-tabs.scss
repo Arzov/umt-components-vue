@@ -123,12 +123,13 @@ $umt-tabs-animation-duration: 300ms;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
-        overflow-x: hidden;
-        overflow-y: auto;
+        overflow: hidden;
         transition: transform 0.3s;
     }
 }
 
 .umt-tab-panel {
     box-sizing: content-box;
+    // touch-action: pan-y;
+    overflow-y: auto;
 }

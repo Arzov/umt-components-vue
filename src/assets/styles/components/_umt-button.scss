@@ -34,6 +34,11 @@
         font-weight: $font-weight-bold;
     }
 
+    &[umt-disabled=true] {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
     // Sizes
     &[umt-size='small'] {
         font-size: 0.8rem;
