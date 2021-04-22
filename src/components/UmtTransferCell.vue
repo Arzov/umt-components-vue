@@ -28,11 +28,12 @@
 
 <script>
     import UmtThemeMixin from './../mixins/theme' 
+    import UmtCellMixin from './../mixins/cells' 
     import moment from 'moment'
 
     export default {
         name: 'UmtTransferCell',
-        mixins: [ UmtThemeMixin ],
+        mixins: [ UmtThemeMixin, UmtCellMixin ],
         props: {
             team: {
                 required: true,
@@ -61,15 +62,6 @@
         computed: {
             _date() {
                 return moment(this.date).format('DD/MM')
-            }
-        },
-        methods: {
-            onErrorLoadProfileImage(evt) {
-                evt.target.src = require(`./../assets/images/${this._theme}-avatar.svg`)
-            },
-
-            onErrorLoadTeamImage(evt) {
-                evt.target.src = require(`./../assets/images/${this._theme}-team-profile.svg`)
             }
         }
     }

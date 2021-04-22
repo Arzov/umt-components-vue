@@ -23,6 +23,7 @@ import { default as UmtTabPanel } from "./src/components/UmtTabPanel.vue";
 import { default as UmtTabs } from "./src/components/UmtTabs.vue";
 import { default as UmtChallengeCell } from "./src/components/UmtChallengeCell.vue";
 import { default as UmtSkeleton } from "./src/components/UmtSkeleton.vue";
+import { default as UmtPatchCell } from "./src/components/UmtPatchCell.vue";
 
 const components = [
     UmtThemeProvider,
@@ -41,7 +42,8 @@ const components = [
     UmtTabPanel,
     UmtTabs,
     UmtChallengeCell,
-    UmtSkeleton
+    UmtSkeleton,
+    UmtPatchCell
 ]
 
 const UmtComponents = {
@@ -83,7 +85,8 @@ export {
     UmtTabPanel,
     UmtTabs,
     UmtChallengeCell,
-    UmtSkeleton
+    UmtSkeleton,
+    UmtPatchCell
 };
 
 export default UmtComponents;

@@ -1,5 +1,5 @@
 <template>
-    <div ref="button" class="umt-component umt-button" :umt-type="type" :umt-size="size" :umt-icon="icon != undefined" @click="onClick" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
+    <div ref="button" class="umt-component umt-button" :umt-type="type" :umt-size="size" :umt-icon="icon != undefined" :umt-disabled="disabled" @click="onClick" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
         <img v-if="icon" :src="require(`../assets/images/${icon.toLowerCase()}.svg`)">
         <span>
             <slot></slot>
@@ -38,6 +38,12 @@
                 required: false,
                 type: String,
                 default: undefined
+            },
+
+            disabled: {
+                required: false,
+                type: Boolean,
+                defsult: false
             }
         },
         data() {

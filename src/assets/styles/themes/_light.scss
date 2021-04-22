@@ -75,6 +75,10 @@ $variable: (
 
     // skeleton
     'skeleton-bkg-color': $color-main-1,
+
+    // patch cell
+    'patch-cell-bkg-color': $color-main-1,
+    'patch-left-border-color': rgba($color-main-6, 0.1),
 );
 
 @include setTheme($config, $variable);
