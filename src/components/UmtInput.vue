@@ -2,18 +2,22 @@
     <div class="umt-component umt-input" :umt-type="type" :umt-has-suffix="suffix != undefined">
         <input :placeholder="placeholder" :type="_type" :value="value" @input="onInput" @focus="onFocus"/>
 
+        <span v-if="suffix" class="suffix"><b>{{suffix}}</b></span>
+        
         <div v-if="type == 'password'" class="eye-icon" @click="isHide = !isHide">
             <img :src="_srcEye" />
         </div>
 
-        <span v-if="suffix" class="suffix"><b>{{suffix}}</b></span>
+        <div v-if="type == 'search'" class="search-icon">
+            <img :src="_srcSearch" />
+        </div>
     </div>
 </template>
 
 <script>
     import UmtThemeMixin from './../mixins/theme' 
 
-    const TYPES = [ 'text', 'email', 'tel', 'password', 'number' ]
+    const TYPES = [ 'text', 'email', 'tel', 'password', 'number', 'search' ]
 
     export default {
         name: 'UmtInput',
@@ -83,6 +87,10 @@
             _srcEye() {
                 let icon = this.isHide ? 'eye' : 'eye-slash'
                 return require(`./../assets/images/${this._theme}-${icon}.svg`)
+            },
+
+            _srcSearch() {
+                return require(`./../assets/images/${this._theme}-search.svg`)
             }
         },
         methods: {

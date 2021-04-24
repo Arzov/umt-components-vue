@@ -21,7 +21,7 @@ import { default as UmtTransferCell } from "./src/components/UmtTransferCell.vue
 import { default as UmtSlide } from "./src/components/UmtSlide.vue";
 import { default as UmtTabPanel } from "./src/components/UmtTabPanel.vue";
 import { default as UmtTabs } from "./src/components/UmtTabs.vue";
-import { default as UmtChallengeCell } from "./src/components/UmtChallengeCell.vue";
+import { default as UmtRequestCell } from "./src/components/UmtRequestCell.vue";
 import { default as UmtSkeleton } from "./src/components/UmtSkeleton.vue";
 import { default as UmtPatchCell } from "./src/components/UmtPatchCell.vue";
 
@@ -41,7 +41,7 @@ const components = [
     UmtSlide,
     UmtTabPanel,
     UmtTabs,
-    UmtChallengeCell,
+    UmtRequestCell,
     UmtSkeleton,
     UmtPatchCell
 ]
@@ -84,7 +84,7 @@ export {
     UmtSlide,
     UmtTabPanel,
     UmtTabs,
-    UmtChallengeCell,
+    UmtRequestCell,
     UmtSkeleton,
     UmtPatchCell
 };

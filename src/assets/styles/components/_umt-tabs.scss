@@ -130,6 +130,9 @@ $umt-tabs-animation-duration: 300ms;
 
 .umt-tab-panel {
     box-sizing: content-box;
-    // touch-action: pan-y;
     overflow-y: auto;
+
+    * {
+        touch-action: pan-y;
+    }
 }

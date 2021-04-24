@@ -164,26 +164,7 @@
                 const tabs = this.$refs['content'].querySelectorAll('.umt-tab-panel')
 
                 tabs.forEach(tab => {
-                    const mc = new Hammer(tab)
-
-                    mc.get('pan').set({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 0 })
-                    mc.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 100 })
-
-                    mc.on("swipeleft swiperight", (e) => {
-                        this.swipCount++
-
-                        if (this.swipCount == 1) {
-                            if (e.type == 'swipeleft') {
-                                this.newOrigin = (this.newOrigin + 1) > (this.tabs.length - 1) ? this.newOrigin : (this.newOrigin + 1)
-                            } else {
-                                this.newOrigin = (this.newOrigin - 1) < 0 ? this.newOrigin : (this.newOrigin - 1)
-                            }
-
-                            setTimeout(() => {
-                                this.swipCount = 0
-                            }, 300)
-                        }
-                    })
+                    this.setSwipeGesture(tab)
                 })
 
                 // NOTE: este bloque de código es el original, por tema de compatibilidad con safary, se dejó como gesto a todos los tabs.
@@ -208,6 +189,29 @@
                 //         }, 300)
                 //     }
                 // })
+            },
+
+            setSwipeGesture(element) {
+                const mc = new Hammer(element)
+
+                mc.get('pan').set({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 0 })
+                mc.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 100 })
+
+                mc.on("swipeleft swiperight", (e) => {
+                    this.swipCount++
+
+                    if (this.swipCount == 1) {
+                        if (e.type == 'swipeleft') {
+                            this.newOrigin = (this.newOrigin + 1) > (this.tabs.length - 1) ? this.newOrigin : (this.newOrigin + 1)
+                        } else {
+                            this.newOrigin = (this.newOrigin - 1) < 0 ? this.newOrigin : (this.newOrigin - 1)
+                        }
+
+                        setTimeout(() => {
+                            this.swipCount = 0
+                        }, 300)
+                    }
+                })
             },
 
             setAnimationDirection(index, exit) {

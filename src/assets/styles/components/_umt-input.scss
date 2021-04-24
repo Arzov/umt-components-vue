@@ -46,19 +46,26 @@
     }
 
     &[umt-type="password"] {
-        input {
-            margin-right: 1.5rem;
-            padding-right: 24px;
-        }
+        align-items: center;
 
         .eye-icon {
-            position: absolute;
-            right: 0;
-            top: 0;
-            height: 100%;
             display: flex;
             align-items: center;
-            padding: 2px 12px;
+            padding: 2px 12px 2px 0;
+
+            img {
+                height: 1.5rem;
+            }
+        }
+    }
+
+    &[umt-type="search"] {
+        align-items: center;
+
+        .search-icon {
+            display: flex;
+            align-items: center;
+            padding: 2px 12px 2px 0;
 
             img {
                 height: 1.5rem;

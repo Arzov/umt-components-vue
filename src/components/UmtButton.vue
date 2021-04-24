@@ -58,7 +58,7 @@
                 initColorBorder: '',
                 interval: undefined,
                 intervalDelay: 5,
-                intervalTimeout: 300
+                intervalTimeout: 200
             }
         },
         mounted() {
@@ -114,7 +114,9 @@
                 if (this.$umtMode == 'mobile') {
                     this.addHover()
                     .then(() => {
-                        this.removeHover()
+                        setTimeout(() => {
+                            this.removeHover()
+                        }, 100);
                     })
                 }
             },

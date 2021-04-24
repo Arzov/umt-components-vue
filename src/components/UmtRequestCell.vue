@@ -1,5 +1,5 @@
 <template>
-    <div class="umt-component umt-challenge-cell">
+    <div class="umt-component umt-request-cell">
         <a-row type="flex" align="middle" class="row">
             <a-col :span="3">
                 <img class="team-image" :src="team.image" @error="onErrorLoadTeamImage"/>
@@ -15,23 +15,28 @@
             </a-col>
 
             <a-col>
-                <umt-button type="rounded" size="small" @click="onSubmit">DESAFIAR</umt-button>
+                <umt-button type="rounded" size="small" @click="onSubmit">{{ buttonLabel.toUpperCase() }}</umt-button>
             </a-col>
         </a-row>
     </div>
 </template>
 
 <script>
-    import UmtThemeMixin from './../mixins/theme'
-    import UmtCellMixin from './../mixins/cells'
+    import UmtThemeMixin from '../mixins/theme'
+    import UmtCellMixin from '../mixins/cells'
 
     export default {
-        name: 'UmtChallengeCell',
+        name: 'UmtRequestCell',
         mixins: [ UmtThemeMixin, UmtCellMixin ],
         props: {
             team: {
                 required: true,
                 type: Object
+            },
+
+            buttonLabel: {
+                required: true,
+                type: String
             }
         }
     }
