@@ -1,7 +1,7 @@
 <template>
-    <div class="umt-component umt-profile">
+    <div class="umt-component umt-profile" @click="onClick">
         <img :src="_profileSrc" />
-        <div class="slot-extra" :umt-position="corner">
+        <div class="slot-extra" :umt-position="corner" :umt-display="_hasChild">
             <slot name="extra"></slot>
         </div>
     </div>
@@ -50,6 +50,15 @@
                     defaultImage = 'avatar'
                 
                 return require(`./../assets/images/${this._theme}-${defaultImage}.svg`)
+            },
+
+            _hasChild() {
+                return !!this.$slots.extra
+            }
+        },
+        methods: {
+            onClick(evt) {
+                this.$emit('click', evt)
             }
         }
     }

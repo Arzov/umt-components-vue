@@ -24,5 +24,9 @@
             bottom: 0;
             left: -25%;
         }
+
+        &:not([umt-display="true"]) {
+            display: none;
+        }
     }
 }
