@@ -1,0 +1,65 @@
+.umt-radio {
+    background-color: $radio-bkg-color;
+    box-shadow: $box-shadow-dir $color-box-shadow;
+    padding: 12px;
+    display: flex;
+    margin-top: 8px;
+
+    label {
+        @extend %font-props;
+        margin: 0;
+        width: 100%;
+
+        .ant-radio {
+            display: none;
+        }
+
+        & > span:nth-child(2) {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            padding: unset;
+        }
+
+        .radio-gutter {
+            flex-grow: 1;
+        }
+
+        .radio {
+            box-sizing: border-box;
+            border: solid 1px $radio-border-color;
+            border-radius: 25px;
+            width: 0.7rem;
+            min-width: 0.7rem;
+            height: 0.7rem;
+            margin-left: 8px;
+            margin-top: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .point {
+                transition-duration: 0.3s;
+                opacity: 0;
+                background-color: $radio-checked-color;
+                border-radius: 25px;
+                width: 0.45rem;
+                height: 0.45rem;
+            }
+        }
+
+        &.ant-radio-wrapper-checked {
+            .radio .point {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.umt-radio-group {
+    margin-bottom: 20px;
+      
+    & > div {
+        width: 100%;
+    }
+}

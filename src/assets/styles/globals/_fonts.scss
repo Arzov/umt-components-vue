@@ -1,0 +1,116 @@
+@function str-replace($string, $search, $replace: "") {
+    $index: str-index($string, $search);
+
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+
+    @return $string;
+}
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+    $src: null;
+
+    $extmods: (
+        eot: "?",
+        svg: "#" + str-replace($name, " ", "_")
+    );
+
+    $formats: (
+        otf: "opentype",
+        ttf: "truetype"
+    );
+
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+@include font-face('PublicSans', './../fonts/PublicSans-Regular', $font-weight-normal, normal, ttf);
+@include font-face('PublicSans', './../fonts/PublicSans-Italic', $font-weight-normal, italic, ttf);
+
+@include font-face('PublicSans', './../fonts/PublicSans-Bold', $font-weight-bold, normal, ttf);
+@include font-face('PublicSans', './../fonts/PublicSans-BoldItalic', $font-weight-bold, italic, ttf);
+
+@include font-face('PublicSans', './../fonts/PublicSans-Black', $font-weight-black, normal, ttf);
+@include font-face('PublicSans', './../fonts/PublicSans-BlackItalic', $font-weight-black, italic, ttf);
+
+$h-sizes: (
+  1: (size: 2.5rem, weight: $font-weight-black, text-transform: none),
+  2: (size: 1rem, weight: $font-weight-bold, text-transform: uppercase),
+  3: (size: 1rem, weight: $font-weight-black, text-transform: uppercase),
+  4: (size: 0.75rem, weight: $font-weight-bold, text-transform: uppercase)
+);
+$p-size: 14px;
+
+html {
+    font-size: $p-size;
+}
+
+@mixin h-sizes {
+    @each $key, $value in $h-sizes {
+        h#{$key} {
+            color: var(--color-font);
+            font-family: 'PublicSans', sans-serif;
+            font-size: map-get($value, 'size');
+            font-weight: map-get($value, 'weight');
+            text-transform: map-get($value, 'text-transform');
+            margin-bottom: 0;
+        }
+    }
+}
+
+@include h-sizes;
+
+p,
+label,
+span {
+    @extend %font-props;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    @extend %font-props;
+    color: var(--color-anchor-link) !important;
+    user-select: none;
+
+    &:hover,
+    &:active {
+        color: var(--color-anchor-link-hover);
+    }
+}
+
+%font-props {
+    font-size: 1rem;
+    font-family: 'PublicSans', sans-serif;
+    font-weight: $font-weight-normal;
+    font-style: normal;
+    color: var(--color-font);
+
+    b {
+        font-weight: $font-weight-bold;
+    }
+}
+
+%ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+}

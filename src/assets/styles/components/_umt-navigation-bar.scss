@@ -1,0 +1,27 @@
+.umt-navigation-bar {
+    background-color: $navigation-bar-bkg-color;
+    padding: 10px;
+    box-shadow: 0 -5px 5px $color-box-shadow;;
+
+    .tab {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+
+        img {
+            width: 1.3rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .tab-name {
+            font-size: 0.75rem;
+
+            &[umt-active] {
+                color: $navigation-bar-color-active;
+            }
+        }
+    }
+}
