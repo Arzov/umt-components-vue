@@ -24,6 +24,8 @@ import { default as UmtTabs } from "./src/components/UmtTabs.vue";
 import { default as UmtRequestCell } from "./src/components/UmtRequestCell.vue";
 import { default as UmtSkeleton } from "./src/components/UmtSkeleton.vue";
 import { default as UmtPatchCell } from "./src/components/UmtPatchCell.vue";
+import { default as UmtPositionGroup } from "./src/components/UmtPositionGroup.vue";
+import { default as UmtPositionModal } from "./src/components/UmtPositionModal.vue";
 
 const components = [
     UmtThemeProvider,
@@ -43,7 +45,9 @@ const components = [
     UmtTabs,
     UmtRequestCell,
     UmtSkeleton,
-    UmtPatchCell
+    UmtPatchCell,
+    UmtPositionGroup,
+    UmtPositionModal
 ]
 
 const UmtComponents = {
@@ -86,7 +90,9 @@ export {
     UmtTabs,
     UmtRequestCell,
     UmtSkeleton,
-    UmtPatchCell
+    UmtPatchCell,
+    UmtPositionGroup,
+    UmtPositionModal
 };
 
 export default UmtComponents;
