@@ -1,6 +1,6 @@
 {
-  "name": "umt-components",
-  "version": "0.1.0",
+  "name": "@arzov/umt-components",
+  "version": "1.0.0",
   "private": true,
   "main": "dist/umt-components.umd.min.js",
   "files": [
@@ -24,7 +24,8 @@
     "sass": "sass --watch src/assets/styles:src/assets/styles --style=compressed --no-source-map",
     "build": "vue-cli-service build --target lib --name umt-components ./index.js",
     "lint": "vue-cli-service lint",
-    "link": "yarn link"
+    "link": "yarn link",
+    "push": "sh publish.sh"
   },
   "dependencies": {
     "ant-design-vue": "^1.7.2",
