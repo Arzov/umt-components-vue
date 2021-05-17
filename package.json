@@ -1,6 +1,6 @@
 {
   "name": "@arzov/umt-components",
-  "version": "1.0.9",
+  "version": "1.0.12",
   "private": false,
   "license": "MIT",
   "main": "dist/umt-components.umd.min.js",
