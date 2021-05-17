@@ -2,6 +2,7 @@
   "name": "@arzov/umt-components",
   "version": "1.0.7",
   "private": false,
+  "license": "MIT",
   "main": "dist/umt-components.umd.min.js",
   "files": [
     "dist/umt-components.umd.min.js",
