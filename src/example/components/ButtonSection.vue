@@ -14,6 +14,11 @@
                     solicitar
                 </umt-button>
             </div>
+
+            <div>
+                <p class="sec">Icon: lm-facebook</p>
+                <umt-button icon="lm-facebook" />
+            </div>
         </div>
     </section-card>
 </template>
