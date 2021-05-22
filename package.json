@@ -1,13 +1,13 @@
 {
   "name": "@arzov/umt-components",
-  "version": "1.0.14",
+  "version": "1.1.0-0",
   "private": false,
   "license": "MIT",
   "main": "dist/umt-components.umd.min.js",
+  "unpkg": "dist/umt-components.umd.min.js",
+  "jsdelivr": "dist/umt-components.umd.min.js",
   "files": [
-    "dist/umt-components.umd.min.js",
-    "src/assets/styles/styles.css",
-    "src/assets/fonts",
+    "dist/*",
     "*.md",
     "LICENSE"
   ],

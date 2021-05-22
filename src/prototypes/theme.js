@@ -1,5 +1,5 @@
 export default (Vue, setup) => {
-    if (setup.store) {
+    if (setup && setup.store) {
         const umtComponentsStore = {
             namespaced: true,
             state: {
