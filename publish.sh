@@ -3,6 +3,6 @@ vue-cli-service build --target lib --name umt-components ./index.js;
 git add dist/;
 git commit -m "dist updated";
 
-yarn unlink umt-components;
+yarn config set version-sign-git-tag true;
 
 np --skip-2fa --no-publish;
