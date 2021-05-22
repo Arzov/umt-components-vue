@@ -4,6 +4,7 @@ node_modules
 !/dist/fonts
 !/dist/img
 !/dist/umt-components.umd.min.js
+!/dist/umt-components.umd.min.js.map
 !/dist/umt-components.css
 
 

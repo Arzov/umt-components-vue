@@ -1,6 +1,6 @@
 {
   "name": "@arzov/umt-components",
-  "version": "1.1.0-1",
+  "version": "1.1.0-2",
   "private": false,
   "license": "MIT",
   "main": "dist/umt-components.umd.min.js",
@@ -44,7 +44,8 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-loader": "^15.9.7",
+    "vue-template-compiler": "^2.6.12"
   },
   "eslintConfig": {
     "root": true,
