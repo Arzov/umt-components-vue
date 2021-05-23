@@ -49,7 +49,7 @@
                 else
                     defaultImage = 'avatar'
                 
-                return require(`/public/images/${this._theme}-${defaultImage}.svg`)
+                return require(`@/assets/images/${this._theme}-${defaultImage}.svg`)
             },
 
             _hasChild() {

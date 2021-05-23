@@ -16,7 +16,7 @@
             </a-col>
 
             <a-col :span="2" class="transfer-icon">
-                <img :src="require(`/public/images/${_theme}-transfer.svg`)"/>
+                <img :src="require(`@/assets/images/${_theme}-transfer.svg`)"/>
             </a-col>
 
             <a-col :span="3">
