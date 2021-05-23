@@ -86,11 +86,11 @@
 
             _srcEye() {
                 let icon = this.isHide ? 'eye' : 'eye-slash'
-                return require(`@/assets/images/${this._theme}-${icon}.svg`)
+                return require(`./../../public/images/${this._theme}-${icon}.svg`)
             },
 
             _srcSearch() {
-                return require(`@/assets/images/${this._theme}-search.svg`)
+                return require(`./../../public/images/${this._theme}-search.svg`)
             }
         },
         methods: {
