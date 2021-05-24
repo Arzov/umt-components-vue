@@ -1,5 +1,5 @@
 import Antd from 'ant-design-vue';
-import './node_modules/ant-design-vue/dist/antd.css';
+import 'ant-design-vue/dist/antd.css';
 import './src/assets/styles/styles.css';
 
 // PROTOTYPES
