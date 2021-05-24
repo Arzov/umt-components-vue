@@ -1,11 +1,6 @@
 .DS_Store
 node_modules
-/dist/*
-!/dist/fonts
-!/dist/img
-!/dist/umt-components.umd.min.js
-!/dist/umt-components.umd.min.js.map
-!/dist/umt-components.css
+!/dist/*
 
 
 # local env files
