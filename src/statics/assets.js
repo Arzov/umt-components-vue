@@ -1,3 +1,3 @@
 export function getImgPath(file) {
-    return require(`./../../public/images/${file.toLowerCase()}`)
+    return require(`public/images/${file.toLowerCase()}`)
 }
