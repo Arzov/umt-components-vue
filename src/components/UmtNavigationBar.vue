@@ -2,8 +2,8 @@
     <div class="umt-component umt-navigation-bar">
         <a-row type="flex" justify="space-around">
             <a-col v-for="tab in tabs" :key="tab.key" class="tab">
-                <img v-if="isActive(tab.key)" :src="require(`./../../public/images/${_theme}-${tab.icon}-active.svg`)" />
-                <img v-else :src="require(`./../../public/images/${_theme}-${tab.icon}.svg`)" />
+                <img v-if="isActive(tab.key)" :src="activeIcon(tab.icon)" />
+                <img v-else :src="icon(tab.icon)" />
                 <span class="tab-name" :umt-active="isActive(tab.key)">{{ tab.name }}</span>
             </a-col>
         </a-row>
@@ -12,6 +12,7 @@
 
 <script>
     import UmtThemeMixin from './../mixins/theme' 
+    import { getImgPath } from '../statics/assets' 
 
     export default {
         name: 'UmtNavigationBar',
@@ -22,12 +23,6 @@
                 type: Array
             },
 
-            theme: {
-                required: false,
-                type: String,
-                default: undefined
-            },
-
             activeTab: {
                 required: true,
                 type: String
@@ -36,6 +31,14 @@
         methods: {
             isActive(key) {
                 return this.activeTab === key
+            },
+            
+            icon(name) {
+                return getImgPath(`${this._theme}-${name}-active.svg`)
+            },
+
+            activeIcon(name) {
+                return getImgPath(`${this._theme}-${name}.svg`)
             }
         }
     }

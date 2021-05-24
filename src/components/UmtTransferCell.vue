@@ -16,7 +16,7 @@
             </a-col>
 
             <a-col :span="2" class="transfer-icon">
-                <img :src="require(`./../../public/images/${_theme}-transfer.svg`)"/>
+                <img :src="_icon"/>
             </a-col>
 
             <a-col :span="3">
@@ -29,6 +29,7 @@
 <script>
     import UmtThemeMixin from './../mixins/theme' 
     import UmtCellMixin from './../mixins/cells' 
+    import { getImgPath } from '../statics/assets' 
     import moment from 'moment'
 
     export default {
@@ -49,19 +50,14 @@
                 required: true,
                 type: undefined
             },
-
-            /*
-             * @Obsolete
-             */
-            theme: {
-                required: false,
-                type: String,
-                default: undefined
-            }
         },
         computed: {
             _date() {
                 return moment(this.date).format('DD/MM')
+            },
+
+            _icon() {
+                return getImgPath(`${this._theme}-transfer.svg`)
             }
         }
     }
