@@ -1,6 +1,6 @@
 {
   "name": "@arzov/umt-components",
-  "version": "1.1.0-15",
+  "version": "1.1.0-16",
   "private": false,
   "license": "MIT",
   "main": "dist/umt-components.umd.min.js",
@@ -13,7 +13,6 @@
     "src/mixins/*",
     "src/prototypes/*",
     "src/statics/*",
-    "public/images/*",
     "index.js",
     "*.md",
     "LICENSE"
@@ -36,6 +35,7 @@
     "push": "sh publish.sh"
   },
   "dependencies": {
+    "@arzov/umt-icons": "1.0.0",
     "ant-design-vue": "^1.7.2",
     "chroma-js": "^2.1.0",
     "core-js": "^3.6.5",
