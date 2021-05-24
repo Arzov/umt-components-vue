@@ -9,6 +9,7 @@
 
 <script>
     import UmtThemeMixin from './../mixins/theme' 
+    import { getImgPath } from '../statics/assets' 
 
     export default {
         name: 'UmtProfile',
@@ -17,12 +18,6 @@
             profileSrc: {
                 required: false,
                 type: undefined,
-                default: undefined
-            },
-
-            theme: {
-                required: false,
-                type: String,
                 default: undefined
             },
 
@@ -49,7 +44,7 @@
                 else
                     defaultImage = 'avatar'
                 
-                return require(`./../../public/images/${this._theme}-${defaultImage}.svg`)
+                return getImgPath(`${this._theme}-${defaultImage}.svg`)
             },
 
             _hasChild() {

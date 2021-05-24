@@ -16,6 +16,7 @@
 
 <script>
     import UmtThemeMixin from './../mixins/theme' 
+    import { getImgPath } from '../statics/assets' 
 
     const TYPES = [ 'text', 'email', 'tel', 'password', 'number', 'search' ]
 
@@ -86,11 +87,11 @@
 
             _srcEye() {
                 let icon = this.isHide ? 'eye' : 'eye-slash'
-                return require(`./../../public/images/${this._theme}-${icon}.svg`)
+                return getImgPath(`${this._theme}-${icon}.svg`)
             },
 
             _srcSearch() {
-                return require(`./../../public/images/${this._theme}-search.svg`)
+                return getImgPath(`${this._theme}-search.svg`)
             }
         },
         methods: {

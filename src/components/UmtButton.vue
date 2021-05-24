@@ -1,6 +1,6 @@
 <template>
     <div ref="button" class="umt-component umt-button" :umt-type="type" :umt-size="size" :umt-icon="icon != undefined" :umt-disabled="disabled" @click="onClick" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
-        <img v-if="icon" :src="require(`./../../public/images/${icon.toLowerCase()}.svg`)">
+        <img v-if="icon" :src="_srcImage">
         <span>
             <slot></slot>
         </span>
@@ -10,6 +10,7 @@
 <script>
     import chroma from 'chroma-js'
     import { EasingFunctions } from './../assets/utils/easing'
+    import { getImgPath } from '../statics/assets' 
 
     export default {
         name: 'UmtButton',
@@ -81,6 +82,10 @@
             }
         },
         computed: {
+            _srcImage() {
+                return getImgPath(`${this.icon.toLowerCase()}.svg`)
+            },
+
             _colors() {
                 let iconRightColor = '--button-bkg-color-right-alt'
 
