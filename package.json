@@ -27,7 +27,7 @@
   },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "sass": "sass --watch src/assets/styles:src/assets/styles --style=compressed --sourcemap=none",
+    "sass": "sass --watch src/assets/styles:src/assets/styles --style=compressed",
     "build": "vue-cli-service build --target lib --name umt-components ./index.js",
     "lint": "vue-cli-service lint",
     "link": "yarn link",
