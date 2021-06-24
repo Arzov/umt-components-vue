@@ -27,14 +27,14 @@
   },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "sass": "sass --watch src/assets/styles:src/assets/styles --style=compressed --no-source-map",
+    "sass": "sass --watch src/assets/styles:src/assets/styles --style=compressed",
     "build": "vue-cli-service build --target lib --name umt-components ./index.js",
     "lint": "vue-cli-service lint",
     "link": "yarn link",
     "push": "sh publish.sh"
   },
   "dependencies": {
-    "@arzov/umt-icons": "1.0.0",
+    "@arzov/umt-icons": "1.0.0-1",
     "ant-design-vue": "^1.7.2",
     "chroma-js": "^2.1.0",
     "core-js": "^3.6.5",

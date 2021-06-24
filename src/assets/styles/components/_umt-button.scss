@@ -1,56 +1,77 @@
 .umt-button {
+
     @extend %font-props;
-    text-transform: uppercase;
-    text-align: center;
-    transition-duration: 0.3s;
-    user-select: none;
-    cursor: pointer;
+
+    text-transform      : uppercase;
+    text-align          : center;
+    transition-duration : 0.3s;
+    user-select         : none;
+    cursor              : pointer;
 
     span {
         font-size: inherit;
     }
 
-    // Styles
+
+    // styles
+
     &[umt-type='primary'] {
+
         span {
-            color: $button-font-color;
-            font-style: italic;
+            color       : $button-font-color;
+            font-style  : italic;
+            display     : block;
+            transform   : skewx(15deg);
         }
-        
-        font-style : italic;
-        background: linear-gradient(45deg, $button-bkg-color-left, $button-bkg-color-right);
-        padding: 12px;
+
+        font-style  : italic;
+        background  : linear-gradient(45deg, $button-bkg-color-left, $button-bkg-color-right);
+        padding     : 1rem;
+        transform   : skewx(-15deg);
+
+    }
+
+    &[umt-type='icon'] {
+
+        padding     : 0;
+        display     : inline-block;
+        background  : linear-gradient(45deg, $button-bkg-color-left-second, $button-bkg-color-right-second);
+        transform   : skewx(-15deg);
+
+        img {
+            height: 3rem;
+            transform   : skewx(15deg);
+        }
+
     }
 
     &[umt-type='rounded'] {
+
         span {
             color: inherit;
         }
 
-        display: inline-block;
-        border: solid 2px $button-border-color;
-        border-radius: 25px;
-        padding: 4px 15px;
-        font-weight: $font-weight-bold;
+        display         : inline-block;
+        border          : solid 2px $button-border-color;
+        border-radius   : 25px;
+        padding         : 4px 15px;
+        font-weight     : $font-weight-bold;
+
     }
+
+
+    // props
 
     &[umt-disabled=true] {
-        pointer-events: none;
-        opacity: 0.5;
+        pointer-events  : none;
+        opacity         : 0.5;
     }
 
-    // Sizes
+
+    // sizes
+
     &[umt-size='small'] {
         font-size: 0.8rem;
     }
 
-    // With Icon
-    &[umt-icon] {
-        padding: 0;
-        display: inline-block;
-
-        img {
-            height: 3rem;
-        }
-    }
 }
