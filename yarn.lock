@@ -22,10 +22,10 @@
   resolved "https://registry.yarnpkg.com/@ant-design/icons/-/icons-2.1.1.tgz#7b9c08dffd4f5d41db667d9dbe5e0107d0bd9a4a"
   integrity sha512-jCH+k2Vjlno4YWl6g535nHR09PwCEmTBKAG6VqF+rhkrSPRLfgpU2maagwbZPLjaHuU5Jd1DFQ2KJpQuI6uG8w==
 
-"@arzov/umt-icons@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@arzov/umt-icons/-/umt-icons-1.0.0.tgz#c46a98b2b47dbf3de49b7b49886090dca9542de5"
-  integrity sha512-RoYbqbApo28ym+w47WwolI1SLz8BZAdmW/4fRC6NG6URGGMRiSOPeTI0hxB6POz+0OFbw0WgfZX6/9fMUpi8kA==
+"@arzov/umt-icons@1.0.0-1":
+  version "1.0.0-1"
+  resolved "https://registry.yarnpkg.com/@arzov/umt-icons/-/umt-icons-1.0.0-1.tgz#4af42a10ac16ed1f131dffec570f15439248c634"
+  integrity sha512-XUgYwO4CgD0MOqbd6Fv3cBEEdHoJz07WPm1l3KyyIvy/qO0onvqRjEJaGbqdWztwR4eAVslN7yGd6KJGF4fqRA==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.12.11":
   version "7.12.11"
