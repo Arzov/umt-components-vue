@@ -1,11 +1,12 @@
 {
   "name": "@arzov/umt-components",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": false,
   "license": "MIT",
   "main": "index.js",
   "files": [
     "src/**/*.vue",
+    "src/assets/img/*",
     "src/assets/fonts/*",
     "src/assets/utils/*",
     "src/assets/styles/*.css",
