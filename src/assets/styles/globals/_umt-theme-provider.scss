@@ -10,11 +10,13 @@
     @if not map-has-key($variable, 'box-shadow-dir') { @error "Falta variable color 'box-shadow-dir'."; }
     @if not map-has-key($variable, 'anchor-link') { @error "Falta variable color 'anchor-link'."; }
     @if not map-has-key($variable, 'anchor-link-hover') { @error "Falta variable color 'anchor-link-hover'."; }
-    @if not map-has-key($variable, 'button-bkg-color-left') { @error "Falta variable color 'button-bkg-color-left'."; }
-    @if not map-has-key($variable, 'button-bkg-color-right') { @error "Falta variable color 'button-bkg-color-right'."; }
+    @if not map-has-key($variable, 'button-bkg-color-left-1') { @error "Falta variable color 'button-bkg-color-left-1'."; }
+    @if not map-has-key($variable, 'button-bkg-color-left-2') { @error "Falta variable color 'button-bkg-color-left-2'."; }
+    @if not map-has-key($variable, 'button-bkg-color-left-3') { @error "Falta variable color 'button-bkg-color-left-3'."; }
+    @if not map-has-key($variable, 'button-bkg-color-right-1') { @error "Falta variable color 'button-bkg-color-right-1'."; }
+    @if not map-has-key($variable, 'button-bkg-color-right-2') { @error "Falta variable color 'button-bkg-color-right-2'."; }
+    @if not map-has-key($variable, 'button-bkg-color-right-3') { @error "Falta variable color 'button-bkg-color-right-3'."; }
     @if not map-has-key($variable, 'button-bkg-color-right-alt') { @error "Falta variable color 'button-bkg-color-right-alt'."; }
-    @if not map-has-key($variable, 'button-bkg-color-left-second') { @error "Falta variable color 'button-bkg-color-left-second'."; }
-    @if not map-has-key($variable, 'button-bkg-color-right-second') { @error "Falta variable color 'button-bkg-color-right-second'."; }
     @if not map-has-key($variable, 'button-bkg-color-hover') { @error "Falta variable color 'button-bkg-color-hover'."; }
     @if not map-has-key($variable, 'button-font-color') { @error "Falta variable color 'button-font-color'."; }
     @if not map-has-key($variable, 'button-border-color') { @error "Falta variable color 'button-border-color'."; }
@@ -66,11 +68,13 @@
         --box-shadow-dir: #{map-get($variable, 'box-shadow-dir')};
         --color-anchor-link: #{map-get($variable, 'anchor-link')};
         --color-anchor-link-hover: #{map-get($variable, 'anchor-link-hover')};
-        --button-bkg-color-left: #{map-get($variable, 'button-bkg-color-left')};
-        --button-bkg-color-right: #{map-get($variable, 'button-bkg-color-right')};
+        --button-bkg-color-left-1: #{map-get($variable, 'button-bkg-color-left-1')};
+        --button-bkg-color-left-2: #{map-get($variable, 'button-bkg-color-left-2')};
+        --button-bkg-color-left-3: #{map-get($variable, 'button-bkg-color-left-3')};
+        --button-bkg-color-right-1: #{map-get($variable, 'button-bkg-color-right-1')};
+        --button-bkg-color-right-2: #{map-get($variable, 'button-bkg-color-right-2')};
+        --button-bkg-color-right-3: #{map-get($variable, 'button-bkg-color-right-3')};
         --button-bkg-color-right-alt: #{map-get($variable, 'button-bkg-color-right-alt')};
-        --button-bkg-color-left-second: #{map-get($variable, 'button-bkg-color-left-second')};
-        --button-bkg-color-right-second: #{map-get($variable, 'button-bkg-color-right-second')};
         --button-bkg-color-hover: #{map-get($variable, 'button-bkg-color-hover')};
         --button-font-color: #{map-get($variable, 'button-font-color')};
         --button-border-color: #{map-get($variable, 'button-border-color')};
@@ -128,11 +132,13 @@ $color-box-shadow: var(--color-box-shadow);
 $box-shadow-dir: var(--box-shadow-dir);
 $color-anchor-link: var(--color-anchor-link);
 $color-anchor-link-hover: var(--color-anchor-link-hover);
-$button-bkg-color-left: var(--button-bkg-color-left);
-$button-bkg-color-right: var(--button-bkg-color-right);
+$button-bkg-color-left-1: var(--button-bkg-color-left-1);
+$button-bkg-color-left-2: var(--button-bkg-color-left-2);
+$button-bkg-color-left-3: var(--button-bkg-color-left-3);
+$button-bkg-color-right-1: var(--button-bkg-color-right-1);
+$button-bkg-color-right-2: var(--button-bkg-color-right-2);
+$button-bkg-color-right-3: var(--button-bkg-color-right-3);
 $button-bkg-color-right-alt: var(--button-bkg-color-right-alt);
-$button-bkg-color-left-second: var(--button-bkg-color-left-second);
-$button-bkg-color-right-second: var(--button-bkg-color-right-second);
 $button-bkg-color-hover: var(--button-bkg-color-hover);
 $button-font-color: var(--button-font-color);
 $button-border-color: var(--button-border-color);

@@ -5,6 +5,8 @@
         class="umt-component umt-button"
         :umt-type="type"
         :umt-size="size"
+        :umt-color="color"
+        :umt-shape="shape"
         :umt-disabled="disabled"
         @click="onClick"
         @mouseenter="onMouseEnter"
@@ -46,6 +48,18 @@
                 required    : false,
                 type        : String,
                 default     : 'normal'
+            },
+
+            shape: {
+                required    : false,
+                type        : String,
+                default     : 'diagonal'
+            },
+
+            color: {
+                required    : false,
+                type        : String,
+                default     : 'purple'
             },
 
             colors: {
@@ -98,17 +112,17 @@
                 this.currentTheme = themeElement.getAttribute('umt-theme')
                 this.endColor = style.getPropertyValue(this._colors.hoverColor)
 
-                if (this.type == 'primary') {
-                    this.currentColorLeft = style.getPropertyValue(this._colors.leftColor)
-                    this.currentColorRight = style.getPropertyValue(this._colors.rightColor)
-                    this.initColorLeft = style.getPropertyValue(this._colors.leftColor)
-                    this.initColorRight = style.getPropertyValue(this._colors.rightColor)
-                }
+                // if (this.type == 'primary') {
+                //     this.currentColorLeft = style.getPropertyValue(this._colors.leftColor)
+                //     this.currentColorRight = style.getPropertyValue(this._colors.rightColor)
+                //     this.initColorLeft = style.getPropertyValue(this._colors.leftColor)
+                //     this.initColorRight = style.getPropertyValue(this._colors.rightColor)
+                // }
 
-                else if (this.type == 'rounded') {
-                    this.currentColorBorder = style.getPropertyValue(this._colors.borderColor)
-                    this.initColorBorder = style.getPropertyValue(this._colors.borderColor)
-                }
+                // else if (this.type == 'rounded') {
+                //     this.currentColorBorder = style.getPropertyValue(this._colors.borderColor)
+                //     this.initColorBorder = style.getPropertyValue(this._colors.borderColor)
+                // }
 
             }
 
@@ -127,8 +141,8 @@
                 let iconRightColor = '--button-bkg-color-right-alt'
 
                 return {
-                    leftColor   : '--button-bkg-color-left',
-                    rightColor  : this.icon ? iconRightColor : '--button-bkg-color-right',
+                    leftColor   : '--button-bkg-color-left-1',
+                    rightColor  : this.icon ? iconRightColor : '--button-bkg-color-right-1',
                     borderColor : '--button-border-color',
                     hoverColor  : '--button-bkg-color-hover',
                     ...this.colors
@@ -261,6 +275,7 @@
 
                 })
             },
+
 
             getCssValuePrefix() {
 
