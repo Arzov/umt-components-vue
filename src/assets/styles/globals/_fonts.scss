@@ -62,7 +62,7 @@ html {
 @mixin h-sizes {
     @each $key, $value in $h-sizes {
         h#{$key} {
-            color: var(--color-font);
+            color: var(--color-font-title);
             font-family: 'PublicSans', sans-serif;
             font-size: map-get($value, 'size');
             font-weight: map-get($value, 'weight');

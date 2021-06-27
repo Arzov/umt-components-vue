@@ -10,6 +10,7 @@
 
     @if not map-has-key($variable, 'font') { @error "Falta variable color 'font'."; }
     @if not map-has-key($variable, 'font-rgb') { @error "Falta variable color 'font-rgb'."; }
+    @if not map-has-key($variable, 'font-title') { @error "Falta variable color 'font-title'."; }
     @if not map-has-key($variable, 'placeholder') { @error "Falta variable color 'placeholder'."; }
     @if not map-has-key($variable, 'background') { @error "Falta variable color 'background'."; }
     @if not map-has-key($variable, 'box-shadow') { @error "Falta variable color 'box-shadow'."; }
@@ -137,6 +138,7 @@
 
         --color-font: #{map-get($variable, 'font')};
         --color-font-rgb: #{map-get($variable, 'font-rgb')};
+        --color-font-title: #{map-get($variable, 'font-title')};
         --color-placeholder: #{map-get($variable, 'placeholder')};
         --color-background: #{map-get($variable, 'background')};
         --color-box-shadow: #{map-get($variable, 'box-shadow')};
@@ -270,6 +272,7 @@
 
 $color-font: var(--color-font);
 $color-font-rgb: var(--color-font-rgb);
+$color-font-title: var(--color-font-title);
 $color-placeholder: var(--color-placeholder);
 $color-background: var(--color-background);
 $color-box-shadow: var(--color-box-shadow);
