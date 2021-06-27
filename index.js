@@ -28,6 +28,7 @@ import { default as UmtPositionGroup } from "./src/components/UmtPositionGroup.v
 import { default as UmtPositionModal } from "./src/components/UmtPositionModal.vue";
 import { default as UmtDatePicker } from "./src/components/UmtDatePicker.vue";
 import { default as UmtMultiSelector } from "./src/components/UmtMultiSelector.vue";
+import { default as UmtRadioSelector } from "./src/components/UmtRadioSelector.vue";
 
 const components = [
     UmtThemeProvider,
@@ -51,7 +52,8 @@ const components = [
     UmtPositionGroup,
     UmtPositionModal,
     UmtDatePicker,
-    UmtMultiSelector
+    UmtMultiSelector,
+    UmtRadioSelector
 ]
 
 const UmtComponents = {
@@ -98,7 +100,8 @@ export {
     UmtPositionGroup,
     UmtPositionModal,
     UmtDatePicker,
-    UmtMultiSelector
+    UmtMultiSelector,
+    UmtRadioSelector
 };
 
 export default UmtComponents;

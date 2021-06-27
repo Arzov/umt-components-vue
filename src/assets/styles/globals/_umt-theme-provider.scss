@@ -35,16 +35,21 @@
     @if not map-has-key($variable, 'date-picker-bkg-color-hover') { @error "Falta variable color 'date-picker-bkg-color-hover'."; }
 
 
-    @if not map-has-key($variable, 'radio-bkg-color') { @error "Falta variable color 'radio-bkg-color'."; }
-    @if not map-has-key($variable, 'radio-font-color') { @error "Falta variable color 'radio-font-color'."; }
-    @if not map-has-key($variable, 'radio-border-color') { @error "Falta variable color 'radio-border-color'."; }
-    @if not map-has-key($variable, 'radio-checked-color') { @error "Falta variable color 'radio-checked-color'."; }
-
-
     @if not map-has-key($variable, 'multi-selector-bkg-color') { @error "Falta variable color 'multi-selector-bkg-color'."; }
     @if not map-has-key($variable, 'multi-selector-bkg-color-left-1') { @error "Falta variable color 'multi-selector-bkg-color-left-1'."; }
     @if not map-has-key($variable, 'multi-selector-bkg-color-right-1') { @error "Falta variable color 'multi-selector-bkg-color-right-1'."; }
     @if not map-has-key($variable, 'multi-selector-font-color') { @error "Falta variable color 'multi-selector-font-color'."; }
+
+
+    @if not map-has-key($variable, 'radio-selector-bkg-color-1') { @error "Falta variable color 'radio-selector-bkg-color-1'."; }
+    @if not map-has-key($variable, 'radio-selector-bkg-color-2') { @error "Falta variable color 'radio-selector-bkg-color-2'."; }
+    @if not map-has-key($variable, 'radio-selector-font-color') { @error "Falta variable color 'radio-selector-font-color'."; }
+
+
+    @if not map-has-key($variable, 'radio-bkg-color') { @error "Falta variable color 'radio-bkg-color'."; }
+    @if not map-has-key($variable, 'radio-font-color') { @error "Falta variable color 'radio-font-color'."; }
+    @if not map-has-key($variable, 'radio-border-color') { @error "Falta variable color 'radio-border-color'."; }
+    @if not map-has-key($variable, 'radio-checked-color') { @error "Falta variable color 'radio-checked-color'."; }
 
 
     @if not map-has-key($variable, 'code-input-border-color') { @error "Falta variable color 'code-input-border-color'."; }
@@ -139,6 +144,11 @@
         --multi-selector-bkg-color-left-1: #{map-get($variable, 'multi-selector-bkg-color-left-1')};
         --multi-selector-bkg-color-right-1: #{map-get($variable, 'multi-selector-bkg-color-right-1')};
         --multi-selector-font-color: #{map-get($variable, 'multi-selector-font-color')};
+
+
+        --radio-selector-bkg-color-1: #{map-get($variable, 'radio-selector-bkg-color-1')};
+        --radio-selector-bkg-color-2: #{map-get($variable, 'radio-selector-bkg-color-2')};
+        --radio-selector-font-color: #{map-get($variable, 'radio-selector-font-color')};
 
 
         --radio-bkg-color: #{map-get($variable, 'radio-bkg-color')};
@@ -245,6 +255,11 @@ $multi-selector-bkg-color: var(--multi-selector-bkg-color);
 $multi-selector-bkg-color-left-1: var(--multi-selector-bkg-color-left-1);
 $multi-selector-bkg-color-right-1: var(--multi-selector-bkg-color-right-1);
 $multi-selector-font-color: var(--multi-selector-font-color);
+
+
+$radio-selector-bkg-color-1: var(--radio-selector-bkg-color-1);
+$radio-selector-bkg-color-2: var(--radio-selector-bkg-color-2);
+$radio-selector-font-color: var(--radio-selector-font-color);
 
 
 $radio-bkg-color: var(--radio-bkg-color);

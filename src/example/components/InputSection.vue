@@ -54,6 +54,19 @@
                 />
             </div>
 
+            <p><i>UmtRadioSelector</i></p>
+
+            <div>
+                <p class="sec"></p>
+                <umt-radio-selector
+                    v-model="radioSelectorValue"
+                    :options="[
+                        { key: 'Masculino', value     : 'M' },
+                        { key: 'Femenino', value     : 'F' }
+                    ]"
+                />
+            </div>
+
         </div>
 
     </section-card>
@@ -90,7 +103,9 @@
                     year    : undefined
                 },
 
-                multiSelectorValue: ['5v5']
+                multiSelectorValue: ['5v5'],
+
+                radioSelectorValue: 'M'
 
             }
         },
