@@ -61,10 +61,17 @@
                 <umt-radio-selector
                     v-model="radioSelectorValue"
                     :options="[
-                        { key: 'Masculino', value     : 'M' },
-                        { key: 'Femenino', value     : 'F' }
+                        { key: 'Masculino', value   : 'M' },
+                        { key: 'Femenino', value    : 'F' }
                     ]"
                 />
+            </div>
+
+            <p><i>UmtRange</i></p>
+
+            <div>
+                <p class="sec"></p>
+                <umt-range v-model="rangeValue" label="RANGO DE EDAD" :min="18" :max="60" />
             </div>
 
         </div>
@@ -103,9 +110,11 @@
                     year    : undefined
                 },
 
-                multiSelectorValue: ['5v5'],
+                multiSelectorValue  : ['5v5'],
 
-                radioSelectorValue: 'M'
+                radioSelectorValue  : 'M',
+
+                rangeValue          : [18, 22]
 
             }
         },
