@@ -1,8 +1,12 @@
 @use "sass:map";
 
+
 @mixin setTheme($config, $variable) {
 
-    // warnings
+    // WARNINGS
+
+
+    // global
 
     @if not map-has-key($variable, 'font') { @error "Falta variable color 'font'."; }
     @if not map-has-key($variable, 'font-rgb') { @error "Falta variable color 'font-rgb'."; }
@@ -13,6 +17,8 @@
     @if not map-has-key($variable, 'anchor-link') { @error "Falta variable color 'anchor-link'."; }
     @if not map-has-key($variable, 'anchor-link-hover') { @error "Falta variable color 'anchor-link-hover'."; }
 
+
+    // button
 
     @if not map-has-key($variable, 'button-bkg-color-left-1') { @error "Falta variable color 'button-bkg-color-left-1'."; }
     @if not map-has-key($variable, 'button-bkg-color-left-2') { @error "Falta variable color 'button-bkg-color-left-2'."; }
@@ -26,14 +32,20 @@
     @if not map-has-key($variable, 'button-border-color') { @error "Falta variable color 'button-border-color'."; }
 
 
+    // input
+
     @if not map-has-key($variable, 'input-bkg-color') { @error "Falta variable color 'input-bkg-color'."; }
     @if not map-has-key($variable, 'input-font-color') { @error "Falta variable color 'input-font-color'."; }
 
+
+    // date picker
 
     @if not map-has-key($variable, 'date-picker-bkg-color') { @error "Falta variable color 'date-picker-bkg-color'."; }
     @if not map-has-key($variable, 'date-picker-font-color') { @error "Falta variable color 'date-picker-font-color'."; }
     @if not map-has-key($variable, 'date-picker-bkg-color-hover') { @error "Falta variable color 'date-picker-bkg-color-hover'."; }
 
+
+    // multi selector
 
     @if not map-has-key($variable, 'multi-selector-bkg-color') { @error "Falta variable color 'multi-selector-bkg-color'."; }
     @if not map-has-key($variable, 'multi-selector-bkg-color-left-1') { @error "Falta variable color 'multi-selector-bkg-color-left-1'."; }
@@ -41,10 +53,14 @@
     @if not map-has-key($variable, 'multi-selector-font-color') { @error "Falta variable color 'multi-selector-font-color'."; }
 
 
+    // radio selector
+
     @if not map-has-key($variable, 'radio-selector-bkg-color-1') { @error "Falta variable color 'radio-selector-bkg-color-1'."; }
     @if not map-has-key($variable, 'radio-selector-bkg-color-2') { @error "Falta variable color 'radio-selector-bkg-color-2'."; }
     @if not map-has-key($variable, 'radio-selector-font-color') { @error "Falta variable color 'radio-selector-font-color'."; }
 
+
+    // radio
 
     @if not map-has-key($variable, 'radio-bkg-color') { @error "Falta variable color 'radio-bkg-color'."; }
     @if not map-has-key($variable, 'radio-font-color') { @error "Falta variable color 'radio-font-color'."; }
@@ -52,10 +68,14 @@
     @if not map-has-key($variable, 'radio-checked-color') { @error "Falta variable color 'radio-checked-color'."; }
 
 
+    // code input
+
     @if not map-has-key($variable, 'code-input-border-color') { @error "Falta variable color 'code-input-border-color'."; }
     @if not map-has-key($variable, 'code-input-font-color') { @error "Falta variable color 'code-input-font-color'."; }
     @if not map-has-key($variable, 'code-input-border-focus-color') { @error "Falta variable color 'code-input-border-focus-color'."; }
 
+
+    // position badge
 
     @if not map-has-key($variable, 'pos-po-bkg-color') { @error "Falta variable color 'pos-po-bkg-color'."; }
     @if not map-has-key($variable, 'pos-dfi-bkg-color') { @error "Falta variable color 'pos-dfi-bkg-color'."; }
@@ -69,45 +89,65 @@
     @if not map-has-key($variable, 'pos-dd-bkg-color') { @error "Falta variable color 'pos-dd-bkg-color'."; }
 
 
+    // modal
+
     @if not map-has-key($variable, 'modal-bkg-color') { @error "Falta variable color 'modal-bkg-color'."; }
 
+
+    // range
 
     @if not map-has-key($variable, 'range-track-color') { @error "Falta variable color 'range-track-color'."; }
     @if not map-has-key($variable, 'range-step-color') { @error "Falta variable color 'range-step-color'."; }
     @if not map-has-key($variable, 'range-handle-color') { @error "Falta variable color 'range-handle-color'."; }
 
 
+    // navigation
+
     @if not map-has-key($variable, 'navigation-bar-bkg-color') { @error "Falta variable color 'navigation-bar-bkg-color'."; }
     @if not map-has-key($variable, 'navigation-bar-color-active') { @error "Falta variable color 'navigation-bar-color-active'."; }
 
 
+    // transfer cell
+
     @if not map-has-key($variable, 'transfer-bkg-color') { @error "Falta variable color 'transfer-bkg-color'."; }
 
+
+    // animation
 
     @if not map-has-key($variable, 'animation-bkg-color-1') { @error "Falta variable color 'animation-bkg-color-1'."; }
     @if not map-has-key($variable, 'animation-bkg-color-2') { @error "Falta variable color 'animation-bkg-color-2'."; }
 
 
+    // slide
+
     @if not map-has-key($variable, 'navigator-pin-color') { @error "Falta variable color 'navigator-pin-color'."; }
 
+
+    // challenge cell
 
     @if not map-has-key($variable, 'challenge-cell-bkg-color') { @error "Falta variable color 'challenge-cell-bkg-color'."; }
 
 
+    // skeleton
+
     @if not map-has-key($variable, 'skeleton-bkg-color') { @error "Falta variable color 'skeleton-bkg-color'."; }
 
+
+    // patch cell
 
     @if not map-has-key($variable, 'patch-cell-bkg-color') { @error "Falta variable color 'patch-cell-bkg-color'."; }
     @if not map-has-key($variable, 'patch-left-border-color') { @error "Falta variable color 'patch-left-border-color'."; }
 
 
-    // setup
+    // SETUP
 
     body {
         background-color: #{map-get($variable, 'background')};
     }
 
     body, #theme-provider[umt-theme="#{map-get($config, 'name')}"] {
+
+        // global
 
         --color-font: #{map-get($variable, 'font')};
         --color-font-rgb: #{map-get($variable, 'font-rgb')};
@@ -118,6 +158,8 @@
         --color-anchor-link: #{map-get($variable, 'anchor-link')};
         --color-anchor-link-hover: #{map-get($variable, 'anchor-link-hover')};
 
+
+        // button
 
         --button-bkg-color-left-1: #{map-get($variable, 'button-bkg-color-left-1')};
         --button-bkg-color-left-2: #{map-get($variable, 'button-bkg-color-left-2')};
@@ -131,14 +173,20 @@
         --button-border-color: #{map-get($variable, 'button-border-color')};
 
 
+        // input
+
         --input-bkg-color: #{map-get($variable, 'input-bkg-color')};
         --input-font-color: #{map-get($variable, 'input-font-color')};
 
+
+        // date picker
 
         --date-picker-bkg-color: #{map-get($variable, 'date-picker-bkg-color')};
         --date-picker-font-color: #{map-get($variable, 'date-picker-font-color')};
         --date-picker-bkg-color-hover: #{map-get($variable, 'date-picker-bkg-color-hover')};
 
+
+        // multi selector
 
         --multi-selector-bkg-color: #{map-get($variable, 'multi-selector-bkg-color')};
         --multi-selector-bkg-color-left-1: #{map-get($variable, 'multi-selector-bkg-color-left-1')};
@@ -146,10 +194,14 @@
         --multi-selector-font-color: #{map-get($variable, 'multi-selector-font-color')};
 
 
+        // radio selector
+
         --radio-selector-bkg-color-1: #{map-get($variable, 'radio-selector-bkg-color-1')};
         --radio-selector-bkg-color-2: #{map-get($variable, 'radio-selector-bkg-color-2')};
         --radio-selector-font-color: #{map-get($variable, 'radio-selector-font-color')};
 
+
+        // radio
 
         --radio-bkg-color: #{map-get($variable, 'radio-bkg-color')};
         --radio-font-color: #{map-get($variable, 'radio-font-color')};
@@ -157,10 +209,14 @@
         --radio-checked-color: #{map-get($variable, 'radio-checked-color')};
 
 
+        // code input
+
         --code-input-border-color: #{map-get($variable, 'code-input-border-color')};
         --code-input-font-color: #{map-get($variable, 'code-input-font-color')};
         --code-input-border-focus-color: #{map-get($variable, 'code-input-border-focus-color')};
 
+
+        // position badge
 
         --pos-po-bkg-color: #{map-get($variable, 'pos-po-bkg-color')};
         --pos-dfi-bkg-color: #{map-get($variable, 'pos-dfi-bkg-color')};
@@ -174,33 +230,51 @@
         --pos-dd-bkg-color: #{map-get($variable, 'pos-dd-bkg-color')};
 
 
+        // modal
+
         --modal-bkg-color: #{map-get($variable, 'modal-bkg-color')};
 
+
+        // range
 
         --range-track-color: #{map-get($variable, 'range-track-color')};
         --range-step-color: #{map-get($variable, 'range-step-color')};
         --range-handle-color: #{map-get($variable, 'range-handle-color')};
 
 
+        // navigation
+
         --navigation-bar-bkg-color: #{map-get($variable, 'navigation-bar-bkg-color')};
         --navigation-bar-color-active: #{map-get($variable, 'navigation-bar-color-active')};
 
 
+        // transfer cell
+
         --transfer-bkg-color: #{map-get($variable, 'transfer-bkg-color')};
 
+
+        // animation
 
         --animation-bkg-color-1: #{map-get($variable, 'animation-bkg-color-1')};
         --animation-bkg-color-2: #{map-get($variable, 'animation-bkg-color-2')};
 
 
+        // slide
+
         --navigator-pin-color: #{map-get($variable, 'navigator-pin-color')};
 
+
+        // challenge cell
 
         --challenge-cell-bkg-color: #{map-get($variable, 'challenge-cell-bkg-color')};
 
 
+        // skeleton
+
         --skeleton-bkg-color: #{map-get($variable, 'skeleton-bkg-color')};
 
+
+        // patch cell
 
         --patch-cell-bkg-color: #{map-get($variable, 'patch-cell-bkg-color')};
         --patch-left-border-color: #{map-get($variable, 'patch-left-border-color')};
@@ -220,6 +294,8 @@
 }
 
 
+// global
+
 $color-font: var(--color-font);
 $color-font-rgb: var(--color-font-rgb);
 $color-placeholder: var(--color-placeholder);
@@ -229,6 +305,8 @@ $box-shadow-dir: var(--box-shadow-dir);
 $color-anchor-link: var(--color-anchor-link);
 $color-anchor-link-hover: var(--color-anchor-link-hover);
 
+
+// button
 
 $button-bkg-color-left-1: var(--button-bkg-color-left-1);
 $button-bkg-color-left-2: var(--button-bkg-color-left-2);
@@ -242,14 +320,20 @@ $button-font-color: var(--button-font-color);
 $button-border-color: var(--button-border-color);
 
 
+// input
+
 $input-bkg-color: var(--input-bkg-color);
 $input-font-color: var(--input-font-color);
 
+
+// date picker
 
 $date-picker-bkg-color: var(--date-picker-bkg-color);
 $date-picker-font-color: var(--date-picker-font-color);
 $date-picker-bkg-color-hover: var(--date-picker-bkg-color-hover);
 
+
+// multi selector
 
 $multi-selector-bkg-color: var(--multi-selector-bkg-color);
 $multi-selector-bkg-color-left-1: var(--multi-selector-bkg-color-left-1);
@@ -257,10 +341,14 @@ $multi-selector-bkg-color-right-1: var(--multi-selector-bkg-color-right-1);
 $multi-selector-font-color: var(--multi-selector-font-color);
 
 
+// radio selector
+
 $radio-selector-bkg-color-1: var(--radio-selector-bkg-color-1);
 $radio-selector-bkg-color-2: var(--radio-selector-bkg-color-2);
 $radio-selector-font-color: var(--radio-selector-font-color);
 
+
+// radio
 
 $radio-bkg-color: var(--radio-bkg-color);
 $radio-font-color: var(--radio-font-color);
@@ -268,10 +356,14 @@ $radio-border-color: var(--radio-border-color);
 $radio-checked-color: var(--radio-checked-color);
 
 
+// code input
+
 $code-input-border-color: var(--code-input-border-color);
 $code-input-font-color: var(--code-input-font-color);
 $code-input-border-focus-color: var(--code-input-border-focus-color);
 
+
+// position badge
 
 $pos-po-bkg-color: var(--pos-po-bkg-color);
 $pos-dfi-bkg-color: var(--pos-dfi-bkg-color);
@@ -285,33 +377,51 @@ $pos-dc-bkg-color: var(--pos-dc-bkg-color);
 $pos-dd-bkg-color: var(--pos-dd-bkg-color);
 
 
+// modal
+
 $modal-bkg-color: var(--modal-bkg-color);
 
+
+// range
 
 $range-track-color: var(--range-track-color);
 $range-step-color: var(--range-step-color);
 $range-handle-color: var(--range-handle-color);
 
 
+// navigation
+
 $navigation-bar-bkg-color: var(--navigation-bar-bkg-color);
 $navigation-bar-color-active: var(--navigation-bar-color-active);
 
 
+// transfer cell
+
 $transfer-bkg-color: var(--transfer-bkg-color);
 
+
+// animation
 
 $animation-bkg-color-1: var(--animation-bkg-color-1);
 $animation-bkg-color-2: var(--animation-bkg-color-2);
 
 
+// slide
+
 $navigator-pin-color: var(--navigator-pin-color);
 
+
+// challenge cell
 
 $challenge-cell-bkg-color: var(--challenge-cell-bkg-color);
 
 
+// skeleton
+
 $skeleton-bkg-color: var(--skeleton-bkg-color);
 
+
+// patch cell
 
 $patch-cell-bkg-color: var(--patch-cell-bkg-color);
 $patch-left-border-color: var(--patch-left-border-color);
