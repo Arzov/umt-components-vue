@@ -41,6 +41,12 @@
     @if not map-has-key($variable, 'radio-checked-color') { @error "Falta variable color 'radio-checked-color'."; }
 
 
+    @if not map-has-key($variable, 'multi-selector-bkg-color') { @error "Falta variable color 'multi-selector-bkg-color'."; }
+    @if not map-has-key($variable, 'multi-selector-bkg-color-left-1') { @error "Falta variable color 'multi-selector-bkg-color-left-1'."; }
+    @if not map-has-key($variable, 'multi-selector-bkg-color-right-1') { @error "Falta variable color 'multi-selector-bkg-color-right-1'."; }
+    @if not map-has-key($variable, 'multi-selector-font-color') { @error "Falta variable color 'multi-selector-font-color'."; }
+
+
     @if not map-has-key($variable, 'code-input-border-color') { @error "Falta variable color 'code-input-border-color'."; }
     @if not map-has-key($variable, 'code-input-font-color') { @error "Falta variable color 'code-input-font-color'."; }
     @if not map-has-key($variable, 'code-input-border-focus-color') { @error "Falta variable color 'code-input-border-focus-color'."; }
@@ -127,6 +133,12 @@
         --date-picker-bkg-color: #{map-get($variable, 'date-picker-bkg-color')};
         --date-picker-font-color: #{map-get($variable, 'date-picker-font-color')};
         --date-picker-bkg-color-hover: #{map-get($variable, 'date-picker-bkg-color-hover')};
+
+
+        --multi-selector-bkg-color: #{map-get($variable, 'multi-selector-bkg-color')};
+        --multi-selector-bkg-color-left-1: #{map-get($variable, 'multi-selector-bkg-color-left-1')};
+        --multi-selector-bkg-color-right-1: #{map-get($variable, 'multi-selector-bkg-color-right-1')};
+        --multi-selector-font-color: #{map-get($variable, 'multi-selector-font-color')};
 
 
         --radio-bkg-color: #{map-get($variable, 'radio-bkg-color')};
@@ -227,6 +239,12 @@ $input-font-color: var(--input-font-color);
 $date-picker-bkg-color: var(--date-picker-bkg-color);
 $date-picker-font-color: var(--date-picker-font-color);
 $date-picker-bkg-color-hover: var(--date-picker-bkg-color-hover);
+
+
+$multi-selector-bkg-color: var(--multi-selector-bkg-color);
+$multi-selector-bkg-color-left-1: var(--multi-selector-bkg-color-left-1);
+$multi-selector-bkg-color-right-1: var(--multi-selector-bkg-color-right-1);
+$multi-selector-font-color: var(--multi-selector-font-color);
 
 
 $radio-bkg-color: var(--radio-bkg-color);

@@ -30,7 +30,7 @@
 
             <div>
                 <p class="sec"></p>
-                <umt-date-picker v-model="dateValue" />
+                <umt-date-picker v-model="datePickerValue" />
             </div>
 
             <p><i>UmtCodeInput</i></p>
@@ -38,6 +38,20 @@
             <div>
                 <p class="sec"></p>
                 <umt-code-input />
+            </div>
+
+            <p><i>UmtMultiSelector</i></p>
+
+            <div>
+                <p class="sec"></p>
+                <umt-multi-selector
+                    v-model="multiSelectorValue"
+                    :options="[
+                        { key: '5v5', value     : '5v5' },
+                        { key: '7v7', value     : '7v7' },
+                        { key: '11v11', value   : '11v11' }
+                    ]"
+                />
             </div>
 
         </div>
@@ -70,11 +84,13 @@
 
                 inputValue: '',
 
-                dateValue: {
+                datePickerValue: {
                     day     : undefined,
                     month   : undefined,
                     year    : undefined
-                }
+                },
+
+                multiSelectorValue: ['5v5']
 
             }
         },

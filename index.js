@@ -27,6 +27,7 @@ import { default as UmtPatchCell } from "./src/components/UmtPatchCell.vue";
 import { default as UmtPositionGroup } from "./src/components/UmtPositionGroup.vue";
 import { default as UmtPositionModal } from "./src/components/UmtPositionModal.vue";
 import { default as UmtDatePicker } from "./src/components/UmtDatePicker.vue";
+import { default as UmtMultiSelector } from "./src/components/UmtMultiSelector.vue";
 
 const components = [
     UmtThemeProvider,
@@ -49,7 +50,8 @@ const components = [
     UmtPatchCell,
     UmtPositionGroup,
     UmtPositionModal,
-    UmtDatePicker
+    UmtDatePicker,
+    UmtMultiSelector
 ]
 
 const UmtComponents = {
@@ -95,7 +97,8 @@ export {
     UmtPatchCell,
     UmtPositionGroup,
     UmtPositionModal,
-    UmtDatePicker
+    UmtDatePicker,
+    UmtMultiSelector
 };
 
 export default UmtComponents;

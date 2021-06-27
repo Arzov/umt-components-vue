@@ -1,0 +1,45 @@
+%umt-multi-selector-aspects {
+
+    @extend %font-props;
+
+    box-shadow      : $box-shadow-dir $color-box-shadow;
+    border          : none;
+    border-radius   : 0;
+    height          : 3rem;
+    width           : 100%;
+    position        : relative;
+    text-align      : center;
+
+}
+
+.umt-multi-selector {
+
+    .container {
+        display                 : grid;
+        grid-template-columns   : repeat(auto-fit, minmax(50px, 1fr));
+        grid-gap                : 12px;
+    }
+
+    .option {
+
+        @extend %umt-multi-selector-aspects;
+
+        display                 : grid;
+        cursor                  : pointer;
+        grid-template-columns   : 1fr auto;
+        grid-template-areas     : "label radio";
+        background              : $multi-selector-bkg-color;
+
+        p {
+            margin-bottom   : 0;
+            align-self      : center;
+        }
+
+        &.on {
+            -webkit-text-fill-color : $multi-selector-font-color;
+            background              : linear-gradient(45deg, $multi-selector-bkg-color-left-1, $multi-selector-bkg-color-right-1);
+        }
+
+    }
+
+}
