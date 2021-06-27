@@ -74,6 +74,87 @@
                 <umt-range v-model="rangeValue" label="RANGO DE EDAD" :min="18" :max="60" />
             </div>
 
+            <p><i>UmtBadgeGroup</i></p>
+
+            <div>
+                <p class="sec"></p>
+                <umt-badge-group
+                    v-model="badgeGroupValue"
+                    :options="[
+                        {
+                            value   : 'GK',
+                            text    : 'PO',
+                            label   : 'Portero',
+                            color   : 'cian',
+                            status  : false
+                        },
+                        {
+                            value   : 'LB',
+                            text    : 'DFI',
+                            label   : 'Defensa izquierdo',
+                            color   : 'violet',
+                            status  : false
+                        },
+                        {
+                            value   : 'CB',
+                            text    : 'DFC',
+                            label   : 'Defensa central',
+                            color   : 'violet',
+                            status  : false
+                        },
+                        {
+                            value   : 'RB',
+                            text    : 'DFD',
+                            label   : 'Defensa derecho',
+                            color   : 'violet',
+                            status  : false
+                        },
+                        {
+                            value   : 'LM',
+                            text    : 'MI',
+                            label   : 'Medio campo izquierdo',
+                            color   : 'pink',
+                            status  : false
+                        },
+                        {
+                            value   : 'CM',
+                            text    : 'MC',
+                            label   : 'Medio campo',
+                            color   : 'pink',
+                            status  : false
+                        },
+                        {
+                            value   : 'RM',
+                            text    : 'MD',
+                            label   : 'Medio campo derecho',
+                            color   : 'pink',
+                            status  : false
+                        },
+                        {
+                            value   : 'LW',
+                            text    : 'DI',
+                            label   : 'Delantero izquierdo',
+                            color   : 'purple',
+                            status  : false
+                        },
+                        {
+                            value   : 'CF',
+                            text    : 'DC',
+                            label   : 'Delantero centro',
+                            color   : 'purple',
+                            status  : false
+                        },
+                        {
+                            value   : 'RW',
+                            text    : 'DD',
+                            label   : 'Delantero derecho',
+                            color   : 'purple',
+                            status  : false
+                        }
+                    ]"
+                />
+            </div>
+
         </div>
 
     </section-card>
@@ -114,7 +195,9 @@
 
                 radioSelectorValue  : 'M',
 
-                rangeValue          : [18, 22]
+                rangeValue          : [18, 22],
+
+                badgeGroupValue     : []
 
             }
         },

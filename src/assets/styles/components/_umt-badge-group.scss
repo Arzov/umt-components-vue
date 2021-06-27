@@ -1,0 +1,15 @@
+.umt-badge-group {
+
+    .badges {
+        display                 : grid;
+        grid-template-columns   : repeat(auto-fill, minmax(50px, 1fr));
+        column-gap              : 8px;
+        row-gap                 : 12px;
+        justify-items           : stretch;
+        align-items             : start;
+        grid-auto-columns       : auto;
+        margin-top              : 8px;
+        padding                 : 0 12px;
+    }
+
+}
