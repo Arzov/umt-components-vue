@@ -9,8 +9,6 @@ import { default as themeSetup } from "./src/prototypes/theme.js";
 import { default as UmtThemeProvider } from "./src/components/UmtThemeProvider.vue";
 import { default as UmtButton } from "./src/components/UmtButton.vue";
 import { default as UmtInput } from "./src/components/UmtInput.vue";
-import { default as UmtRadio } from "./src/components/UmtRadio.vue";
-import { default as UmtRadioGroup } from "./src/components/UmtRadioGroup.vue";
 import { default as UmtCodeInput } from "./src/components/UmtCodeInput.vue";
 import { default as UmtBadge } from "./src/components/UmtBadge.vue";
 import { default as UmtModal } from "./src/components/UmtModal.vue";
@@ -34,8 +32,6 @@ const components = [
     UmtThemeProvider,
     UmtButton,
     UmtInput,
-    UmtRadio,
-    UmtRadioGroup,
     UmtCodeInput,
     UmtBadge,
     UmtModal,
@@ -82,8 +78,6 @@ export {
     UmtThemeProvider,
     UmtButton,
     UmtInput,
-    UmtRadio,
-    UmtRadioGroup,
     UmtCodeInput,
     UmtBadge,
     UmtModal,
