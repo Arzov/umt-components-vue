@@ -1,31 +1,34 @@
 .umt-input {
-    margin-bottom: 20px;
-    position: relative;
-    box-shadow: $box-shadow-dir $color-box-shadow;
-    display: flex;
+
+    margin-bottom   : 20px;
+    position        : relative;
+    box-shadow      : $box-shadow-dir $color-box-shadow;
+    display         : flex;
     background-color: $input-bkg-color;
 
     input {
+
         @extend %font-props;
-        padding: 12px;
-        width: 100%;
-        border: none;
-        border-radius: 0;
-        outline: none;
+
+        padding         : 1rem 12px 1rem 12px;
+        width           : 100%;
+        border          : none;
+        border-radius   : 0;
+        outline         : none;
         background-color: $input-bkg-color;
-        color: $input-font-color;
+        color           : $input-font-color;
 
         &::-webkit-inner-spin-button,
         &::-webkit-outer-spin-button,
         &::-webkit-calendar-picker-indicator,
         &::-webkit-clear-button {
-            display: none;
-            -webkit-appearance: none;
+            display             : none;
+            -webkit-appearance  : none;
         }
 
         &::-webkit-input-placeholder {
-            color: $color-placeholder;
-            text-align: start !important;
+            color       : $color-placeholder;
+            text-align  : start !important;
         }
 
         &:-webkit-autofill,
@@ -33,51 +36,58 @@
         &:-webkit-autofill:focus, 
         &:-webkit-autofill:active {
             background-color: $input-bkg-color !important;
-            color: $input-font-color !important;
+            color           : $input-font-color !important;
         }
     }
 
     .placeholder-date {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        box-shadow: none;
+        position    : absolute;
+        top         : 0;
+        left        : 0;
+        bottom      : 0;
+        box-shadow  : none;
     }
 
     &[umt-type="password"] {
+
         align-items: center;
 
         .eye-icon {
-            display: flex;
-            align-items: center;
-            padding: 2px 12px 2px 0;
+            cursor      : pointer;
+            display     : flex;
+            align-items : center;
+            padding     : 2px 12px 2px 0;
 
             img {
                 height: 1.5rem;
             }
         }
+
     }
 
     &[umt-type="search"] {
+
         align-items: center;
 
         .search-icon {
-            display: flex;
-            align-items: center;
-            padding: 2px 12px 2px 0;
+            cursor      : pointer;
+            display     : flex;
+            align-items : center;
+            padding     : 2px 12px 2px 0;
 
             img {
                 height: 1.5rem;
             }
         }
+
     }
 
     &[umt-has-suffix] {
         .suffix {
-            display: flex;
-            align-items: center;
-            padding: 2px 12px 2px 0px;
+            display     : flex;
+            align-items : center;
+            padding     : 2px 12px 2px 0px;
         }
     }
+
 }

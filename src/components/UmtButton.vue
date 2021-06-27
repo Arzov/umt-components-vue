@@ -255,22 +255,30 @@
 
 
                     this.interval = setInterval(() => {
+
                         if (currStep <= steps) {
+
                             let t = (1/steps) * currStep
                             let currDomain = EasingFunctions.easeInOutQuad(t)
 
                             if (this.type == 'primary') {
                                 this.currentColorLeft = chromaLeft(currDomain).hex()
                                 this.currentColorRight = chromaRight(currDomain).hex()
-                            } else if (this.type == 'rounded') {
+                            }
+                            
+                            else if (this.type == 'rounded') {
                                 this.currentColorBorder = chromaLeft(currDomain).hex()
                             }
                             
                             currStep++
-                        } else {
+
+                        }
+                        
+                        else {
                             clearInterval(this.interval)
                             resolve()
                         }
+
                     }, this.intervalDelay)
 
                 })

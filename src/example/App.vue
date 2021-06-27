@@ -1,15 +1,16 @@
 <template>
 
-    <div id="app">
+    <div id="app" :style="theme === 'dark' ? `background-color: #161C27;` : `background-color: #F1F3FF;`">
 
-        <umt-theme-provider>
+        <umt-theme-provider :theme="theme">
 
-            <button-section />
-            <input-section />
+            <button-section v-model="theme" />
+            <input-section :theme="theme" />
 
         </umt-theme-provider>
 
     </div>
+
 
 </template>
 
@@ -27,7 +28,13 @@ export default {
         InputSection
     },
 
-    name: 'App'
+    name: 'App',
+
+    data () {
+        return {
+            theme: 'dark',
+        }
+    }
 
 }
 
@@ -37,7 +44,6 @@ export default {
 <style>
 
 #app {
-    background-color: #F1F3FF;
     position        : absolute;
     top             : 0;
     bottom          : 0;

@@ -4,6 +4,9 @@ $config: (
 );
 
 $variable: (
+
+    // global
+
     'font': $color-main-1,
     'font-rgb': $color-main-1-rgb,
     'placeholder': rgba($color-main-1, 0.5),
@@ -13,7 +16,9 @@ $variable: (
     'box-shadow': rgba($color-main-3, 0.1),
     'box-shadow-dir': 0px 5px 5px,
 
+
     // button
+
     'button-bkg-color-left-1': $color-main-6,
     'button-bkg-color-left-2': $color-main-10,
     'button-bkg-color-left-3': $color-main-6,
@@ -25,22 +30,37 @@ $variable: (
     'button-border-color': $color-main-5,
     'button-bkg-color-hover': $color-main-10,
 
+
     // input
+
     'input-bkg-color': $color-main-4,
     'input-font-color': $color-main-1,
 
+
+    // date picker
+
+    'date-picker-bkg-color': $color-main-4,
+    'date-picker-font-color': $color-main-1,
+    'date-picker-bkg-color-hover': $color-main-5,
+
+
     // radio
+
     'radio-bkg-color': $color-main-4,
     'radio-font-color': $color-main-1,
     'radio-border-color': $color-main-1,
     'radio-checked-color': $color-main-1,
 
+
     // code input
+
     'code-input-border-color': $color-main-1,
     'code-input-font-color': $color-main-1,
     'code-input-border-focus-color': $color-main-5,
 
+
     // position badge
+
     'pos-po-bkg-color': $color-main-5-rgb,
     'pos-dfi-bkg-color': $color-main-8-rgb,
     'pos-dfc-bkg-color': $color-main-8-rgb,
@@ -52,37 +72,56 @@ $variable: (
     'pos-dc-bkg-color': $color-main-6-rgb,
     'pos-dd-bkg-color': $color-main-6-rgb,
 
+
     // modal
+
     'modal-bkg-color': $color-main-4,
 
+
     // range
+
     'range-track-color': $color-main-10,
     'range-step-color': $color-main-5,
     'range-handle-color': $color-main-1,
 
+
     // navigation
+
     'navigation-bar-bkg-color': $color-main-4,
     'navigation-bar-color-active': $color-main-5,
 
+
     // transfer cell
+
     'transfer-bkg-color': $color-main-4,
 
-    // Animation
+
+    // animation
+
     'animation-bkg-color-1': $color-main-5,
     'animation-bkg-color-2': $color-main-10,
 
+
     // slide
+
     'navigator-pin-color': $color-main-1-rgb,
 
+
     // challenge cell
+
     'challenge-cell-bkg-color': $color-main-4,
 
+
     // skeleton
+
     'skeleton-bkg-color': $color-main-4,
 
+
     // patch cell
+
     'patch-cell-bkg-color': $color-main-4,
     'patch-left-border-color': rgba($color-main-3, 0.1),
+
 );
 
 @include setTheme($config, $variable);

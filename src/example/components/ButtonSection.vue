@@ -1,8 +1,10 @@
 <template>
 
-    <section-card title="UmtButton" tag="umt-button">
+    <section-card title="Buttons" :theme="value">
 
         <div>
+
+            <p><i>UmtButton</i></p>
 
             <div>
                 <p class="sec">Type: primary | Size: normal | Color: purple </p>
@@ -17,8 +19,8 @@
             </div>
 
             <div>
-                <p class="sec">Type: icon | Size: normal | Color: transparent | Icon: lm-theme </p>
-                <umt-button type="icon" color="transparent" icon="lm-theme" />
+                <p class="sec">Type: icon | Size: normal | Color: transparent | Icon: {{ _themePrefix }}-theme </p>
+                <umt-button type="icon" color="transparent" :icon="`${_themePrefix}-theme`" @click="triggerChange" />
             </div>
 
             <div>
@@ -46,7 +48,33 @@
 
 
     export default {
+
         components: { SectionCard },
+
+        props: {
+            value: {
+                type: String,
+                default: 'dark'
+            }
+        },
+
+        computed: {
+
+            _themePrefix () {
+                return this.value === 'dark' ? 'dm' : 'lm'
+            }
+
+        },
+
+        methods: {
+            triggerChange () {
+                const theme = this.value === 'dark' ? 'light' : 'dark'
+
+                this.$emit('input', theme)
+                this.$emit('change', theme)
+            }
+        }
+
     }
 
 </script>

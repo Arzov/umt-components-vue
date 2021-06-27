@@ -26,6 +26,7 @@ import { default as UmtSkeleton } from "./src/components/UmtSkeleton.vue";
 import { default as UmtPatchCell } from "./src/components/UmtPatchCell.vue";
 import { default as UmtPositionGroup } from "./src/components/UmtPositionGroup.vue";
 import { default as UmtPositionModal } from "./src/components/UmtPositionModal.vue";
+import { default as UmtDatePicker } from "./src/components/UmtDatePicker.vue";
 
 const components = [
     UmtThemeProvider,
@@ -47,7 +48,8 @@ const components = [
     UmtSkeleton,
     UmtPatchCell,
     UmtPositionGroup,
-    UmtPositionModal
+    UmtPositionModal,
+    UmtDatePicker
 ]
 
 const UmtComponents = {
@@ -92,7 +94,8 @@ export {
     UmtSkeleton,
     UmtPatchCell,
     UmtPositionGroup,
-    UmtPositionModal
+    UmtPositionModal,
+    UmtDatePicker
 };
 
 export default UmtComponents;
