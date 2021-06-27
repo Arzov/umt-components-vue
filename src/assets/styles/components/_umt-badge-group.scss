@@ -1,5 +1,7 @@
 .umt-badge-group {
 
+    margin-bottom   : 20px;
+
     .badges {
         display                 : grid;
         grid-template-columns   : repeat(auto-fill, minmax(50px, 1fr));

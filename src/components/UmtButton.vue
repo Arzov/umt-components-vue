@@ -9,8 +9,8 @@
         :umt-shape="shape"
         :umt-disabled="disabled"
         @click="onClick"
-        @mouseenter="onMouseEnter"
-        @mouseleave="onMouseLeave"
+        @mouseEnter="onMouseEnter"
+        @mouseLeave="onMouseLeave"
     >
 
         <img v-if="icon" :src="_srcImage">
