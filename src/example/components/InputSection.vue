@@ -33,6 +33,13 @@
                 <umt-date-picker v-model="dateValue" />
             </div>
 
+            <p><i>UmtCodeInput</i></p>
+
+            <div>
+                <p class="sec"></p>
+                <umt-code-input />
+            </div>
+
         </div>
 
     </section-card>
