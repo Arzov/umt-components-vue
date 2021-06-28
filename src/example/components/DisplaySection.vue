@@ -33,6 +33,20 @@
                 </umt-modal>
             </div>
 
+            <br>
+
+            <p><i>UmtAvatar</i></p>
+
+            <div>
+                <p class="sec">Icon: avatar | Size: default | Color: green </p>
+                <umt-avatar />
+            </div>
+
+            <div>
+                <p class="sec">Icon: team-profile | Size: small | Color: purple </p>
+                <umt-avatar icon="team-profile" size="small" color="purple" />
+            </div>
+
         </div>
 
     </section-card>

@@ -3,7 +3,7 @@ import { getImgPath } from '../statics/assets'
 export default {
     methods: {
         onErrorLoadProfileImage(evt) {
-            evt.target.src = getImgPath(`${this._theme}-avatar.svg`)
+            evt.target.src = getImgPath('avatar.svg')
         },
 
         onErrorLoadTeamImage(evt) {

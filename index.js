@@ -26,6 +26,7 @@ import { default as UmtBadgeGroup } from "./src/components/UmtBadgeGroup.vue";
 import { default as UmtDatePicker } from "./src/components/UmtDatePicker.vue";
 import { default as UmtMultiSelector } from "./src/components/UmtMultiSelector.vue";
 import { default as UmtRadioSelector } from "./src/components/UmtRadioSelector.vue";
+import { default as UmtAvatar } from "./src/components/UmtAvatar.vue";
 
 const components = [
     UmtThemeProvider,
@@ -47,7 +48,8 @@ const components = [
     UmtBadgeGroup,
     UmtDatePicker,
     UmtMultiSelector,
-    UmtRadioSelector
+    UmtRadioSelector,
+    UmtAvatar
 ]
 
 const UmtComponents = {
@@ -92,7 +94,8 @@ export {
     UmtBadgeGroup,
     UmtDatePicker,
     UmtMultiSelector,
-    UmtRadioSelector
+    UmtRadioSelector,
+    UmtAvatar
 };
 
 export default UmtComponents;
