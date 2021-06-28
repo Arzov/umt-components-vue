@@ -1,7 +1,7 @@
 %animation-skeleton {
-    background-size: 400% 100% !important;
-    animation: ant-skeleton-loading 1.4s ease infinite !important;
-    -webkit-animation: ant-skeleton-loading 1.4s ease infinite !important;
+    background-size     : 400% 100% !important;
+    animation           : ant-skeleton-loading 1.4s ease infinite !important;
+    -webkit-animation   : ant-skeleton-loading 1.4s ease infinite !important;
 }
 
 %animation-skeleton-gradient {

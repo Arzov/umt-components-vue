@@ -1,5 +1,7 @@
 <template>
+
     <div ref="component" class="umt-component umt-slide">
+
         <div ref="content" class="content" :umt-end-slide="endTransition" umt-slide-content>
             <div v-for="i in items" :key="i.key" class="item-wrapper" umt-slide-item-wrapper></div>
         </div>
@@ -11,32 +13,45 @@
         <div ref="slot">
             <slot />
         </div>
+
     </div>
+
 </template>
 
 <script>
+
     import Hammer from 'hammerjs'
 
+
     export default {
+
         name: 'UmtSlide',
+
+
         data() {
             return {
-                items: [],
-                endTransition: false,
-                currentItem: 0,
-                newOrigin: 0,
-                swipCount: 0,
-                lastKey: 0,
-                isAplyingChanges: false
+                items               : [],
+                endTransition       : false,
+                currentItem         : 0,
+                newOrigin           : 0,
+                swipCount           : 0,
+                lastKey             : 0,
+                isAplyingChanges    : false
             }
         },
+
+
         mounted() {
             this.setup()
         },
+
+
         beforeDestroy() {
             this.observer.disconnect()
             this.observerContent.disconnect()
         },
+
+
         watch: {
             currentItem() {
                 this.items.forEach((i) => {
@@ -47,8 +62,12 @@
                     this.items[this.currentItem].checked = true
             }
         },
+
+
         methods: {
+
             setup() {
+
                 this.setItems(this.$refs['slot'].childNodes)
                 this.setGestures()
 
@@ -88,10 +107,14 @@
                 });
 
                 this.observerContent.observe(this.$refs['content'], { childList: true, subtree: true })
+
             },
 
+
             setItems(nodes) {
-                // Limpia elementos que no son nodos
+
+                // limpia elementos que no son nodos
+
                 const newNodes = []
                 
                 nodes.forEach((node) => {
@@ -99,7 +122,9 @@
                         newNodes.push(node)
                 })
 
+
                 if (newNodes.length > 0) {
+
                     newNodes.forEach((node) => {
                         if (node && typeof node.setAttribute == 'function') {
                             node.setAttribute('umt-slide-index', this.lastKey)
@@ -113,29 +138,39 @@
                     }) 
 
                     this.items[0].checked = true
-                }        
+
+                }
+      
             },
 
+
             setNodes() {
+
                 this.isAplyingChanges = true
 
                 const wrappers = this.$refs['content'].childNodes
                 let contentWidth = 0
 
-                // Limpia elementos que no son nodos
+
+                // limpia elementos que no son nodos
+
                 this.$refs['slot'].childNodes.forEach((node) => {
                     if (!node || typeof node.setAttribute != 'function')
                         this.$refs['slot'].removeChild(node)
                 })
 
+
                 if (this.$refs['slot'].childNodes.length > 0) {
+
                     wrappers.forEach((wrapper) => {
+
                         if (wrapper.childNodes.length == 0) {
                             wrapper.style.minWidth = this.$refs['component'].clientWidth + 'px'
                             wrapper.style.maxWidth = this.$refs['component'].clientWidth + 'px'
                             wrapper.style.paddingRight = this.$refs['component'].clientWidth + 'px'
 
                             const node = this.$refs['slot'].childNodes[0]
+
                             if (node) {
                                 wrapper.setAttribute('umt-slide-index', node.getAttribute('umt-slide-index'))
                                 wrapper.appendChild(node)
@@ -143,15 +178,20 @@
                         }
 
                         contentWidth += wrapper.clientWidth
+
                     })
 
                     this.$refs['content'].style.width = this.items.length > 0 ? (contentWidth + 'px') : (this.$refs['component'].clientWidth + 'px')
+
                 }
                 
                 this.isAplyingChanges = false
+
             },
 
+
             removeWrapper(key) {
+
                 const wrappers = this.$refs['content'].childNodes
                 let itemWrapper
 
@@ -168,7 +208,9 @@
                 this.items.splice(index, 1)
                 this.lastKey--
 
+
                 if ((this.currentItem+1) > this.items.length) {
+
                     const componentWidth = this.$refs['component'].clientWidth
                     let contentWidth = 0
 
@@ -180,14 +222,19 @@
                     this.currentItem = (this.lastKey - 1)
                     this.newOrigin = this.currentItem > 0 ? (-1 * this.currentItem * ((componentWidth + 10) * 2)) : 0
                     this.$refs['content'].style.transform = `translate(${this.newOrigin + 'px'}, 0)`
+
                 }
+
             },
+
 
             isChecked(key) {
                 return Number(key) == this.currentItem
             },
 
+
             setGestures() {
+
                 const mc = new Hammer(this.$refs['component'])
 
                 mc.get('pan').set({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 0 })
@@ -225,7 +272,10 @@
                         }, 300)
                     }
                 })
+
             }
+
         }
+
     }
 </script>

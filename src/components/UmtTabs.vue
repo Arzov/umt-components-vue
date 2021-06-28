@@ -1,77 +1,106 @@
 <template>
+
     <div ref="component" class="umt-component umt-tabs">
+
         <div ref="header" class="umt-tabs-header">
             <div v-for="t in tabs" :key="t.key" :umt-checked="t.checked" @click="newOrigin = t.index">
-                <h3>
+                <h2>
                     <span :data-content="t.label" aria-hidden="true" :umt-animation-direction="animationDirection"/>
                     {{ t.label }}
-                </h3>
+                </h2>
             </div>
         </div>
 
         <div ref="content" class="umt-tabs-content">
             <slot/>
         </div>
+
     </div>
+
 </template>
 
+
 <script>
+
     import Hammer from 'hammerjs'
 
-    // Duración de animación en ms
+
+    // duración de animación en ms
+
     const DEFAULT_ANIMATION_DURATION = 300
 
+
     export default {
+
         name: 'UmtTabs',
+
+
         props: {
             value: {
                 required: false,
-                type: String,
-                default: undefined
+                type    : String,
+                default : undefined
             }
         },
+
+
         data() {
             return {
-                tabs: [],
-                newOrigin: 0,
-                oldOrigin: 0,
-                swipCount: 0,
-                animationDirection: 'toRight'
+                tabs                : [],
+                newOrigin           : 0,
+                oldOrigin           : 0,
+                swipCount           : 0,
+                animationDirection  : 'toRight'
             }
         },
+
+
         mounted() {
             this.setup()
             this.setObservers()
         },
+
+
         beforeDestroy() {
             this.destroyObservers()
         },
+
+
         watch: {
             newOrigin(_new, _old) {
+
                 this.oldOrigin = _old
 
-                // Configura contenido activo
+                // configura contenido activo
+
                 const componentWidth = this.$refs['component'].clientWidth
                 this.$refs['content'].style.transform = `translate(${(-1 * this.newOrigin * (componentWidth * 2)) + 'px'}, 0)`
 
-                // Configura dirección de animación para los tabs
+                // configura dirección de animación para los tabs
+
                 if (_new > _old)
                     this.animationDirection = 'toRight'
                 else
                     this.animationDirection = 'toLeft'
 
-                // Configura tab activo
+                // configura tab activo
+
                 this.setAnimationDirection(_new, false)
                 this.setAnimationDirection(_old, true)
                 this.prepareSpanForAnimation()
+
             }
         },
+
+
         methods: {
+
             setup() {
                 this.setHeaders()
                 this.setContent()
                 this.setGestures()
             },
+
 
             setObservers() {
                 this.observerContent = new MutationObserver((mutation) => {
@@ -93,19 +122,23 @@
                 this.observerHeader.observe(this.$refs['header'], { childList: true })
             },
 
+
             destroyObservers() {
                 this.observerContent.disconnect()
                 this.observerHeader.disconnect()
             },
 
+
             /**
              * Configura los títulos de los tabs.
              */
+
             setHeaders() {
                 this.tabs = []
                 this.cleanNoVueInstances()
 
-                // Recopila props de los tabs
+                // recopila props de los tabs
+
                 this.$refs['content'].childNodes.forEach((tab, index) => {
                     if (tab['__vue__'] != null) {
                         this.tabs.push({
@@ -118,10 +151,12 @@
                 })
             },
 
+
             /**
              * Configura contenido para que muestre el tab-panel
              * correspondiente al tab seleccionado.
              */
+
             setContent() {
                 const selectedTab = this.tabs.find((tab) => tab.checked)
                 this.newOrigin = selectedTab.index
@@ -138,27 +173,32 @@
                 })
             },
 
+
             /**
              * Configura ancho del contenido.
              * El ancho se define como la sumatoria del producto entre el ancho del contenedor y 2, donde
              * la cantidad de veces que se suma es igual a la cantidad de tabs.
              */
+
             setContentWidth() {
                 const componentWidth = this.$refs['component'].clientWidth
                 const totalWidth = (componentWidth * 2) * this.tabs.length
                 this.$refs['content'].style.width = totalWidth == 0 ? (componentWidth + 'px') : (totalWidth + 'px')
             },
 
+
             /**
              * Limpia del arreglos de hijos, los nodos
              * que no sean una instancia de Vue.
              */
+
             cleanNoVueInstances() {
                 this.$refs['content'].childNodes.forEach((tab) => {
                     if (tab['__vue__'] == null)
                         this.$refs['content'].removeChild(tab)
                 })
             },
+
 
             setGestures() {
                 const tabs = this.$refs['content'].querySelectorAll('.umt-tab-panel')
@@ -191,6 +231,7 @@
                 // })
             },
 
+
             setSwipeGesture(element) {
                 const mc = new Hammer(element)
 
@@ -214,7 +255,9 @@
                 })
             },
 
+
             setAnimationDirection(index, exit) {
+
                 const spanList = this.$refs['header'].querySelectorAll('span')
                 const span = spanList[index]
 
@@ -227,7 +270,9 @@
 
                     if (this.animationDirection == 'toRight') {
                         span.style.transform = 'translateX(-100%)'
-                    } else {
+                    }
+
+                    else {
                         span.style.transform = 'translateX(100%)'
                     }
 
@@ -235,14 +280,18 @@
                         span.style.transition = `transform ${DEFAULT_ANIMATION_DURATION}ms ease`
                         this.tabs[index].checked = true
                     }, 100)
-                } else {
+                }
+
+                else {
                     span.style.opacity = 1
                     span.setAttribute('umt-exit', true)
                     span.style.transition = `transform ${DEFAULT_ANIMATION_DURATION}ms ease`
 
                     if (this.animationDirection == 'toRight') {
                         span.style.transform = 'translateX(100%)'
-                    } else {
+                    }
+
+                    else {
                         span.style.transform = 'translateX(-100%)'
                     }
 
@@ -250,47 +299,71 @@
                         this.tabs[index].checked = false
                     }, 100)
                 }
+
             },
 
+
             prepareSpanForAnimation() {
+
                 const spanList = this.$refs['header'].querySelectorAll('span')
+
                 spanList.forEach((span, index) => {
                     if (index != this.newOrigin) {
+
                         if (this.oldOrigin == index) {
                             setTimeout(() => {
                                 this.setSpanStartAnimation(span, index)
                             }, DEFAULT_ANIMATION_DURATION)
-                        } else {
+                        }
+
+                        else {
                             this.setSpanStartAnimation(span, index)
                         }
+
                     }
                 })
+
             },
 
+
             setSpanStartAnimation(span, index) {
+
                 span.style.opacity = 0
                 span.setAttribute('umt-exit', false)
                 span.setAttribute('umt-animating', false)
                 span.style.transition = 'transform 0s ease'
 
                 if (index < this.newOrigin) {
+
                     span.setAttribute('umt-is-next', false)
 
                     if (this.animationDirection == 'toRight') {
                         span.style.transform = 'translateX(100%)'
-                    } else {
+                    }
+
+                    else {
                         span.style.transform = 'translateX(-100%)'
                     }
-                } else {
+
+                }
+
+                else {
+
                     span.setAttribute('umt-is-next', true)
 
                     if (this.animationDirection == 'toRight') {
                         span.style.transform = 'translateX(-100%)'
-                    } else {
+                    }
+
+                    else {
                         span.style.transform = 'translateX(100%)'
                     }
+
                 }
+
             }
+
         }
+
     }
 </script>

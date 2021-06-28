@@ -1,27 +1,43 @@
 .umt-navigation-bar {
+
     background-color: $navigation-bar-bkg-color;
-    padding: 10px;
-    box-shadow: 0 -5px 5px $color-box-shadow;;
+    padding         : 12px;
+
+
+    &[umt-position="bottom"] {
+        box-shadow: 0 -5px 5px $color-box-shadow;
+        margin-top: 20px;
+    }
+
+
+    &[umt-position="top"] {
+        box-shadow      : 0 5px 5px $color-box-shadow;
+        margin-bottom   : 20px;
+    }
+
 
     .tab {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        cursor: pointer;
+
+        display         : flex;
+        flex-direction  : column;
+        align-items     : center;
+        text-align      : center;
+        cursor          : pointer;
 
         img {
-            width: 1.3rem;
-            display: block;
-            margin-bottom: 4px;
+            width           : 1.5rem;
+            display         : block;
+            margin-bottom   : 3px;
         }
 
         .tab-name {
-            font-size: 0.75rem;
+            font-size: 0.8rem;
 
             &[umt-active] {
                 color: $navigation-bar-color-active;
             }
         }
+
     }
+
 }

@@ -2,39 +2,37 @@
 
     <div class="umt-component umt-transfer-cell">
 
-        <a-row type="flex" align="middle" class="row">
+        <a-row type="flex" justify="space-around" align="middle" :gutter="12">
 
             <!-- TEAM AVATAR -->
 
-            <a-col :span="3">
-                <umt-avatar icon="team-profile" size="large" :src="team.picture" />
+            <a-col :span="4">
+                <center>
+                    <umt-avatar icon="team-profile" size="large" :src="team.picture" />
+                </center>
             </a-col>
 
 
             <!-- CONTENT -->
 
-            <a-col :flex="1" class="transfer-info">
-
-                <div class="info">
-                    <p><b>{{ team.name.toUpperCase() }}</b></p>
-                    <span class="transfer-info-date"><i>{{ _date }}</i></span>
-                </div>
-
-                <div class="info-to">
-                    <span>Ha fichado a {{ user.firstName }}</span>
-                </div>
-
+            <a-col class="info">
+                <span><b>{{ team.name.toUpperCase() }}</b> <i>{{ _date }}</i></span>
+                <span>Ha fichado a {{ user.firstName }}</span>
             </a-col>
 
-            <a-col :span="2" class="transfer-icon">
-                <img :src="_icon"/>
+            <a-col class="transfer-icon">
+                <center>
+                    <img :src="_icon"/>
+                </center>
             </a-col>
 
 
             <!-- USER AVATAR -->
 
-            <a-col :span="3">
-                <umt-avatar icon="avatar" size="large" :src="user.picture" />
+            <a-col :span="4">
+                <center>
+                    <umt-avatar icon="avatar" size="large" :src="user.picture" />
+                </center>
             </a-col>
 
         </a-row>

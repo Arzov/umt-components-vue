@@ -52,10 +52,9 @@
             <p><i>UmtRequestCell</i></p>
 
             <div>
-                <p class="sec">ButtonLabel: solicitar</p>
+                <p class="sec"></p>
                 <umt-request-cell
                     :team="{ name: 'equipo', picture: '', distance: 5 }"
-                    buttonLabel="solicitar"
                 />
             </div>
 
@@ -68,6 +67,106 @@
                     :user="{ firstName: 'Usuario', picture: '' }"
                     date="2021-05-16T01:26:24.720Z"
                 />
+            </div>
+
+            <p><i>UmtPatchCell</i></p>
+
+            <div>
+                <p class="sec"></p>
+                <umt-patch-cell
+                    :match="{
+                        name1       : 'equipo1',
+                        picture1    : '',
+                        name2       : 'equipo2',
+                        picture2    : '',
+                        schedule    : '2021-05-16T01:26:24.720Z',
+                        patches     : {
+                            CP: { N: 1 },
+                            NP: { N: 2 }
+                        }
+                    }"
+                />
+            </div>
+
+            <p><i>UmtSlide</i></p>
+
+            <div>
+                <p class="sec"></p>
+                <umt-slide>
+                    <umt-transfer-cell
+                        :team="{ name: 'equipo1', picture: '' }"
+                        :user="{ firstName: 'Usuario1', picture: '' }"
+                        date="2021-05-16T01:26:24.720Z"
+                    />
+                    <umt-transfer-cell
+                        :team="{ name: 'equipo2', picture: '' }"
+                        :user="{ firstName: 'Usuario2', picture: '' }"
+                        date="2021-05-16T01:26:24.720Z"
+                    />
+                </umt-slide>
+            </div>
+
+            <p><i>UmtTabs</i></p>
+
+            <div>
+                <p class="sec"></p>
+                <umt-tabs>
+
+                    <!-- CHALLENGES -->
+
+                    <umt-tab-panel tab="1" label="desafiar">
+                        <p>
+                            Puedes desafiar a otros equipos sólo si tienes o perteneces a un equipo.
+                        </p>
+                        <umt-request-cell
+                            :team="{ name: 'equipo', picture: '', distance: 5 }"
+                        />
+                    </umt-tab-panel>
+
+
+                    <!-- PATCH -->
+
+                    <umt-tab-panel tab="2" label="parchar">
+                        <p>
+                            Únete a partidos cercanos a ti.
+                            Puedes parchar de manera individual a equipos que requieran de jugadores.
+                        </p>
+                        <umt-patch-cell
+                            :match="{
+                                name1       : 'equipo1',
+                                picture1    : '',
+                                name2       : 'equipo2',
+                                picture2    : '',
+                                schedule    : '2021-05-16T01:26:24.720Z',
+                                patches     : {
+                                    CP: { N: 1 },
+                                    NP: { N: 2 }
+                                }
+                            }"
+                        />
+                    </umt-tab-panel>
+
+
+                    <!-- TEAMS -->
+
+                    <umt-tab-panel tab="3" label="equipos">
+                        <p>
+                            ¿No tienes equipo?
+                            Busca uno cercano a ti o encuentra alguno por su nomber.
+                        </p>
+                        <umt-request-cell
+                            :team="{ name: 'equipo', picture: '', distance: 5 }"
+                        />
+                    </umt-tab-panel>
+
+                </umt-tabs>
+            </div>
+
+            <p><i>UmtSkeleton</i></p>
+
+            <div>
+                <p class="sec"></p>
+                <umt-skeleton />
             </div>
 
         </div>
