@@ -17,6 +17,8 @@
     @if not map-has-key($variable, 'box-shadow-dir') { @error "Falta variable color 'box-shadow-dir'."; }
     @if not map-has-key($variable, 'anchor-link') { @error "Falta variable color 'anchor-link'."; }
     @if not map-has-key($variable, 'anchor-link-hover') { @error "Falta variable color 'anchor-link-hover'."; }
+    @if not map-has-key($variable, 'animation-bkg-color-1') { @error "Falta variable color 'animation-bkg-color-1'."; }
+    @if not map-has-key($variable, 'animation-bkg-color-2') { @error "Falta variable color 'animation-bkg-color-2'."; }
 
 
     // button
@@ -91,12 +93,6 @@
     @if not map-has-key($variable, 'transfer-bkg-color') { @error "Falta variable color 'transfer-bkg-color'."; }
 
 
-    // animation
-
-    @if not map-has-key($variable, 'animation-bkg-color-1') { @error "Falta variable color 'animation-bkg-color-1'."; }
-    @if not map-has-key($variable, 'animation-bkg-color-2') { @error "Falta variable color 'animation-bkg-color-2'."; }
-
-
     // slide
 
     @if not map-has-key($variable, 'navigator-pin-color') { @error "Falta variable color 'navigator-pin-color'."; }
@@ -137,6 +133,8 @@
         --box-shadow-dir: #{map-get($variable, 'box-shadow-dir')};
         --color-anchor-link: #{map-get($variable, 'anchor-link')};
         --color-anchor-link-hover: #{map-get($variable, 'anchor-link-hover')};
+        --animation-bkg-color-1: #{map-get($variable, 'animation-bkg-color-1')};
+        --animation-bkg-color-2: #{map-get($variable, 'animation-bkg-color-2')};
 
 
         // button
@@ -211,12 +209,6 @@
         --transfer-bkg-color: #{map-get($variable, 'transfer-bkg-color')};
 
 
-        // animation
-
-        --animation-bkg-color-1: #{map-get($variable, 'animation-bkg-color-1')};
-        --animation-bkg-color-2: #{map-get($variable, 'animation-bkg-color-2')};
-
-
         // slide
 
         --navigator-pin-color: #{map-get($variable, 'navigator-pin-color')};
@@ -277,6 +269,8 @@ $button-bkg-color-right-alt: var(--button-bkg-color-right-alt);
 $button-bkg-color-hover: var(--button-bkg-color-hover);
 $button-font-color: var(--button-font-color);
 $button-border-color: var(--button-border-color);
+$animation-bkg-color-1: var(--animation-bkg-color-1);
+$animation-bkg-color-2: var(--animation-bkg-color-2);
 
 
 // input
@@ -335,12 +329,6 @@ $navigation-bar-color-active: var(--navigation-bar-color-active);
 // transfer cell
 
 $transfer-bkg-color: var(--transfer-bkg-color);
-
-
-// animation
-
-$animation-bkg-color-1: var(--animation-bkg-color-1);
-$animation-bkg-color-2: var(--animation-bkg-color-2);
 
 
 // slide

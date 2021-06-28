@@ -16,6 +16,8 @@ $variable: (
     'anchor-link-hover': lighten($color-main-5, 30%),
     'box-shadow': rgba($color-main-3, 0.1),
     'box-shadow-dir': 0px 5px 5px,
+    'animation-bkg-color-1': $color-main-5,
+    'animation-bkg-color-2': $color-main-10,
 
 
     // button
@@ -88,12 +90,6 @@ $variable: (
     // transfer cell
 
     'transfer-bkg-color': $color-main-4,
-
-
-    // animation
-
-    'animation-bkg-color-1': $color-main-5,
-    'animation-bkg-color-2': $color-main-10,
 
 
     // slide
