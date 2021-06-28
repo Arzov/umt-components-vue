@@ -88,6 +88,24 @@
                 />
             </div>
 
+            <p><i>UmtSlide</i></p>
+
+            <div>
+                <p class="sec"></p>
+                <umt-slide>
+                    <umt-transfer-cell
+                        :team="{ name: 'equipo1', picture: '' }"
+                        :user="{ firstName: 'Usuario1', picture: '' }"
+                        date="2021-05-16T01:26:24.720Z"
+                    />
+                    <umt-transfer-cell
+                        :team="{ name: 'equipo2', picture: '' }"
+                        :user="{ firstName: 'Usuario2', picture: '' }"
+                        date="2021-05-16T01:26:24.720Z"
+                    />
+                </umt-slide>
+            </div>
+
         </div>
 
     </section-card>
