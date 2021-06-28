@@ -2,7 +2,7 @@
 
     <div class="umt-component umt-avatar">
 
-        <a-avatar :size="size" :src="_srcImage" :umt-color="color" :loadError="onError" />
+        <a-avatar :size="size" :src="_srcImage" :umt-color="_colorTheme" :loadError="onError" />
 
     </div>
 
@@ -50,14 +50,26 @@
 
         data() {
             return {
-                srcImage: this.src
+                srcImage    : this.src,
+                colorTheme  : this.color
             }
         },
 
 
         computed: {
             _srcImage() {
-                return this.srcImage || getImgPath(`${this.icon.toLowerCase()}.svg`)
+
+                const imageURL = this.srcImage || getImgPath(`${this.icon.toLowerCase()}.svg`)
+
+                return imageURL
+
+            },
+
+            _colorTheme() {
+
+                // if there is no error on src we need to put a transparent background
+                return this._srcImage === this.src ? 'transparent' : this.colorTheme
+
             }
         },
 

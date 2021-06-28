@@ -52,10 +52,9 @@
             <p><i>UmtRequestCell</i></p>
 
             <div>
-                <p class="sec">ButtonLabel: solicitar</p>
+                <p class="sec"></p>
                 <umt-request-cell
                     :team="{ name: 'equipo', picture: '', distance: 5 }"
-                    buttonLabel="solicitar"
                 />
             </div>
 
@@ -67,6 +66,25 @@
                     :team="{ name: 'equipo', picture: '' }"
                     :user="{ firstName: 'Usuario', picture: '' }"
                     date="2021-05-16T01:26:24.720Z"
+                />
+            </div>
+
+            <p><i>UmtPatchCell</i></p>
+
+            <div>
+                <p class="sec"></p>
+                <umt-patch-cell
+                    :match="{
+                        name1       : 'equipo1',
+                        picture1    : '',
+                        name2       : 'equipo2',
+                        picture2    : '',
+                        schedule    : '2021-05-16T01:26:24.720Z',
+                        patches     : {
+                            CP: { N: 1 },
+                            NP: { N: 2 }
+                        }
+                    }"
                 />
             </div>
 

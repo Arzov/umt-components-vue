@@ -2,36 +2,33 @@
 
     <div class="umt-component umt-request-cell">
 
-        <a-row type="flex" align="middle" class="row">
+        <a-row type="flex" justify="space-around" align="middle" :gutter="12">
 
             <!-- AVATAR -->
 
-            <a-col :span="3">
-                <umt-avatar icon="team-profile" size="large" :src="team.picture" />
+            <a-col :span="4">
+                <center>
+                    <umt-avatar icon="team-profile" size="large" :src="team.picture" />
+                </center>
             </a-col>
 
 
             <!-- CONTENT -->
 
             <a-col class="info">
-
-                <div class="team-name">
-                    <p><b>{{ team.name.toUpperCase() }}</b></p>
-                </div>
-
-                <div class="distance">
-                    <span>A {{ team.distance }} kilómetros de distancia</span>
-                </div>
-
+                <span><b>{{ team.name.toUpperCase() }}</b></span>
+                <span>A {{ team.distance }} kilómetros de distancia</span>
             </a-col>
 
 
             <!-- BUTTON -->
 
             <a-col class="button">
-                <umt-button type="border" size="small" shape="round" @click="onClick">
-                    {{ buttonLabel }}
-                </umt-button>
+                <center>
+                    <umt-button type="border" size="small" shape="round" @click="onClick">
+                        SOLICITAR
+                    </umt-button>
+                </center>
             </a-col>
 
         </a-row>
@@ -51,11 +48,6 @@
             team: {
                 required: true,
                 type    : Object
-            },
-
-            buttonLabel: {
-                required: true,
-                type    : String
             }
         },
 

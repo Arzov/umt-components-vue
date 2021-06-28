@@ -1,41 +1,19 @@
 .umt-request-cell {
 
     background-color: $request-cell-bkg-color;
-    padding         : 8px 16px;
+    padding         : 1.072rem 12px;
     box-shadow      : $box-shadow-dir $color-box-shadow;
     margin-bottom   : 20px;
 
-
-    .row {
-        flex-wrap: nowrap;
-    }
-
-
     .info {
 
-        margin      : 8px 12px;
-        min-width   : 0;
         flex-grow   : 1;
 
-        .team-name {
-            margin-bottom: -12px;
-
-            p {
-                @extend %ellipsis;
-                font-weight: $font-weight-bold;
-            }
-        }
-
-        .distance {
-            max-width: 100%;
-
-            span {
-                @extend %ellipsis;
-            }
+        span {
+            @extend %ellipsis;
         }
 
     }
-
 
     .button {
         margin-bottom: -20px;
