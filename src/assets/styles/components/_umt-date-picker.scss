@@ -1,0 +1,66 @@
+.umt-date-picker {
+
+    @extend %font-props;
+
+    .ant-select {
+        width: 100%;
+    }
+
+    .ant-select-selection {
+
+        margin-bottom   : 20px;
+        box-shadow      : $box-shadow-dir $color-box-shadow;
+        background-color: $date-picker-bkg-color;
+        border          : none;
+        border-radius   : 0;
+        color           : $date-picker-font-color;
+        height          : 3rem;
+        padding-top     : 0.9rem;
+
+        svg {
+            color: $input-font-color;
+        }
+
+        .ant-select-selection__rendered {
+            line-height: normal;
+        }
+
+    }
+
+    // .has-error & {
+    //     .ant-select-selection {
+    //         border-color    : $color-purple;
+    //         box-shadow      : 0 0 0 2px $color-purple;
+    //     }
+    // }
+
+}
+
+
+.ant-select-dropdown-menu-item {
+    @extend %font-props;
+}
+
+
+.ant-select-dropdown-content,
+.ant-select-dropdown {
+    background-color: $date-picker-bkg-color !important;
+    border          : none !important;
+    border-radius   : 0 !important;
+}
+
+
+.ant-select-dropdown-menu-item-active {
+    background: transparent !important;
+}
+
+
+.ant-select-dropdown-menu-item-active:hover {
+    background: $date-picker-bkg-color-hover !important;
+}
+
+
+.ant-select-dropdown-menu-item-selected {
+    font-weight : $font-weight-black !important;
+    background  : transparent !important;
+}

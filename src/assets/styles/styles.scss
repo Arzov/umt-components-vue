@@ -3,7 +3,6 @@
 @import "./globals/fonts";
 @import "./globals/umt-theme-provider";
 @import "./globals/animations";
-@import "./globals/reusables";
 
 // THEMES
 @import "./themes/light";
@@ -13,9 +12,8 @@
 @import "./components/umt-skeleton";
 @import "./components/umt-button";
 @import "./components/umt-input";
-@import "./components/umt-radio";
 @import "./components/umt-code-input";
-@import "./components/umt-position-badge";
+@import "./components/umt-badge";
 @import "./components/umt-modal";
 @import "./components/umt-range";
 @import "./components/umt-navigation-bar";
@@ -25,5 +23,8 @@
 @import "./components/umt-tabs";
 @import "./components/umt-request-cell";
 @import "./components/umt-patch-cell";
-@import "./components/umt-position-group";
-@import "./components/umt-position-modal";
+@import "./components/umt-badge-group";
+@import "./components/umt-date-picker";
+@import "./components/umt-multi-selector";
+@import "./components/umt-radio-selector";
+@import "./components/umt-avatar";

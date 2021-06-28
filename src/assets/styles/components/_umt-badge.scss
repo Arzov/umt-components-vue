@@ -1,0 +1,90 @@
+$umt-badge-colors: (
+
+    cian: (
+        color: $color-main-5,
+    ),
+
+    violet: (
+        color: $color-main-8,
+    ),
+
+    pink: (
+        color: $color-main-7,
+    ),
+
+    purple: (
+        color: $color-main-6,
+    )
+
+);
+
+@mixin umt-badge-create-colors {
+
+    @each $key, $value in $umt-badge-colors {
+
+        &[umt-color="#{$key}"] {
+
+            position        : relative;
+            transition      : background-color 0.3s, box-shadow 0.3s;
+            background-color: map-get($value, "color");
+            opacity         : 0.5;
+            box-shadow      : 0 0 0 0 $color-box-shadow;;
+
+            span {
+                color       : rgba($color-main-3, 0.5);
+                transition  : color 0.3;
+            }
+
+            &::after {
+                content         : '';
+                position        : absolute;
+                top             : 0;
+                left            : 0;
+                width           : 100%;
+                height          : 100%;
+                opacity         : 0;
+                box-shadow      : $box-shadow-dir $color-box-shadow;
+                transition      : opacity 0.3s;
+                border-radius   : 25px;
+            }
+
+            &[umt-checked] {
+
+                background-color: map-get($value, "color");
+                opacity: 1;
+
+                span {
+                    color: rgba($color-main-3, 1);
+                }
+
+                &::after {
+                    opacity: 1;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.umt-badge {
+
+    background-color: $color-background;
+    border-radius   : 25px;
+
+    .badge {
+
+        border-radius   : 25px;
+        padding         : 0.393rem 12px 0.393rem 12px;
+        min-width       : 50px;
+        box-sizing      : border-box;
+        text-align      : center;
+        cursor          : pointer;
+
+        @include umt-badge-create-colors;
+
+    }
+
+}

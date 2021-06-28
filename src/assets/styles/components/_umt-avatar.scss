@@ -1,0 +1,11 @@
+.umt-avatar {
+
+    .ant-avatar-image[umt-color='green'] {
+        background: linear-gradient(45deg, $color-main-10, $color-main-5);
+    }
+
+    .ant-avatar-image[umt-color='purple'] {
+        background: linear-gradient(45deg, $color-main-6, $color-main-8);
+    }
+
+}
