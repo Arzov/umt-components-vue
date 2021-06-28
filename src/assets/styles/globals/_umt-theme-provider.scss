@@ -102,9 +102,9 @@
     @if not map-has-key($variable, 'navigator-pin-color') { @error "Falta variable color 'navigator-pin-color'."; }
 
 
-    // challenge cell
+    // request cell
 
-    @if not map-has-key($variable, 'challenge-cell-bkg-color') { @error "Falta variable color 'challenge-cell-bkg-color'."; }
+    @if not map-has-key($variable, 'request-cell-bkg-color') { @error "Falta variable color 'request-cell-bkg-color'."; }
 
 
     // skeleton
@@ -222,9 +222,9 @@
         --navigator-pin-color: #{map-get($variable, 'navigator-pin-color')};
 
 
-        // challenge cell
+        // request cell
 
-        --challenge-cell-bkg-color: #{map-get($variable, 'challenge-cell-bkg-color')};
+        --request-cell-bkg-color: #{map-get($variable, 'request-cell-bkg-color')};
 
 
         // skeleton
@@ -348,9 +348,9 @@ $animation-bkg-color-2: var(--animation-bkg-color-2);
 $navigator-pin-color: var(--navigator-pin-color);
 
 
-// challenge cell
+// request cell
 
-$challenge-cell-bkg-color: var(--challenge-cell-bkg-color);
+$request-cell-bkg-color: var(--request-cell-bkg-color);
 
 
 // skeleton

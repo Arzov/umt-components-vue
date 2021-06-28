@@ -38,13 +38,25 @@
             <p><i>UmtAvatar</i></p>
 
             <div>
-                <p class="sec">Icon: avatar | Size: default | Color: green </p>
+                <p class="sec">Icon: avatar | Size: default | Color: green</p>
                 <umt-avatar />
             </div>
 
             <div>
-                <p class="sec">Icon: team-profile | Size: small | Color: purple </p>
+                <p class="sec">Icon: team-profile | Size: small | Color: purple</p>
                 <umt-avatar icon="team-profile" size="small" color="purple" />
+            </div>
+
+            <br>
+
+            <p><i>UmtRequestCell</i></p>
+
+            <div>
+                <p class="sec">ButtonLabel: solicitar</p>
+                <umt-request-cell
+                    :team="{ name: 'equipo', picture: '', distance: 5 }"
+                    buttonLabel="solicitar"
+                />
             </div>
 
         </div>
@@ -78,7 +90,7 @@
                 showModal: false
 
             }
-        },
+        }
 
     }
 

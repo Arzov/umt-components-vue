@@ -7,19 +7,19 @@
             <p><i>UmtButton</i></p>
 
             <div>
-                <p class="sec">Type: primary | Size: normal | Color: purple </p>
+                <p class="sec">Type: primary | Size: normal | Color: purple</p>
                 <umt-button>
                     iniciar sesión
                 </umt-button>
             </div>
 
             <div>
-                <p class="sec">Type: icon | Size: normal | Color: green | Icon: facebook </p>
+                <p class="sec">Type: icon | Size: normal | Color: green | Icon: facebook</p>
                 <umt-button type="icon" color="green" icon="facebook" />
             </div>
 
             <div>
-                <p class="sec">Type: icon | Size: normal | Color: transparent | Icon: {{ _themePrefix }}-theme </p>
+                <p class="sec">Type: icon | Size: normal | Color: transparent | Icon: {{ _themePrefix }}-theme</p>
                 <umt-button type="icon" color="transparent" :icon="`${_themePrefix}-theme`" @click="triggerChange" />
             </div>
 
@@ -31,7 +31,7 @@
             </div>
 
             <div>
-                <p class="sec">Type: icon | Size: small | Color: transparent | Icon: x </p>
+                <p class="sec">Type: icon | Size: small | Color: transparent | Icon: x</p>
                 <umt-button type="icon" size="small" color="violet" icon="x" />
             </div>
 
