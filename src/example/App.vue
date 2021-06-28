@@ -6,6 +6,7 @@
 
             <button-section v-model="theme" />
             <input-section :theme="theme" />
+            <display-section :theme="theme" />
 
         </umt-theme-provider>
 
@@ -19,13 +20,15 @@
 
 import ButtonSection from './components/ButtonSection.vue'
 import InputSection from './components/InputSection.vue'
+import DisplaySection from './components/DisplaySection.vue'
 
 
 export default {
 
     components: { 
         ButtonSection,
-        InputSection
+        InputSection,
+        DisplaySection
     },
 
     name: 'App',

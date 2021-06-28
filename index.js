@@ -23,7 +23,6 @@ import { default as UmtRequestCell } from "./src/components/UmtRequestCell.vue";
 import { default as UmtSkeleton } from "./src/components/UmtSkeleton.vue";
 import { default as UmtPatchCell } from "./src/components/UmtPatchCell.vue";
 import { default as UmtBadgeGroup } from "./src/components/UmtBadgeGroup.vue";
-import { default as UmtPositionModal } from "./src/components/UmtPositionModal.vue";
 import { default as UmtDatePicker } from "./src/components/UmtDatePicker.vue";
 import { default as UmtMultiSelector } from "./src/components/UmtMultiSelector.vue";
 import { default as UmtRadioSelector } from "./src/components/UmtRadioSelector.vue";
@@ -46,7 +45,6 @@ const components = [
     UmtSkeleton,
     UmtPatchCell,
     UmtBadgeGroup,
-    UmtPositionModal,
     UmtDatePicker,
     UmtMultiSelector,
     UmtRadioSelector
@@ -92,7 +90,6 @@ export {
     UmtSkeleton,
     UmtPatchCell,
     UmtBadgeGroup,
-    UmtPositionModal,
     UmtDatePicker,
     UmtMultiSelector,
     UmtRadioSelector
