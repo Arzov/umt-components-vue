@@ -162,6 +162,13 @@
                 </umt-tabs>
             </div>
 
+            <p><i>UmtSkeleton</i></p>
+
+            <div>
+                <p class="sec"></p>
+                <umt-skeleton />
+            </div>
+
         </div>
 
     </section-card>
