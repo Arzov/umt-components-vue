@@ -1,47 +1,59 @@
 .umt-transfer-cell {
+
     background-color: $transfer-bkg-color;
-    padding: 8px 16px;
-    box-shadow: $box-shadow-dir $color-box-shadow;
-    margin: 2px 0px 10px 0px;
+    padding         : 8px 16px;
+    box-shadow      : $box-shadow-dir $color-box-shadow;
+    margin-bottom   : 20px;
+
 
     .row {
         flex-wrap: nowrap;
     }
 
-    .team-image,
-    .profile-image {
-        @extend %avatar;
-    }
 
     .transfer-info {
-        margin: 0 15px;
-        min-width: 0;
+
+        margin      : 8px 12px;
+        min-width   : 0;
+        flex-grow   : 1;
 
         &-date {
-            color: $color-anchor-link;
-            margin-left: 5px;
+            color       : $color-anchor-link;
+            margin-left : 8px;
         }
+
     }
 
-    .transfer-icon {
-        margin-right: 15px;
-    }
 
     .info {
-        margin-bottom: -5px;
-        display: flex;
-        flex-wrap: nowrap;
-        flex-grow: 1;
 
-        h3 {
+        display         : flex;
+        margin-bottom   : -12px;
+
+        p {
             @extend %ellipsis;
             font-weight: $font-weight-bold;
         }
 
         &-to {
+            max-width: 100%;
+
             span {
                 @extend %ellipsis;
             }
         }
+
     }
+
+
+    .transfer-icon {
+
+        margin-right: 15px;
+
+        img {
+            height: 2.286rem;
+        }
+
+    }
+
 }

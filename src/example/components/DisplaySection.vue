@@ -59,6 +59,17 @@
                 />
             </div>
 
+            <p><i>UmtTransferCell</i></p>
+
+            <div>
+                <p class="sec"></p>
+                <umt-transfer-cell
+                    :team="{ name: 'equipo', picture: '' }"
+                    :user="{ firstName: 'Usuario', picture: '' }"
+                    date="2021-05-16T01:26:24.720Z"
+                />
+            </div>
+
         </div>
 
     </section-card>

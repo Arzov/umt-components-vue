@@ -1,64 +1,94 @@
 <template>
+
     <div class="umt-component umt-transfer-cell">
+
         <a-row type="flex" align="middle" class="row">
+
+            <!-- TEAM AVATAR -->
+
             <a-col :span="3">
-                <img class="team-image" :src="team.image" @error="onErrorLoadTeamImage"/>
+                <umt-avatar icon="team-profile" size="large" :src="team.picture" />
             </a-col>
 
+
+            <!-- CONTENT -->
+
             <a-col :flex="1" class="transfer-info">
+
                 <div class="info">
-                    <h3>{{ team.name.toUpperCase() }}</h3>
+                    <p><b>{{ team.name.toUpperCase() }}</b></p>
                     <span class="transfer-info-date"><i>{{ _date }}</i></span>
                 </div>
+
                 <div class="info-to">
-                    <span>A fichado a {{ profile.name }}</span>
+                    <span>Ha fichado a {{ user.firstName }}</span>
                 </div>
+
             </a-col>
 
             <a-col :span="2" class="transfer-icon">
                 <img :src="_icon"/>
             </a-col>
 
+
+            <!-- USER AVATAR -->
+
             <a-col :span="3">
-                <img class="profile-image" :src="profile.image" @error="onErrorLoadProfileImage"/>
+                <umt-avatar icon="avatar" size="large" :src="user.picture" />
             </a-col>
+
         </a-row>
+
     </div>
+
 </template>
 
+
 <script>
+
     import UmtThemeMixin from './../mixins/theme' 
     import UmtCellMixin from './../mixins/cells' 
     import { getImgPath } from '../statics/assets' 
-    import moment from 'moment'
+
 
     export default {
+
         name: 'UmtTransferCell',
+
+
         mixins: [ UmtThemeMixin, UmtCellMixin ],
+
+
         props: {
+
             team: {
                 required: true,
-                type: Object
+                type    : Object
             },
 
-            profile: {
+            user: {
                 required: true,
-                type: Object
+                type    : Object
             },
 
             date: {
                 required: true,
-                type: undefined
-            },
+                type    : String
+            }
+
         },
+
+
         computed: {
             _date() {
-                return moment(this.date).format('DD/MM')
+                return `${this.getDayDD(this.date)} / ${this.getMonthMM(this.date)}`
             },
 
             _icon() {
                 return getImgPath(`${this._theme}-transfer.svg`)
             }
         }
+
     }
+
 </script>
