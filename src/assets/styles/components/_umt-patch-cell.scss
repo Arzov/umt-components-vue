@@ -24,11 +24,6 @@
         }
     }
 
-    .team-image {
-        @extend %avatar;
-        max-width: 80%;
-    }
-
     .patches,
     .date {
         min-width: 0;
