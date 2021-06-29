@@ -14,7 +14,6 @@ import { default as UmtBadge } from "./src/components/UmtBadge.vue";
 import { default as UmtModal } from "./src/components/UmtModal.vue";
 import { default as UmtRange } from "./src/components/UmtRange.vue";
 import { default as UmtNavigationBar } from "./src/components/UmtNavigationBar.vue";
-import { default as UmtProfile } from "./src/components/UmtProfile.vue";
 import { default as UmtTransferCell } from "./src/components/UmtTransferCell.vue";
 import { default as UmtSlide } from "./src/components/UmtSlide.vue";
 import { default as UmtTabPanel } from "./src/components/UmtTabPanel.vue";
@@ -37,7 +36,6 @@ const components = [
     UmtModal,
     UmtRange,
     UmtNavigationBar,
-    UmtProfile,
     UmtTransferCell,
     UmtSlide,
     UmtTabPanel,
@@ -83,7 +81,6 @@ export {
     UmtModal,
     UmtRange,
     UmtNavigationBar,
-    UmtProfile,
     UmtTransferCell,
     UmtSlide,
     UmtTabPanel,
