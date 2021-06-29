@@ -1,60 +1,28 @@
 .umt-patch-cell {
-    background-color: $challenge-cell-bkg-color;
-    padding: 8px 16px;
-    box-shadow: $box-shadow-dir $color-box-shadow;
-    margin: 2px 0px 10px 0px;
 
-    .row {
-        flex-wrap: nowrap;
-    }
-
-    .team-wrapper,
-    .separator {
-        margin-right: 5px;
-    }
-
-    .team-wrapper {
-        text-align: center;
-
-        span {
-            text-align: center;
-            font-size: 0.5rem;
-            margin-top: 3px;
-            @extend %ellipsis;
-        }
-    }
-
-    .team-image {
-        @extend %avatar;
-        max-width: 80%;
-    }
+    background-color: $request-cell-bkg-color;
+    padding         : 0.858rem 12px;
+    box-shadow      : $box-shadow-dir $color-box-shadow;
+    margin-bottom   : 20px;
 
     .patches,
     .date {
-        min-width: 0;
-        flex-grow: 1;
-        padding: 0 5px 0 10px;
-        border-left: solid 2px $patch-left-border-color;
+
+        flex-grow   : 1;
+        border-left : solid 1px $patch-left-border-color;
 
         span {
             @extend %ellipsis;
 
-            &.label {
-                margin-top: -5px;
+            i {
+                color: $color-anchor-link;
             }
         }
+
     }
 
-    .count,
-    .when {
-        span {
-            color: $color-anchor-link;
-        }
+    .button {
+        margin-bottom: -20px;
     }
 
-    .info {
-        margin: 0 10px 0 5px;
-        flex-grow: 1;
-        min-width: 0;
-    }
 }

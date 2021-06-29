@@ -1,42 +1,22 @@
 .umt-request-cell {
-    background-color: $challenge-cell-bkg-color;
-    padding: 8px 16px;
-    box-shadow: $box-shadow-dir $color-box-shadow;
-    margin: 2px 0px 10px 0px;
 
-    .row {
-        flex-wrap: nowrap;
-    }
-
-    .team-image {
-        @extend %avatar;
-    }
-
-    .transfer-info {
-        margin: 0 15px;
-        min-width: 0;
-    }
+    background-color: $request-cell-bkg-color;
+    padding         : 1.072rem 12px;
+    box-shadow      : $box-shadow-dir $color-box-shadow;
+    margin-bottom   : 20px;
 
     .info {
-        margin: 0 15px;
-        min-width: 0;
-        flex-grow: 1;
 
-        .team-name {
-            margin-bottom: -5px;
+        flex-grow   : 1;
 
-            h3 {
-                @extend %ellipsis;
-                font-weight: $font-weight-bold;
-            }
+        span {
+            @extend %ellipsis;
         }
 
-        .distance {
-            max-width: 100%;
-
-            span {
-                @extend %ellipsis;
-            }
-        }
     }
+
+    .button {
+        margin-bottom: -20px;
+    }
+
 }

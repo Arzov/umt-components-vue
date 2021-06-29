@@ -1,48 +1,36 @@
-// Base definitions
-%avatar-info-base {
-    background-color: $skeleton-bkg-color;
-    padding: 8px 16px;
-    box-shadow: $box-shadow-dir $color-box-shadow;
-    margin: 2px 0px 10px 0px;
-}
-
 .umt-skeleton {
-    // Defaults
-    .circle {
-        max-height: 50px;
-        width: 100%;
-        border-radius: 50%;
-        padding-bottom: 100%;
-        @extend %animation-skeleton-gradient;
-        @extend %animation-skeleton;
-    }
 
-    .square {
-        height: 100%;
-        padding-bottom: 6%;
-        @extend %animation-skeleton-gradient;
-        @extend %animation-skeleton;
+    background-color: $skeleton-bkg-color;
+    padding         : 0.822rem 12px;
+    box-shadow      : $box-shadow-dir $color-box-shadow;
+    margin-bottom   : 20px;
 
-        &-wrapper {
-            height: 0;
-            padding-bottom: 6%;
+    .loading-avatar {
+        &.ant-avatar {
+            @extend %animation-skeleton-gradient;
+            @extend %animation-skeleton;
         }
     }
 
-    // Types
-    .avatar-info {
-        @extend %avatar-info-base;
+    .info {
 
-        .info {
-            margin-left: 15px;
+        flex-grow: 1;
 
-            .first {
-                margin-bottom: 5px;
+        .loading-text {
+
+            margin      : 0.5rem 0;
+            width       : 70%;
+            height      : 1rem;
+        
+            &.title {
+                width: 30%;
             }
-
-            .second .square {
-                width: 70%;
-            }
+        
+            @extend %animation-skeleton-gradient;
+            @extend %animation-skeleton;
+    
         }
+
     }
+
 }

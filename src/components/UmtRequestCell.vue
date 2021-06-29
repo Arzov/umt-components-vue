@@ -1,43 +1,62 @@
 <template>
+
     <div class="umt-component umt-request-cell">
-        <a-row type="flex" align="middle" class="row">
-            <a-col :span="3">
-                <img class="team-image" :src="team.image" @error="onErrorLoadTeamImage"/>
+
+        <a-row type="flex" justify="space-around" align="middle" :gutter="12">
+
+            <!-- AVATAR -->
+
+            <a-col :span="4">
+                <center>
+                    <umt-avatar icon="team-profile" size="large" :src="team.picture" />
+                </center>
             </a-col>
+
+
+            <!-- CONTENT -->
 
             <a-col class="info">
-                <div class="team-name">
-                    <h3>{{ team.name.toUpperCase() }}</h3>
-                </div>
-                <div class="distance">
-                    <span>A {{ team.distance }} kilómetros de distancia</span>
-                </div>
+                <span><b>{{ team.name.toUpperCase() }}</b></span>
+                <span>A {{ team.distance }} kilómetros de distancia</span>
             </a-col>
 
-            <a-col>
-                <umt-button type="rounded" size="small" @click="onSubmit">{{ buttonLabel.toUpperCase() }}</umt-button>
+
+            <!-- BUTTON -->
+
+            <a-col class="button">
+                <center>
+                    <umt-button type="border" size="small" shape="round" @click="onClick">
+                        SOLICITAR
+                    </umt-button>
+                </center>
             </a-col>
+
         </a-row>
+
     </div>
+
 </template>
 
-<script>
-    import UmtThemeMixin from '../mixins/theme'
-    import UmtCellMixin from '../mixins/cells'
 
+<script>
     export default {
+
         name: 'UmtRequestCell',
-        mixins: [ UmtThemeMixin, UmtCellMixin ],
+
+
         props: {
             team: {
                 required: true,
-                type: Object
-            },
+                type    : Object
+            }
+        },
 
-            buttonLabel: {
-                required: true,
-                type: String
+
+        methods: {
+            onClick() {
+                this.$emit('click')
             }
         }
+
     }
 </script>

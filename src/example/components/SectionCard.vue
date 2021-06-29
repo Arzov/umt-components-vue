@@ -1,28 +1,33 @@
 <template>
-    <div class="section-card">
+
+    <div class="section-card" :style="theme === 'dark' ? `background-color: #161C27; border: 1px solid #0CECF2;` : `background-color: #F1F3FF; border: 1px solid #AC9FF9;`">
+
         <div class="section-card-title">
-            <h5 class="title">{{ title }}</h5>
-            <span class="tag">{{ tag }}</span>
+            <h5 class="title" :style="theme === 'dark' ? `color: #FFFFFF;` : `color: #161C27;`">{{ title }}</h5>
         </div>
 
         <div class="section-card-content">
             <slot></slot>
         </div>
+
     </div>
+
 </template>
+
 
 <script>
     export default {
-        props: ['title', 'tag']
+        props: ['title', 'theme']
     }
 </script>
+
 
 <style>
 .section-card {
     margin: 20px;
     border: 1px solid #AC9FF9;
     border-radius: 3px;
-    background-color: white;
+    background-color: #F1F3FF;
 }
 
 .section-card-content {
@@ -31,7 +36,6 @@
 
 .section-card-title {
     padding: 5px 10px;
-    border-bottom: 1px solid #AC9FF9;
 }
 
 .section-card-title .title {

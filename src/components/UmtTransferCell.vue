@@ -1,64 +1,92 @@
 <template>
+
     <div class="umt-component umt-transfer-cell">
-        <a-row type="flex" align="middle" class="row">
-            <a-col :span="3">
-                <img class="team-image" :src="team.image" @error="onErrorLoadTeamImage"/>
+
+        <a-row type="flex" justify="space-around" align="middle" :gutter="12">
+
+            <!-- TEAM AVATAR -->
+
+            <a-col :span="4">
+                <center>
+                    <umt-avatar icon="team-profile" size="large" :src="team.picture" />
+                </center>
             </a-col>
 
-            <a-col :flex="1" class="transfer-info">
-                <div class="info">
-                    <h3>{{ team.name.toUpperCase() }}</h3>
-                    <span class="transfer-info-date"><i>{{ _date }}</i></span>
-                </div>
-                <div class="info-to">
-                    <span>A fichado a {{ profile.name }}</span>
-                </div>
+
+            <!-- CONTENT -->
+
+            <a-col class="info">
+                <span><b>{{ team.name.toUpperCase() }}</b> <i>{{ _date }}</i></span>
+                <span>Ha fichado a {{ user.firstName }}</span>
             </a-col>
 
-            <a-col :span="2" class="transfer-icon">
-                <img :src="_icon"/>
+            <a-col class="transfer-icon">
+                <center>
+                    <img :src="_icon"/>
+                </center>
             </a-col>
 
-            <a-col :span="3">
-                <img class="profile-image" :src="profile.image" @error="onErrorLoadProfileImage"/>
+
+            <!-- USER AVATAR -->
+
+            <a-col :span="4">
+                <center>
+                    <umt-avatar icon="avatar" size="large" :src="user.picture" />
+                </center>
             </a-col>
+
         </a-row>
+
     </div>
+
 </template>
 
+
 <script>
+
     import UmtThemeMixin from './../mixins/theme' 
     import UmtCellMixin from './../mixins/cells' 
     import { getImgPath } from '../statics/assets' 
-    import moment from 'moment'
+
 
     export default {
+
         name: 'UmtTransferCell',
+
+
         mixins: [ UmtThemeMixin, UmtCellMixin ],
+
+
         props: {
+
             team: {
                 required: true,
-                type: Object
+                type    : Object
             },
 
-            profile: {
+            user: {
                 required: true,
-                type: Object
+                type    : Object
             },
 
             date: {
                 required: true,
-                type: undefined
-            },
+                type    : String
+            }
+
         },
+
+
         computed: {
             _date() {
-                return moment(this.date).format('DD/MM')
+                return `${this.getDayDD(this.date)} / ${this.getMonthMM(this.date)}`
             },
 
             _icon() {
                 return getImgPath(`${this._theme}-transfer.svg`)
             }
         }
+
     }
+
 </script>
