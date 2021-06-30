@@ -6,7 +6,13 @@ export default (Vue, setup) => {
                 umtComponentsTheme: 'lm'
             },
             mutations: {
-                setTheme: function(state, value) { state.umtComponentsTheme = value; }
+                setTheme: function(state, value) {
+                  if (value === 'light' || value === 'lm')
+                    state.umtComponentsTheme = 'lm'; 
+
+                  if (value === 'dark' || value === 'dm')
+                    state.umtComponentsTheme = 'dm'; 
+                }
             }
         };
 
