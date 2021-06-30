@@ -75,12 +75,6 @@
                 required: false,
                 type    : String,
                 default : undefined
-            },
-
-            theme: {
-                required: false,
-                type    : String,
-                default : undefined
             }
 
         },
