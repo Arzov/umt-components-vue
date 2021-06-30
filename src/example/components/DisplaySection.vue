@@ -7,7 +7,7 @@
             <p><i>UmtModal</i></p>
 
             <div>
-                <p class="sec"></p>
+                <p class="sec">Closable: true</p>
                 <a @click="showModal = true">Mostrar</a>
                 <umt-modal v-if="showModal" @click="showModal = false">
 
@@ -15,7 +15,7 @@
 
                     <br>
 
-                    <p>
+                    <p style="text-align: justify;">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Donec ipsum nisi, sollicitudin suscipit lacinia nec, egestas vel massa.
                         Sed egestas, sapien sed eleifend tempus, massa arcu congue neque, non sagittis neque leo quis orci.

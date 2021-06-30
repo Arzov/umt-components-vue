@@ -5,12 +5,13 @@
     box-shadow      : $box-shadow-dir $color-box-shadow;
     display         : flex;
     background-color: $input-bkg-color;
+    padding         : 0.75rem 12px 0.75rem 12px;
+    max-height      : 3rem;
 
     input {
 
         @extend %font-props;
 
-        padding         : 0.75rem 12px 0.75rem 12px;
         width           : 100%;
         border          : none;
         border-radius   : 0;
