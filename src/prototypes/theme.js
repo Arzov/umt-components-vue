@@ -1,21 +1,31 @@
 export default (Vue, setup) => {
     if (setup && setup.store) {
-        const umtComponentsStore = {
-            namespaced: true,
-            state: {
-                umtComponentsTheme: 'lm'
-            },
-            mutations: {
-                setTheme: function(state, value) {
-                  if (value === 'light' || value === 'lm')
-                    state.umtComponentsTheme = 'lm'; 
+      let defaultTheme = 'lm'
 
-                  if (value === 'dark' || value === 'dm')
-                    state.umtComponentsTheme = 'dm'; 
-                }
-            }
-        };
+      if (setup.defaultTheme) {
+        if (setup.defaultTheme === 'light' || setup.defaultTheme === 'lm')
+          defaultTheme = 'lm'; 
 
-        setup.store.registerModule('umt-components', umtComponentsStore);
+        if (setup.defaultTheme === 'dark' || setup.defaultTheme === 'dm')
+          defaultTheme = 'dm'; 
+      }
+      
+      const umtComponentsStore = {
+        namespaced: true,
+        state: {
+          umtComponentsTheme: defaultTheme || 'lm'
+        },
+        mutations: {
+          setTheme: function(state, value) {
+            if (value === 'light' || value === 'lm')
+              state.umtComponentsTheme = 'lm'; 
+
+            if (value === 'dark' || value === 'dm')
+              state.umtComponentsTheme = 'dm';
+          }
+        }
+      };
+
+      setup.store.registerModule('umt-components', umtComponentsStore);
     }
 }
