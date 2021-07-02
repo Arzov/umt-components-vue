@@ -3,7 +3,8 @@
 @import "./globals/fonts";
 @import "./globals/umt-theme-provider";
 @import "./globals/animations";
-@import "./globals/math";
+@import "./globals/functions";
+@import "./globals/dom";
 
 // THEMES
 @import "./themes/light";
@@ -28,3 +29,4 @@
 @import "./components/umt-multi-selector";
 @import "./components/umt-radio-selector";
 @import "./components/umt-avatar";
+@import "./components/umt-label";

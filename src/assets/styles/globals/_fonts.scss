@@ -61,13 +61,14 @@ html {
 
 @mixin h-sizes {
     @each $key, $value in $h-sizes {
-        h#{$key} {
+        %h#{$key}, h#{$key} {
             color: var(--color-font-title);
             font-family: 'PublicSans', sans-serif;
             font-size: map-get($value, 'size');
             font-weight: map-get($value, 'weight');
             text-transform: map-get($value, 'text-transform');
             margin-bottom: 0;
+            line-height: map-get($value, 'size');
         }
     }
 }

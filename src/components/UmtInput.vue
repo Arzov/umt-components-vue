@@ -61,7 +61,7 @@
             
             value: {
                 required: false,
-                type    : String,
+                type    : [Number, String],
                 default : undefined
             },
 
