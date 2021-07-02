@@ -21,14 +21,20 @@
     @if not map-has-key($variable, 'animation-bkg-color-2') { @error "Falta variable color 'animation-bkg-color-2'."; }
 
 
+    // avatar
+
+    @if not map-has-key($variable, 'avatar-bkg-color-left-1') { @error "Falta variable color 'avatar-bkg-color-left-1'."; }
+    @if not map-has-key($variable, 'avatar-bkg-color-right-1') { @error "Falta variable color 'avatar-bkg-color-right-1'."; }
+    @if not map-has-key($variable, 'avatar-bkg-color-left-2') { @error "Falta variable color 'avatar-bkg-color-left-2'."; }
+    @if not map-has-key($variable, 'avatar-bkg-color-right-2') { @error "Falta variable color 'avatar-bkg-color-right-2'."; }
+
+
     // button
 
     @if not map-has-key($variable, 'button-bkg-color-left-1') { @error "Falta variable color 'button-bkg-color-left-1'."; }
     @if not map-has-key($variable, 'button-bkg-color-left-2') { @error "Falta variable color 'button-bkg-color-left-2'."; }
-    @if not map-has-key($variable, 'button-bkg-color-left-3') { @error "Falta variable color 'button-bkg-color-left-3'."; }
     @if not map-has-key($variable, 'button-bkg-color-right-1') { @error "Falta variable color 'button-bkg-color-right-1'."; }
     @if not map-has-key($variable, 'button-bkg-color-right-2') { @error "Falta variable color 'button-bkg-color-right-2'."; }
-    @if not map-has-key($variable, 'button-bkg-color-right-3') { @error "Falta variable color 'button-bkg-color-right-3'."; }
     @if not map-has-key($variable, 'button-bkg-color-right-alt') { @error "Falta variable color 'button-bkg-color-right-alt'."; }
     @if not map-has-key($variable, 'button-bkg-color-hover') { @error "Falta variable color 'button-bkg-color-hover'."; }
     @if not map-has-key($variable, 'button-font-color') { @error "Falta variable color 'button-font-color'."; }
@@ -137,14 +143,20 @@
         --animation-bkg-color-2: #{map-get($variable, 'animation-bkg-color-2')};
 
 
+        // avatar
+
+        --avatar-bkg-color-left-1: #{map-get($variable, 'avatar-bkg-color-left-1')};
+        --avatar-bkg-color-right-1: #{map-get($variable, 'avatar-bkg-color-right-1')};
+        --avatar-bkg-color-left-2: #{map-get($variable, 'avatar-bkg-color-left-2')};
+        --avatar-bkg-color-right-2: #{map-get($variable, 'avatar-bkg-color-right-2')};
+
+
         // button
 
         --button-bkg-color-left-1: #{map-get($variable, 'button-bkg-color-left-1')};
         --button-bkg-color-left-2: #{map-get($variable, 'button-bkg-color-left-2')};
-        --button-bkg-color-left-3: #{map-get($variable, 'button-bkg-color-left-3')};
         --button-bkg-color-right-1: #{map-get($variable, 'button-bkg-color-right-1')};
         --button-bkg-color-right-2: #{map-get($variable, 'button-bkg-color-right-2')};
-        --button-bkg-color-right-3: #{map-get($variable, 'button-bkg-color-right-3')};
         --button-bkg-color-right-alt: #{map-get($variable, 'button-bkg-color-right-alt')};
         --button-bkg-color-hover: #{map-get($variable, 'button-bkg-color-hover')};
         --button-font-color: #{map-get($variable, 'button-font-color')};
@@ -257,14 +269,20 @@ $color-anchor-link: var(--color-anchor-link);
 $color-anchor-link-hover: var(--color-anchor-link-hover);
 
 
+// avatar
+
+$avatar-bkg-color-left-1: var(--avatar-bkg-color-left-1);
+$avatar-bkg-color-right-1: var(--avatar-bkg-color-right-1);
+$avatar-bkg-color-left-2: var(--avatar-bkg-color-left-2);
+$avatar-bkg-color-right-2: var(--avatar-bkg-color-right-2);
+
+
 // button
 
 $button-bkg-color-left-1: var(--button-bkg-color-left-1);
 $button-bkg-color-left-2: var(--button-bkg-color-left-2);
-$button-bkg-color-left-3: var(--button-bkg-color-left-3);
 $button-bkg-color-right-1: var(--button-bkg-color-right-1);
 $button-bkg-color-right-2: var(--button-bkg-color-right-2);
-$button-bkg-color-right-3: var(--button-bkg-color-right-3);
 $button-bkg-color-right-alt: var(--button-bkg-color-right-alt);
 $button-bkg-color-hover: var(--button-bkg-color-hover);
 $button-font-color: var(--button-font-color);
