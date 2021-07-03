@@ -39,7 +39,9 @@
         }
 
         &[umt-shape='diagonal'] {
-            width: unset;
+            width       : unset;
+            margin-left : 0;
+            margin-right: 0;
         }
 
     }
