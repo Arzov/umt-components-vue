@@ -118,6 +118,12 @@ $variable: (
     'patch-cell-bkg-color': $color-main-1,
     'patch-left-border-color': rgba($color-main-3, 0.1),
 
+
+    // notification
+
+    'notification-bkg-color': $color-main-1,
+    'notification-icon-color': $color-main-6,
+
 );
 
 @include setTheme($config, $variable);

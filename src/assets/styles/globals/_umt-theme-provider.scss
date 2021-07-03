@@ -120,6 +120,12 @@
     @if not map-has-key($variable, 'patch-left-border-color') { @error "Falta variable color 'patch-left-border-color'."; }
 
 
+    // notification
+
+    @if not map-has-key($variable, 'notification-bkg-color') { @error "Falta variable color 'notification-bkg-color'."; }
+    @if not map-has-key($variable, 'notification-icon-color') { @error "Falta variable color 'notification-icon-color'."; }
+
+
     // SETUP
 
     body {
@@ -240,6 +246,12 @@
 
         --patch-cell-bkg-color: #{map-get($variable, 'patch-cell-bkg-color')};
         --patch-left-border-color: #{map-get($variable, 'patch-left-border-color')};
+
+
+        // notification
+
+        --notification-bkg-color: #{map-get($variable, 'notification-bkg-color')};
+        --notification-icon-color: #{map-get($variable, 'notification-icon-color')};
 
     }
 
@@ -368,3 +380,9 @@ $skeleton-bkg-color: var(--skeleton-bkg-color);
 
 $patch-cell-bkg-color: var(--patch-cell-bkg-color);
 $patch-left-border-color: var(--patch-left-border-color);
+
+
+// notification
+
+$notification-bkg-color: var(--notification-bkg-color);
+$notification-icon-color: var(--notification-icon-color);
