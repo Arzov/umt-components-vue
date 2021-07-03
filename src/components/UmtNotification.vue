@@ -4,18 +4,11 @@
 
         <div class="buttons">
 
-            <a-icon v-if="type === 'success'" type="check-circle" />
-            <a-icon v-if="type === 'error'" type="close-circle" />
-            <a-icon v-if="type === 'warning'" type="warning" />
+            <a-icon class="symbol" v-if="type === 'success'" type="check-circle" />
+            <a-icon class="symbol" v-if="type === 'error'" type="close-circle" />
+            <a-icon class="symbol" v-if="type === 'warning'" type="warning" />
 
-            <umt-button
-                type="icon"
-                color="transparent"
-                shape="square"
-                size="small"
-                icon="x"
-                @click="onClick"
-            />
+            <p><a-icon type="close" @click="onClick" /></p>
 
         </div>
 
