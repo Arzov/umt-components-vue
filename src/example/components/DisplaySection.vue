@@ -185,6 +185,16 @@
                 <umt-skeleton />
             </div>
 
+            <p><i>UmtTopProgress</i></p>
+
+            <div>
+                <p class="sec"></p>
+                <a @click="showTopProgress">Mostrar</a>
+                <umt-top-progress ref="topProgress" />
+            </div>
+
+            <br>
+
         </div>
 
     </section-card>
@@ -216,6 +226,17 @@
                 showModal       : false,
                 showNotification: false
 
+            }
+        },
+
+
+        methods: {
+            showTopProgress () {
+                this.$refs.topProgress.start()
+
+                setTimeout(() => {
+                    this.$refs.topProgress.fail()
+                }, 2000)
             }
         }
 
