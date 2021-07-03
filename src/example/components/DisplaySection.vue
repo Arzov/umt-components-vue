@@ -35,6 +35,22 @@
 
             <br>
 
+            <p><i>UmtNotification</i></p>
+
+            <div>
+                <p class="sec"></p>
+                <a @click="showNotification = true">Mostrar</a>
+                <umt-notification
+                    v-if="showNotification"
+                    type="success"
+                    title="Lorem ipsum"
+                    msg="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                    @click="showNotification = false"
+                />
+            </div>
+
+            <br>
+
             <p><i>UmtAvatar</i></p>
 
             <div>
@@ -197,7 +213,8 @@
         data() {
             return {
 
-                showModal: false
+                showModal       : false,
+                showNotification: false
 
             }
         }
