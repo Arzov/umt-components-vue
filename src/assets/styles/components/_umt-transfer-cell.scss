@@ -1,29 +1,48 @@
 .umt-transfer-cell {
 
     background-color: $transfer-bkg-color;
-    padding         : 1rem 12px;
+    padding         : space(4) space(3);
     box-shadow      : $box-shadow-dir $color-box-shadow;
     margin-bottom   : 20px;
-    max-height      : 5rem;
+    max-height      : space(17);
+    overflow-x      : auto;
 
-    .info {
+    & > div {
+        flex-wrap: nowrap;
 
-        flex-grow: 1;
+        .avatar-section {
+            min-width: fit-content;
 
-        span {
-            @extend %ellipsis;
+            center {
+                min-width: fit-content;
+            }
 
-            i {
-                color: $color-anchor-link;
+            .ant-avatar-lg {
+                min-width: 40px;
             }
         }
 
-    }
+        .info {
 
-    .transfer-icon {
-        img {
-            height: 2rem;
+            min-width: 50px;
+            flex-grow: 1;
+    
+            span {
+                @extend %ellipsis;
+    
+                i {
+                    color: $color-anchor-link;
+                }
+            }
+    
         }
+    
+        .transfer-icon {
+            img {
+                height: 2rem;
+            }
+        }
+
     }
 
 }

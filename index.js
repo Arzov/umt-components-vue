@@ -28,6 +28,8 @@ import { default as UmtRadioSelector } from "./src/components/UmtRadioSelector.v
 import { default as UmtAvatar } from "./src/components/UmtAvatar.vue";
 import { default as UmtNotification } from "./src/components/UmtNotification.vue";
 import { default as UmtTopProgress } from "./src/components/UmtTopProgress.vue";
+import { default as UmtCollapsible } from "./src/components/UmtCollapsible.vue";
+import { default as UmtCollapsibleRequestHeader } from "./src/components/UmtCollapsibleRequestHeader.vue";
 
 const components = [
     UmtThemeProvider,
@@ -51,7 +53,9 @@ const components = [
     UmtRadioSelector,
     UmtAvatar,
     UmtNotification,
-    UmtTopProgress
+    UmtTopProgress,
+    UmtCollapsible,
+    UmtCollapsibleRequestHeader,
 ]
 
 const UmtComponents = {
@@ -98,7 +102,9 @@ export {
     UmtRadioSelector,
     UmtAvatar,
     UmtNotification,
-    UmtTopProgress
+    UmtTopProgress,
+    UmtCollapsible,
+    UmtCollapsibleRequestHeader,
 };
 
 export default UmtComponents;

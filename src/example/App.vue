@@ -8,6 +8,7 @@
             <input-section :theme="theme" />
             <display-section :theme="theme" />
             <navigation-section :theme="theme" />
+            <collapsible-section :theme="theme" />
 
         </umt-theme-provider>
 
@@ -31,7 +32,7 @@ export default {
         ButtonSection,
         InputSection,
         DisplaySection,
-        NavigationSection
+        NavigationSection,
     },
 
     name: 'App',

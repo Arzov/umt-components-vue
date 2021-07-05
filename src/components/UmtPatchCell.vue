@@ -6,10 +6,10 @@
 
             <!-- TEAMS AVATAR -->
 
-            <a-col :span="4">
+            <a-col :span="4" class="avatar-section">
                 <center>
                     <umt-avatar icon="team-profile" :src="match.picture1" />
-                    <h3>{{ match.name1 }}</h3>
+                    <h3 class="team-name">{{ match.name1 }}</h3>
                 </center>
             </a-col>
 
@@ -17,10 +17,10 @@
                 <center>-</center>
             </a-col>
 
-            <a-col :span="4">
+            <a-col :span="4" class="avatar-section">
                 <center>
                     <umt-avatar icon="team-profile" :src="match.picture2" />
-                    <h3>{{ match.name2 }}</h3>
+                    <h3 class="team-name">{{ match.name2 }}</h3>
                 </center>
             </a-col>
 

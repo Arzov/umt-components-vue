@@ -124,6 +124,11 @@ $variable: (
     'notification-bkg-color': $color-main-1,
     'notification-icon-color': $color-main-6,
 
+
+    // collapsible
+
+    'collapsible-bkg-header': $color-main-1,
+
 );
 
 @include setTheme($config, $variable);

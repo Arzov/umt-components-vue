@@ -126,6 +126,11 @@
     @if not map-has-key($variable, 'notification-icon-color') { @error "Falta variable color 'notification-icon-color'."; }
 
 
+    // collapsible
+
+    @if not map-has-key($variable, 'collapsible-bkg-header') { @error "Falta variable color 'collapsible-bkg-header'."; }
+
+
     // SETUP
 
     body {
@@ -252,6 +257,11 @@
 
         --notification-bkg-color: #{map-get($variable, 'notification-bkg-color')};
         --notification-icon-color: #{map-get($variable, 'notification-icon-color')};
+
+
+        // collapsible
+
+        --collapsible-bkg-header: #{map-get($variable, 'collapsible-bkg-header')};
 
     }
 
@@ -386,3 +396,8 @@ $patch-left-border-color: var(--patch-left-border-color);
 
 $notification-bkg-color: var(--notification-bkg-color);
 $notification-icon-color: var(--notification-icon-color);
+
+
+// collapsible
+
+$collapsible-bkg-header-color: var(--collapsible-bkg-header);

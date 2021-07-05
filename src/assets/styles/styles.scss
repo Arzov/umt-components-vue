@@ -1,7 +1,7 @@
 // GLOBALS
 @import "./globals/colors";
-@import "./globals/fonts";
 @import "./globals/umt-theme-provider";
+@import "./globals/fonts";
 @import "./globals/animations";
 @import "./globals/functions";
 @import "./globals/dom";
@@ -31,3 +31,4 @@
 @import "./components/umt-avatar";
 @import "./components/umt-label";
 @import "./components/umt-notification";
+@import "./components/umt-collapsible";
