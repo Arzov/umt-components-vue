@@ -1,10 +1,10 @@
-.umt-transfer-cell {
+.umt-chat-list {
 
-    background-color: $transfer-bkg-color;
-    padding         : space(4) space(3);
-    box-shadow      : $box-shadow-dir $color-box-shadow;
+    padding         : 1rem 12px;
+    border-bottom   : solid 1px $chat-list-border-color;
     margin-bottom   : 20px;
     min-height      : space(17);
+    cursor          : pointer;
     overflow-x      : auto;
 
     & > div {
@@ -22,25 +22,25 @@
             }
         }
 
-        .info {
-
+        .info,
+        .datetime {
             min-width: 50px;
             flex-grow: 1;
-    
+
             span {
                 @extend %ellipsis;
-    
-                i {
-                    color: $color-anchor-link;
-                }
             }
     
         }
-    
-        .transfer-icon {
-            img {
-                height: 2rem;
-            }
+
+    }
+
+    &[umt-active="true"] {
+
+        background: linear-gradient(45deg, $chat-list-bkg-active-color-1, $chat-list-bkg-active-color-2);
+
+        span {
+            color: $chat-list-font-active-color;
         }
 
     }

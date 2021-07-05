@@ -33,8 +33,10 @@
 
     @if not map-has-key($variable, 'button-bkg-color-left-1') { @error "Falta variable color 'button-bkg-color-left-1'."; }
     @if not map-has-key($variable, 'button-bkg-color-left-2') { @error "Falta variable color 'button-bkg-color-left-2'."; }
+    @if not map-has-key($variable, 'button-bkg-color-left-3') { @error "Falta variable color 'button-bkg-color-left-3'."; }
     @if not map-has-key($variable, 'button-bkg-color-right-1') { @error "Falta variable color 'button-bkg-color-right-1'."; }
     @if not map-has-key($variable, 'button-bkg-color-right-2') { @error "Falta variable color 'button-bkg-color-right-2'."; }
+    @if not map-has-key($variable, 'button-bkg-color-right-3') { @error "Falta variable color 'button-bkg-color-right-3'."; }
     @if not map-has-key($variable, 'button-bkg-color-right-alt') { @error "Falta variable color 'button-bkg-color-right-alt'."; }
     @if not map-has-key($variable, 'button-bkg-color-hover') { @error "Falta variable color 'button-bkg-color-hover'."; }
     @if not map-has-key($variable, 'button-font-color') { @error "Falta variable color 'button-font-color'."; }
@@ -126,6 +128,32 @@
     @if not map-has-key($variable, 'notification-icon-color') { @error "Falta variable color 'notification-icon-color'."; }
 
 
+    // chat cell
+
+    @if not map-has-key($variable, 'chat-cell-bkg-color') { @error "Falta variable color 'chat-cell-bkg-color'."; }
+    @if not map-has-key($variable, 'chat-cell-font-active-color') { @error "Falta variable color 'chat-cell-font-active-color'."; }
+    @if not map-has-key($variable, 'chat-cell-bkg-active-color-1') { @error "Falta variable color 'chat-cell-bkg-active-color-1'."; }
+    @if not map-has-key($variable, 'chat-cell-bkg-active-color-2') { @error "Falta variable color 'chat-cell-bkg-active-color-2'."; }
+
+
+    // chat list
+
+    @if not map-has-key($variable, 'chat-list-border-color') { @error "Falta variable color 'chat-list-border-color'."; }
+    @if not map-has-key($variable, 'chat-list-font-active-color') { @error "Falta variable color 'chat-list-font-active-color'."; }
+    @if not map-has-key($variable, 'chat-list-bkg-active-color-1') { @error "Falta variable color 'chat-list-bkg-active-color-1'."; }
+    @if not map-has-key($variable, 'chat-list-bkg-active-color-2') { @error "Falta variable color 'chat-list-bkg-active-color-2'."; }
+
+
+    // collapsible
+
+    @if not map-has-key($variable, 'collapsible-bkg-header') { @error "Falta variable color 'collapsible-bkg-header'."; }
+
+
+    // request list
+
+    @if not map-has-key($variable, 'request-list-border-color') { @error "Falta variable color 'request-list-border-color'."; }
+
+
     // SETUP
 
     body {
@@ -161,8 +189,10 @@
 
         --button-bkg-color-left-1: #{map-get($variable, 'button-bkg-color-left-1')};
         --button-bkg-color-left-2: #{map-get($variable, 'button-bkg-color-left-2')};
+        --button-bkg-color-left-3: #{map-get($variable, 'button-bkg-color-left-3')};
         --button-bkg-color-right-1: #{map-get($variable, 'button-bkg-color-right-1')};
         --button-bkg-color-right-2: #{map-get($variable, 'button-bkg-color-right-2')};
+        --button-bkg-color-right-3: #{map-get($variable, 'button-bkg-color-right-3')};
         --button-bkg-color-right-alt: #{map-get($variable, 'button-bkg-color-right-alt')};
         --button-bkg-color-hover: #{map-get($variable, 'button-bkg-color-hover')};
         --button-font-color: #{map-get($variable, 'button-font-color')};
@@ -253,6 +283,32 @@
         --notification-bkg-color: #{map-get($variable, 'notification-bkg-color')};
         --notification-icon-color: #{map-get($variable, 'notification-icon-color')};
 
+
+        // chat cell
+
+        --chat-cell-bkg-color: #{map-get($variable, 'chat-cell-bkg-color')};
+        --chat-cell-font-active-color: #{map-get($variable, 'chat-cell-font-active-color')};
+        --chat-cell-bkg-active-color-1: #{map-get($variable, 'chat-cell-bkg-active-color-1')};
+        --chat-cell-bkg-active-color-2: #{map-get($variable, 'chat-cell-bkg-active-color-2')};
+
+
+        // chat list
+
+        --chat-list-border-color: #{map-get($variable, 'chat-list-border-color')};
+        --chat-list-font-active-color: #{map-get($variable, 'chat-list-font-active-color')};
+        --chat-list-bkg-active-color-1: #{map-get($variable, 'chat-list-bkg-active-color-1')};
+        --chat-list-bkg-active-color-2: #{map-get($variable, 'chat-list-bkg-active-color-2')};
+
+
+        // collapsible
+
+        --collapsible-bkg-header: #{map-get($variable, 'collapsible-bkg-header')};
+
+
+        // request list
+
+        --request-list-border-color: #{map-get($variable, 'request-list-border-color')};
+
     }
 
     #theme-provider {
@@ -293,8 +349,10 @@ $avatar-bkg-color-right-2: var(--avatar-bkg-color-right-2);
 
 $button-bkg-color-left-1: var(--button-bkg-color-left-1);
 $button-bkg-color-left-2: var(--button-bkg-color-left-2);
+$button-bkg-color-left-3: var(--button-bkg-color-left-3);
 $button-bkg-color-right-1: var(--button-bkg-color-right-1);
 $button-bkg-color-right-2: var(--button-bkg-color-right-2);
+$button-bkg-color-right-3: var(--button-bkg-color-right-3);
 $button-bkg-color-right-alt: var(--button-bkg-color-right-alt);
 $button-bkg-color-hover: var(--button-bkg-color-hover);
 $button-font-color: var(--button-font-color);
@@ -386,3 +444,29 @@ $patch-left-border-color: var(--patch-left-border-color);
 
 $notification-bkg-color: var(--notification-bkg-color);
 $notification-icon-color: var(--notification-icon-color);
+
+
+// chat cell
+
+$chat-cell-bkg-color: var(--chat-cell-bkg-color);
+$chat-cell-font-active-color: var(--chat-cell-font-active-color);
+$chat-cell-bkg-active-color-1: var(--chat-cell-bkg-active-color-1);
+$chat-cell-bkg-active-color-2: var(--chat-cell-bkg-active-color-2);
+
+
+// chat list
+
+$chat-list-border-color: var(--chat-list-border-color);
+$chat-list-font-active-color: var(--chat-list-font-active-color);
+$chat-list-bkg-active-color-1: var(--chat-list-bkg-active-color-1);
+$chat-list-bkg-active-color-2: var(--chat-list-bkg-active-color-2);
+
+
+// collapsible
+
+$collapsible-bkg-header-color: var(--collapsible-bkg-header);
+
+
+// request list
+
+$request-list-border-color: var(--request-list-border-color);

@@ -59,3 +59,12 @@ $_precision: 10;
 @function tan($angle){
   @return math.div(sin($angle), cos($angle));
 }
+
+
+// space
+
+$space-factor: 4px;
+
+@function space($factor) {
+    @return $space-factor * $factor
+}

@@ -32,8 +32,10 @@ $variable: (
 
     'button-bkg-color-left-1': $color-main-6,
     'button-bkg-color-left-2': $color-main-10,
+    'button-bkg-color-left-3': $color-main-6,
     'button-bkg-color-right-1': $color-main-7,
     'button-bkg-color-right-2': $color-main-5,
+    'button-bkg-color-right-3': $color-main-8,
     'button-bkg-color-right-alt': $color-main-9,
     'button-font-color': $color-main-1,
     'button-border-color': $color-main-5,
@@ -123,6 +125,32 @@ $variable: (
 
     'notification-bkg-color': $color-main-4,
     'notification-icon-color': $color-main-5,
+
+
+    // chat cell
+
+    'chat-cell-bkg-color': $color-main-4,
+    'chat-cell-font-active-color': $color-main-3,
+    'chat-cell-bkg-active-color-1': $color-main-10,
+    'chat-cell-bkg-active-color-2': $color-main-5,
+
+
+    // chat list
+
+    'chat-list-border-color': rgba($color-main-2, 0.2),
+    'chat-list-font-active-color': $color-main-3,
+    'chat-list-bkg-active-color-1': $color-main-10,
+    'chat-list-bkg-active-color-2': $color-main-5,
+
+
+    // collapsible
+
+    'collapsible-bkg-header': $color-main-4,
+
+
+    // request list
+
+    'request-list-border-color': rgba($color-main-2, 0.2),
 
 );
 

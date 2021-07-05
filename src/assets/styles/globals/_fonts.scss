@@ -79,6 +79,16 @@ p,
 label,
 span {
     @extend %font-props;
+
+    &.hight-light {
+        color: $color-anchor-link;
+    }
+}
+
+i {
+    &.hight-light {
+        color: $color-anchor-link;
+    }
 }
 
 p {

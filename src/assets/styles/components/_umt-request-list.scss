@@ -1,8 +1,7 @@
-.umt-transfer-cell {
+.umt-request-list {
 
-    background-color: $transfer-bkg-color;
-    padding         : space(4) space(3);
-    box-shadow      : $box-shadow-dir $color-box-shadow;
+    padding         : 1rem 12px;
+    border-bottom   : solid 1px $request-list-border-color;
     margin-bottom   : 20px;
     min-height      : space(17);
     overflow-x      : auto;
@@ -23,24 +22,25 @@
         }
 
         .info {
-
             min-width: 50px;
             flex-grow: 1;
-    
+
             span {
                 @extend %ellipsis;
-    
-                i {
-                    color: $color-anchor-link;
-                }
             }
     
         }
-    
-        .transfer-icon {
-            img {
-                height: 2rem;
+
+        .accept,
+        .reject {
+
+            min-width: fit-content;
+
+            .umt-button {
+                margin-bottom   : 0;
+                width           : 100%;
             }
+
         }
 
     }
