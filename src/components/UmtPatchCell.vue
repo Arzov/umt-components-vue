@@ -14,7 +14,7 @@
             </a-col>
 
             <a-col>
-                <center>-</center>
+                <center><h2>-</h2></center>
             </a-col>
 
             <a-col :span="4">

@@ -134,6 +134,14 @@
     @if not map-has-key($variable, 'chat-cell-bkg-active-color-2') { @error "Falta variable color 'chat-cell-bkg-active-color-2'."; }
 
 
+    // chat list
+
+    @if not map-has-key($variable, 'chat-list-border-color') { @error "Falta variable color 'chat-list-border-color'."; }
+    @if not map-has-key($variable, 'chat-list-font-active-color') { @error "Falta variable color 'chat-list-font-active-color'."; }
+    @if not map-has-key($variable, 'chat-list-bkg-active-color-1') { @error "Falta variable color 'chat-list-bkg-active-color-1'."; }
+    @if not map-has-key($variable, 'chat-list-bkg-active-color-2') { @error "Falta variable color 'chat-list-bkg-active-color-2'."; }
+
+
     // SETUP
 
     body {
@@ -268,6 +276,14 @@
         --chat-cell-font-active-color: #{map-get($variable, 'chat-cell-font-active-color')};
         --chat-cell-bkg-active-color-1: #{map-get($variable, 'chat-cell-bkg-active-color-1')};
         --chat-cell-bkg-active-color-2: #{map-get($variable, 'chat-cell-bkg-active-color-2')};
+
+
+        // chat list
+
+        --chat-list-border-color: #{map-get($variable, 'chat-list-border-color')};
+        --chat-list-font-active-color: #{map-get($variable, 'chat-list-font-active-color')};
+        --chat-list-bkg-active-color-1: #{map-get($variable, 'chat-list-bkg-active-color-1')};
+        --chat-list-bkg-active-color-2: #{map-get($variable, 'chat-list-bkg-active-color-2')};
 
     }
 
@@ -410,3 +426,11 @@ $chat-cell-bkg-color: var(--chat-cell-bkg-color);
 $chat-cell-font-active-color: var(--chat-cell-font-active-color);
 $chat-cell-bkg-active-color-1: var(--chat-cell-bkg-active-color-1);
 $chat-cell-bkg-active-color-2: var(--chat-cell-bkg-active-color-2);
+
+
+// chat list
+
+$chat-list-border-color: var(--chat-list-border-color);
+$chat-list-font-active-color: var(--chat-list-font-active-color);
+$chat-list-bkg-active-color-1: var(--chat-list-bkg-active-color-1);
+$chat-list-bkg-active-color-2: var(--chat-list-bkg-active-color-2);

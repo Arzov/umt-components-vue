@@ -216,6 +216,50 @@
                 />
             </div>
 
+            <p><i>UmtChatList</i></p>
+
+            <div>
+                <p class="sec">Type: team</p>
+                <umt-chat-list
+                    :team="{
+                        name    : 'equipo',
+                        picture : '',
+                        chat    : {
+                            messages: [{
+                                author  : 'Author',
+                                msg     : 'Mensaje',
+                                sentOn  : '2021-05-16T01:26:24.720Z'
+                            }]
+                        }
+                    }"
+                    :active="activeChatList"
+                    type="team"
+                    @click="activeChatList = !activeChatList"
+                />
+            </div>
+
+            <div>
+                <p class="sec">Type: match</p>
+                <umt-chat-list
+                    :match="{
+                        name1   : 'equipo1',
+                        picture1: '',
+                        name2   : 'equipo2',
+                        picture2: '',
+                        chat    : {
+                            messages: [{
+                                author  : 'Author',
+                                msg     : 'Mensaje',
+                                sentOn  : '2021-05-16T01:26:24.720Z'
+                            }]
+                        }
+                    }"
+                    :active="activeChatList"
+                    type="match"
+                    @click="activeChatList = !activeChatList"
+                />
+            </div>
+
         </div>
 
     </section-card>
@@ -246,7 +290,8 @@
 
                 showModal       : false,
                 showNotification: false,
-                activeChatCell  : false
+                activeChatCell  : false,
+                activeChatList  : false
 
             }
         },

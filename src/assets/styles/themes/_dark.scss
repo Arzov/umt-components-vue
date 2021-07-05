@@ -130,7 +130,15 @@ $variable: (
     'chat-cell-bkg-color': $color-main-4,
     'chat-cell-font-active-color': $color-main-3,
     'chat-cell-bkg-active-color-1': $color-main-10,
-    'chat-cell-bkg-active-color-2': $color-main-5
+    'chat-cell-bkg-active-color-2': $color-main-5,
+
+
+    // chat list
+
+    'chat-list-border-color': rgba($color-main-2, 0.2),
+    'chat-list-font-active-color': $color-main-3,
+    'chat-list-bkg-active-color-1': $color-main-10,
+    'chat-list-bkg-active-color-2': $color-main-5
 
 );
 
