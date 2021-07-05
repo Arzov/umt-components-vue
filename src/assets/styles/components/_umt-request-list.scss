@@ -1,0 +1,48 @@
+.umt-request-list {
+
+    padding         : 1rem 12px;
+    border-bottom   : solid 1px $request-list-border-color;
+    margin-bottom   : 20px;
+    min-height      : space(17);
+    overflow-x      : auto;
+
+    & > div {
+        flex-wrap: nowrap;
+
+        .avatar-section {
+            min-width: fit-content;
+
+            center {
+                min-width: fit-content;
+            }
+
+            .ant-avatar-lg {
+                min-width: 40px;
+            }
+        }
+
+        .info {
+            min-width: 50px;
+            flex-grow: 1;
+
+            span {
+                @extend %ellipsis;
+            }
+    
+        }
+
+        .accept,
+        .reject {
+
+            min-width: fit-content;
+
+            .umt-button {
+                margin-bottom   : 0;
+                width           : 100%;
+            }
+
+        }
+
+    }
+
+}

@@ -147,6 +147,11 @@
     @if not map-has-key($variable, 'collapsible-bkg-header') { @error "Falta variable color 'collapsible-bkg-header'."; }
 
 
+    // request list
+
+    @if not map-has-key($variable, 'request-list-border-color') { @error "Falta variable color 'request-list-border-color'."; }
+
+
     // SETUP
 
     body {
@@ -294,6 +299,11 @@
         // collapsible
 
         --collapsible-bkg-header: #{map-get($variable, 'collapsible-bkg-header')};
+
+
+        // request list
+
+        --request-list-border-color: #{map-get($variable, 'request-list-border-color')};
 
     }
 
@@ -449,3 +459,8 @@ $chat-list-bkg-active-color-2: var(--chat-list-bkg-active-color-2);
 // collapsible
 
 $collapsible-bkg-header-color: var(--collapsible-bkg-header);
+
+
+// request list
+
+$request-list-border-color: var(--request-list-border-color);

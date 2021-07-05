@@ -290,7 +290,6 @@
                 </umt-collapsible>
             </div>
 
-
             <div>
                 <p class="sec"></p>
                 <umt-collapsible>
@@ -317,6 +316,37 @@
                     </div>
 
                 </umt-collapsible>
+            </div>
+
+            <p><i>UmtRequestList</i></p>
+
+            <div>
+                <p class="sec">Type: team | Inbound: false</p>
+                <umt-request-list
+                    :team="{
+                        name    : 'equipo',
+                        picture : ''
+                    }"
+                    :inbound="false"
+                    type="team"
+                    @reject="reject"
+                />
+            </div>
+
+            <div>
+                <p class="sec">Type: match | Inbound: true</p>
+                <umt-request-list
+                    :match="{
+                        name1   : 'equipo1',
+                        picture1: '',
+                        name2   : 'equipo2',
+                        picture2: ''
+                    }"
+                    :inbound="true"
+                    type="match"
+                    @accept="accept"
+                    @reject="reject"
+                />
             </div>
 
         </div>
@@ -364,6 +394,14 @@
                 setTimeout(() => {
                     this.$refs.topProgress.fail()
                 }, 2000)
+            },
+
+            reject () {
+                console.log('reject')
+            },
+
+            accept () {
+                console.log('accept')
             }
 
         }

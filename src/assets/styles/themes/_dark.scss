@@ -145,6 +145,11 @@ $variable: (
 
     'collapsible-bkg-header': $color-main-4,
 
+
+    // request list
+
+    'request-list-border-color': rgba($color-main-2, 0.2),
+
 );
 
 @include setTheme($config, $variable);
