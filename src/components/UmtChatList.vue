@@ -8,13 +8,13 @@
 
             <a-col v-if="type === 'team'" :span="4" class="avatar-section">
                 <center>
-                    <umt-avatar icon="team-profile" size="large" :src="team.picture" />
+                    <umt-avatar icon="team-profile" color="violet" size="large" :src="team.picture" />
                 </center>
             </a-col>
 
             <a-col v-if="type === 'match'" :span="4" class="avatar-section">
                 <center>
-                    <umt-avatar icon="team-profile" :src="match.picture1" />
+                    <umt-avatar icon="team-profile" color="violet" :src="match.picture1" />
                 </center>
             </a-col>
 
@@ -24,7 +24,7 @@
 
             <a-col v-if="type === 'match'" :span="4" class="avatar-section">
                 <center>
-                    <umt-avatar icon="team-profile" :src="match.picture2" />
+                    <umt-avatar icon="team-profile" color="violet" :src="match.picture2" />
                 </center>
             </a-col>
 

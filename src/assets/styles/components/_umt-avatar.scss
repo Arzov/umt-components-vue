@@ -9,6 +9,10 @@
         background: linear-gradient(45deg, $color-main-6, $color-main-7);
     }
 
+    .ant-avatar-image[umt-color='violet'] {
+        background: linear-gradient(45deg, $color-main-6, $color-main-8);
+    }
+
     .ant-avatar-image[umt-color='transparent'] {
         background: transparent;
     }

@@ -31,8 +31,8 @@
             </div>
 
             <div>
-                <p class="sec">Type: icon | Size: small | Color: purple | Icon: x</p>
-                <umt-button type="icon" size="small" color="purple" icon="x" />
+                <p class="sec">Type: icon | Size: small | Color: violet | Icon: x</p>
+                <umt-button type="icon" size="small" color="violet" icon="x" />
             </div>
 
         </div>

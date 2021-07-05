@@ -107,6 +107,16 @@
 
     }
 
+    &[umt-color='violet'] {
+
+        background: linear-gradient(45deg, $button-bkg-color-left-3, $button-bkg-color-right-3);
+
+        &[umt-type='border'] {
+            background: transparent;
+        }
+
+    }
+
     &[umt-color='transparent'] {
         background: transparent;
     }

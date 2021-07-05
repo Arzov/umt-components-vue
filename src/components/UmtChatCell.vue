@@ -8,7 +8,7 @@
 
             <a-col :span="4" class="avatar-section">
                 <center>
-                    <umt-avatar icon="team-profile" size="large" :src="team.picture" />
+                    <umt-avatar icon="team-profile" color="violet" size="large" :src="team.picture" />
                 </center>
             </a-col>
 

@@ -4,8 +4,8 @@
             <!-- TEAM AVATAR -->
             <a-col :span="4" class="avatar-section">
                 <center>
-                    <umt-avatar v-if="type === 'team'" icon="team-profile" size="large" :src="picture" />
-                    <umt-avatar v-else icon="avatar" size="large" :src="picture" />
+                    <umt-avatar v-if="type === 'team'" color="violet" icon="team-profile" size="large" :src="picture" />
+                    <umt-avatar v-else icon="avatar" color="green" size="large" :src="picture" />
                 </center>
             </a-col>
 
