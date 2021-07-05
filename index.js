@@ -28,6 +28,7 @@ import { default as UmtRadioSelector } from "./src/components/UmtRadioSelector.v
 import { default as UmtAvatar } from "./src/components/UmtAvatar.vue";
 import { default as UmtNotification } from "./src/components/UmtNotification.vue";
 import { default as UmtTopProgress } from "./src/components/UmtTopProgress.vue";
+import { default as UmtChatCell } from "./src/components/UmtChatCell.vue";
 
 const components = [
     UmtThemeProvider,
@@ -51,7 +52,8 @@ const components = [
     UmtRadioSelector,
     UmtAvatar,
     UmtNotification,
-    UmtTopProgress
+    UmtTopProgress,
+    UmtChatCell
 ]
 
 const UmtComponents = {
@@ -98,7 +100,8 @@ export {
     UmtRadioSelector,
     UmtAvatar,
     UmtNotification,
-    UmtTopProgress
+    UmtTopProgress,
+    UmtChatCell
 };
 
 export default UmtComponents;

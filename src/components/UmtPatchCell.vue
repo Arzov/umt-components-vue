@@ -29,7 +29,7 @@
 
             <a-col class="patches">
                 <center>
-                    <span><i>{{ `${match.patches.CP.N} / ${match.patches.NP.N}` }}</i></span>
+                    <span><i>{{ `${match.patches.CP.N}/${match.patches.NP.N}` }}</i></span>
                     <span>Parches</span>
                 </center>
             </a-col>
@@ -89,7 +89,7 @@ export default {
 
     computed: {
         _date() {
-            return `${this.getDayDD(this.match.schedule)} / ${this.getMonthMM(this.match.schedule)}`
+            return `${this.getDayDD(this.match.schedule)}/${this.getMonthMM(this.match.schedule)}`
         }
     }
 

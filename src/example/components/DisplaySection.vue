@@ -195,6 +195,27 @@
 
             <br>
 
+            <p><i>UmtChatCell</i></p>
+
+            <div>
+                <p class="sec"></p>
+                <umt-chat-cell
+                    :team="{
+                        name    : 'equipo',
+                        picture : '',
+                        chat    : {
+                            messages: [{
+                                author  : 'Author',
+                                msg     : 'Mensaje',
+                                sentOn  : '2021-05-16T01:26:24.720Z'
+                            }]
+                        }
+                    }"
+                    :active="activeChatCell"
+                    @click="activeChatCell = !activeChatCell"
+                />
+            </div>
+
         </div>
 
     </section-card>
@@ -224,13 +245,15 @@
             return {
 
                 showModal       : false,
-                showNotification: false
+                showNotification: false,
+                activeChatCell  : false
 
             }
         },
 
 
         methods: {
+
             showTopProgress () {
                 this.$refs.topProgress.start()
 
@@ -238,6 +261,7 @@
                     this.$refs.topProgress.fail()
                 }, 2000)
             }
+
         }
 
     }

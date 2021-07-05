@@ -124,6 +124,14 @@ $variable: (
     'notification-bkg-color': $color-main-1,
     'notification-icon-color': $color-main-6,
 
+
+    // chat cell
+
+    'chat-cell-bkg-color': $color-main-1,
+    'chat-cell-font-active-color': $color-main-3,
+    'chat-cell-bkg-active-color-1': $color-main-10,
+    'chat-cell-bkg-active-color-2': $color-main-5
+
 );
 
 @include setTheme($config, $variable);
