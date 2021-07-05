@@ -1,0 +1,28 @@
+.umt-collapsible-request-header {
+    & > div {
+        flex-wrap: nowrap;
+
+        .avatar-section {
+            min-width: fit-content;
+
+            center {
+                min-width: fit-content;
+            }
+
+            .ant-avatar-lg {
+                min-width: 40px;
+            }
+        }
+
+        .team-name {
+            min-width: 50px;
+            flex-grow: 1;
+
+            span {
+                @extend %ellipsis;
+            }
+    
+        }
+
+    }
+}

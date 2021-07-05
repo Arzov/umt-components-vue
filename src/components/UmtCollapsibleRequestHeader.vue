@@ -2,16 +2,15 @@
     <div class="umt-component umt-collapsible-request-header">
         <a-row type="flex" justify="space-around" align="middle" :gutter="12">
             <!-- TEAM AVATAR -->
-            <a-col :span="4">
+            <a-col :span="4" class="avatar-section">
                 <center>
                     <umt-avatar v-if="type === 'team'" icon="team-profile" size="large" :src="picture" />
                     <umt-avatar v-else icon="avatar" size="large" :src="picture" />
                 </center>
             </a-col>
 
-            <a-col flex="auto" class="team-name">
-                <span><b>{{ name.toUpperCase() }}</b></span>
-                <span class="hight-light"><i> ({{ requestCount }})</i></span>
+            <a-col class="team-name">
+                <span><b>{{ name.toUpperCase() }}</b> <i class="hight-light">({{ requestCount }})</i></span>
             </a-col>
         </a-row>
     </div>

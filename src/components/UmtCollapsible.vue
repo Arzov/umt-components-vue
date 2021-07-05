@@ -1,8 +1,8 @@
 <template>
 
-    <div class="umt-component umt-collapsible" :umt-collapsed="isCollapsed" @click="onCollapse">
+    <div class="umt-component umt-collapsible" :umt-collapsed="isCollapsed">
 
-        <a-row class="header" type="flex" justify="space-around" align="middle">
+        <a-row class="header" type="flex" justify="space-around" align="middle" @click.native="onCollapse">
 
             <a-col class="title-section">
 

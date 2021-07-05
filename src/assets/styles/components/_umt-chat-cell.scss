@@ -4,23 +4,36 @@
     padding         : 1rem 12px;
     box-shadow      : $box-shadow-dir $color-box-shadow;
     margin-bottom   : 20px;
-    max-height      : 5rem;
+    min-height      : space(17);
     cursor          : pointer;
+    overflow-x      : auto;
 
-    .info {
+    & > div {
+        flex-wrap: nowrap;
 
-        flex-grow: 1;
+        .avatar-section {
+            min-width: fit-content;
 
-        span {
-            @extend %ellipsis;
+            center {
+                min-width: fit-content;
+            }
+
+            .ant-avatar-lg {
+                min-width: 40px;
+            }
         }
 
-    }
+        .info,
+        .datetime {
+            min-width: 50px;
+            flex-grow: 1;
 
-    .datetime {
-        span {
-            @extend %ellipsis;
+            span {
+                @extend %ellipsis;
+            }
+    
         }
+
     }
 
     &[umt-active="true"] {

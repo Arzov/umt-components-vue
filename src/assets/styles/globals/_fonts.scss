@@ -85,6 +85,12 @@ span {
     }
 }
 
+i {
+    &.hight-light {
+        color: $color-anchor-link;
+    }
+}
+
 p {
     margin-bottom: 20px;
 }
