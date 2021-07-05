@@ -260,6 +260,61 @@
                 />
             </div>
 
+            <br>
+            
+            <p><i>UmtCollapsible</i></p>
+
+            <div>
+                <p class="sec"></p>
+                <umt-collapsible title="TITLE">
+
+                    <div slot="body">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Donec ipsum nisi, sollicitudin suscipit lacinia nec, egestas vel massa.
+                        Sed egestas, sapien sed eleifend tempus, massa arcu congue neque, non sagittis neque leo quis orci.
+                        Suspendisse ultrices porttitor quam, id suscipit ligula tempus vitae.
+                        Suspendisse ullamcorper tellus quis placerat luctus.
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi.
+                        Suspendisse eu nisl lacus. Etiam et malesuada tortor.
+                        Curabitur venenatis ex vitae leo convallis commodo.
+                        In vel arcu molestie, cursus purus eget, fringilla lorem.
+                        Sed iaculis libero sit amet enim interdum, id semper odio rutrum.
+                        Nunc in dignissim nisl.
+                        Nulla pulvinar mattis erat at molestie.
+                        </p>
+                    </div>
+                    
+                </umt-collapsible>
+            </div>
+
+
+            <div>
+                <p class="sec"></p>
+                <umt-collapsible>
+
+                    <umt-collapsible-request-header slot="header" name="EQUIPO" :request-count="2" />
+
+                    <div slot="body">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Donec ipsum nisi, sollicitudin suscipit lacinia nec, egestas vel massa.
+                        Sed egestas, sapien sed eleifend tempus, massa arcu congue neque, non sagittis neque leo quis orci.
+                        Suspendisse ultrices porttitor quam, id suscipit ligula tempus vitae.
+                        Suspendisse ullamcorper tellus quis placerat luctus.
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi.
+                        Suspendisse eu nisl lacus. Etiam et malesuada tortor.
+                        Curabitur venenatis ex vitae leo convallis commodo.
+                        In vel arcu molestie, cursus purus eget, fringilla lorem.
+                        Sed iaculis libero sit amet enim interdum, id semper odio rutrum.
+                        Nunc in dignissim nisl.
+                        Nulla pulvinar mattis erat at molestie.
+                        </p>
+                    </div>
+
+                </umt-collapsible>
+            </div>
+
         </div>
 
     </section-card>

@@ -30,6 +30,8 @@ import { default as UmtNotification } from "./src/components/UmtNotification.vue
 import { default as UmtTopProgress } from "./src/components/UmtTopProgress.vue";
 import { default as UmtChatCell } from "./src/components/UmtChatCell.vue";
 import { default as UmtChatList } from "./src/components/UmtChatList.vue";
+import { default as UmtCollapsible } from "./src/components/UmtCollapsible.vue";
+import { default as UmtCollapsibleRequestHeader } from "./src/components/UmtCollapsibleRequestHeader.vue";
 
 const components = [
     UmtThemeProvider,
@@ -55,7 +57,9 @@ const components = [
     UmtNotification,
     UmtTopProgress,
     UmtChatCell,
-    UmtChatList
+    UmtChatList,
+    UmtCollapsible,
+    UmtCollapsibleRequestHeader,
 ]
 
 const UmtComponents = {
@@ -104,7 +108,9 @@ export {
     UmtNotification,
     UmtTopProgress,
     UmtChatCell,
-    UmtChatList
+    UmtChatList,
+    UmtCollapsible,
+    UmtCollapsibleRequestHeader,
 };
 
 export default UmtComponents;

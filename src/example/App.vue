@@ -31,7 +31,7 @@ export default {
         ButtonSection,
         InputSection,
         DisplaySection,
-        NavigationSection
+        NavigationSection,
     },
 
     name: 'App',

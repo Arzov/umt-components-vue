@@ -52,3 +52,7 @@ input:-webkit-autofill:not(:hover) {
     -webkit-text-fill-color : $input-font-color;
 
 }
+
+img {
+    pointer-events: none;
+}
