@@ -17,13 +17,14 @@
 
             <a-col class="info">
                 <span><b>{{ team.name.toUpperCase() }}</b></span>
-                <span>{{ team.chat.messages[0].author }}: {{ team.chat.messages[0].msg }}</span>
+                <span v-if="team.chat.messages.length">{{ team.chat.messages[0].author }}: {{ team.chat.messages[0].msg }}</span>
+                <span v-else>No hay mensajes</span>
             </a-col>
 
 
             <!-- DATETIME -->
 
-            <a-col class="datetime">
+            <a-col v-if="team.chat.messages.length" class="datetime">
                 <span>{{ _date }}</span>
                 <span>{{ _time }}</span>
             </a-col>
