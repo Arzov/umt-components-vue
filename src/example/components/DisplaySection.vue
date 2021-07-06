@@ -267,26 +267,7 @@
             <div>
                 <p class="sec"></p>
                 <umt-collapsible title="TITLE">
-
-                    <div slot="body">
-                        <umt-chat-list
-                            :team="{
-                                name    : 'equipo',
-                                picture : '',
-                                chat    : {
-                                    messages: [{
-                                        author  : 'Author',
-                                        msg     : 'Mensaje',
-                                        sentOn  : '2021-05-16T01:26:24.720Z'
-                                    }]
-                                }
-                            }"
-                            :active="activeChatList"
-                            type="team"
-                            @click="activeChatList = !activeChatList"
-                        />
-                    </div>
-                    
+                    <div slot="body" />
                 </umt-collapsible>
             </div>
 
@@ -294,7 +275,7 @@
                 <p class="sec"></p>
                 <umt-collapsible>
 
-                    <umt-collapsible-request-header slot="header" name="EQUIPO" :request-count="2" />
+                    <umt-collapsible-request-header slot="header" name="EQUIPO" :request-count="1" />
 
                     <div slot="body">
                         <umt-chat-list
@@ -302,11 +283,7 @@
                                 name    : 'equipo',
                                 picture : '',
                                 chat    : {
-                                    messages: [{
-                                        author  : 'Author',
-                                        msg     : 'Mensaje',
-                                        sentOn  : '2021-05-16T01:26:24.720Z'
-                                    }]
+                                    messages: []
                                 }
                             }"
                             :active="activeChatList"

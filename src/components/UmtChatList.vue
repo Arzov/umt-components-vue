@@ -33,18 +33,25 @@
 
             <a-col v-if="type === 'team'" class="info">
                 <span><b>{{ team.name.toUpperCase() }}</b></span>
-                <span>{{ team.chat.messages[0].author }}: {{ team.chat.messages[0].msg }}</span>
+                <span v-if="team.chat.messages.length">{{ team.chat.messages[0].author }}: {{ team.chat.messages[0].msg }}</span>
+                <span v-else>No hay mensajes</span>
             </a-col>
 
             <a-col v-if="type === 'match'" class="info">
                 <span><b>{{ match.name1.toUpperCase() }} / {{ match.name2.toUpperCase() }}</b></span>
-                <span>{{ match.chat.messages[0].author }}: {{ match.chat.messages[0].msg }}</span>
+                <span v-if="match.chat.messages.length">{{ match.chat.messages[0].author }}: {{ match.chat.messages[0].msg }}</span>
+                <span v-else>No hay mensajes</span>
             </a-col>
 
 
             <!-- DATETIME -->
 
-            <a-col class="datetime">
+            <a-col v-if="type === 'team' && team.chat.messages.length" class="datetime">
+                <span>{{ _date }}</span>
+                <span>{{ _time }}</span>
+            </a-col>
+
+            <a-col v-if="type === 'match' && match.chat.messages.length" class="datetime">
                 <span>{{ _date }}</span>
                 <span>{{ _time }}</span>
             </a-col>
