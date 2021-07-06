@@ -7,15 +7,18 @@
     transition-duration : 0.3s;
     user-select         : none;
     cursor              : pointer;
-    margin-bottom       : 20px;
+    margin-bottom       : space(3);
     box-sizing          : border-box;
     min-width           : 0;
+    display             : flex;
+    justify-content     : center;
+    align-items         : center;
 
 
     span {
         @extend %ellipsis;
         font-size   : inherit;
-        line-height : 2rem;
+        line-height : 1rem;
     }
 
 
@@ -33,10 +36,10 @@
 
     &[umt-type='icon'] {
 
-        display : inline-block;
+        display: inline-block;
 
         img {
-            height: 3rem;
+            height: space(5);
         }
 
         &[umt-shape='diagonal'] {
@@ -53,7 +56,6 @@
             color: $button-border-color;
         }
 
-        display     : inline-block;
         border      : solid 2px $button-border-color;
         font-weight : $font-weight-bold;
 
@@ -79,7 +81,7 @@
     }
 
     &[umt-shape='round'] {
-        border-radius: 24px;
+        border-radius: space(3);
     }
 
     // default shape is 'square'
@@ -127,18 +129,15 @@
     &[umt-size='small'] {
 
         font-size   : 0.8rem;
-        padding     : 0.411rem 1rem 0.411rem 1rem;
-
-        span {
-            line-height : 1.2rem;
-        }
+        padding     : 0 space(2);
+        min-height  : space(4);
 
         &[umt-type='icon'] {
 
-            padding: 0rem;
+            padding: 0;
 
             img {
-                height: 2.286rem;
+                height: space(4);
             }
 
         }
@@ -147,14 +146,15 @@
 
     &[umt-size='normal'] {
 
-        padding: space(2) space(5);
+        padding     : space(1) space(2);
+        min-height  : space(5);
 
         &[umt-type='icon'] {
 
-            padding: 0rem;
+            padding: 0;
 
             img {
-                height: 3rem;
+                height: space(5);
             }
 
         }

@@ -8,31 +8,36 @@
 
     .ant-select-selection {
 
-        margin-bottom   : 20px;
+        margin-bottom   : space(3);
         box-shadow      : $box-shadow-dir $color-box-shadow;
         background-color: $date-picker-bkg-color;
         border          : none;
         border-radius   : 0;
         color           : $date-picker-font-color;
-        height          : 3rem;
-        padding-top     : 0.9rem;
+        min-height      : space(5);
+        display         : flex;
 
         svg {
             color: $input-font-color;
         }
 
         .ant-select-selection__rendered {
-            line-height: normal;
+            line-height : normal;
+            width       : 100%;
+
+            .ant-select-selection__placeholder {
+                align-self: center
+            }
         }
 
     }
 
-    // .has-error & {
-    //     .ant-select-selection {
-    //         border-color    : $color-purple;
-    //         box-shadow      : 0 0 0 2px $color-purple;
-    //     }
-    // }
+    .has-error & {
+        .ant-select-selection {
+            border-color: $color-main-11;
+            box-shadow  : 0 0 0 2px $color-main-11;
+        }
+    }
 
 }
 

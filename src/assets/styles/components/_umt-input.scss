@@ -1,12 +1,16 @@
 .umt-input {
 
-    margin-bottom   : 20px;
+    margin-bottom   : space(3);
     position        : relative;
     box-shadow      : $box-shadow-dir $color-box-shadow;
     display         : flex;
     background-color: $input-bkg-color;
-    padding         : 0.75rem 12px 0.75rem 12px;
-    max-height      : 3rem;
+    padding         : space(1) space(2);
+    min-height      : space(5);
+
+    .has-error & {
+        box-shadow: 0 0 0 2px $color-main-11;
+    }
 
     input {
 
@@ -29,15 +33,15 @@
 
         &::-webkit-input-placeholder {
             color       : $color-placeholder;
-            text-align  : start !important;
+            text-align  : start;
         }
 
         &:-webkit-autofill,
         &:-webkit-autofill:hover, 
         &:-webkit-autofill:focus, 
         &:-webkit-autofill:active {
-            background-color: $input-bkg-color !important;
-            color           : $input-font-color !important;
+            background-color: $input-bkg-color;
+            color           : $input-font-color;
         }
     }
 
@@ -57,10 +61,10 @@
             cursor      : pointer;
             display     : flex;
             align-items : center;
-            padding     : 2px 0 2px 0;
+            padding     : 0;
 
             img {
-                height: 1.5rem;
+                height: space(3);
             }
         }
 
@@ -74,10 +78,10 @@
             cursor      : pointer;
             display     : flex;
             align-items : center;
-            padding     : 2px 0 2px 0;
+            padding     : 0;
 
             img {
-                height: 1.5rem;
+                height: space(3);
             }
         }
 
@@ -87,7 +91,7 @@
         .suffix {
             display     : flex;
             align-items : center;
-            padding     : 2px 0 2px 0px;
+            padding     : 0;
         }
     }
 

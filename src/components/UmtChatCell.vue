@@ -2,11 +2,11 @@
 
     <div class="umt-component umt-chat-cell" :umt-active="active" @click="onClick">
 
-        <a-row type="flex" justify="space-around" align="middle" :gutter="12">
+        <a-row type="flex" justify="space-around" align="middle" :gutter="24">
 
             <!-- AVATAR -->
 
-            <a-col :span="4" class="avatar-section">
+            <a-col class="avatar-section">
                 <center>
                     <umt-avatar icon="team-profile" color="violet" size="large" :src="team.picture" />
                 </center>
@@ -17,17 +17,16 @@
 
             <a-col class="info">
                 <span><b>{{ team.name.toUpperCase() }}</b></span>
-                <span>{{ team.chat.messages[0].author }}: {{ team.chat.messages[0].msg }}</span>
+                <span v-if="team.chat.messages.length">{{ team.chat.messages[0].author }}: {{ team.chat.messages[0].msg }}</span>
+                <span v-else>No hay mensajes</span>
             </a-col>
 
 
             <!-- DATETIME -->
 
-            <a-col class="datetime">
-                <center>
-                    <span>{{ _date }}</span>
-                    <span>{{ _time }}</span>
-                </center>
+            <a-col v-if="team.chat.messages.length" class="datetime">
+                <span>{{ _date }}</span>
+                <span>{{ _time }}</span>
             </a-col>
 
         </a-row>

@@ -1,6 +1,13 @@
 .umt-collapsible-request-header {
+
+    display         : flex;
+    justify-content : center;
+
     & > div {
-        flex-wrap: nowrap;
+
+        width       : 100%;
+        flex-wrap   : nowrap;
+        margin      : 0;
 
         .avatar-section {
             min-width: fit-content;
@@ -21,7 +28,6 @@
             span {
                 @extend %ellipsis;
             }
-    
         }
 
     }

@@ -11,25 +11,18 @@
 }
 
 .has-error {
-
-    .umt-input,
-    .ant-select-selection {
-        box-shadow: 0 0 0 2px $color-main-11;
-    }
-
     .ant-form-explain {
         position                : absolute;
-        margin-top              : -20px;
+        margin-top              : -space(3);
         color                   : $color-main-11;
         -webkit-text-fill-color : $color-main-11;
     }
-
 }
 
 .has-success {
     .ant-form-explain {
         position                : absolute;
-        margin-top              : -20px;
+        margin-top              : -space(3);
         color                   : $color-main-11;
         -webkit-text-fill-color : $color-main-11;
     }
@@ -46,11 +39,9 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active,
 input:-webkit-autofill:not(:hover) {
-
-    -webkit-background-clip : text;
     background-clip         : text;
+    -webkit-background-clip : text;
     -webkit-text-fill-color : $input-font-color;
-
 }
 
 img {

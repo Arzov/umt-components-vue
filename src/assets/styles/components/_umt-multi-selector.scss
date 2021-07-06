@@ -5,7 +5,7 @@
     box-shadow      : $box-shadow-dir $color-box-shadow;
     border          : none;
     border-radius   : 0;
-    height          : 3rem;
+    min-height      : space(5);
     width           : 100%;
     position        : relative;
     text-align      : center;
@@ -14,8 +14,7 @@
 
 .umt-multi-selector {
 
-    margin-bottom   : 20px;
-    max-height      : 3rem;
+    margin-bottom: space(3);
 
     .container {
         display                 : grid;
