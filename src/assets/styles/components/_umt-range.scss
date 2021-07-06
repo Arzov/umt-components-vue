@@ -3,7 +3,7 @@
 }
 
 .umt-range {
-    margin-bottom: 20px;
+    margin-bottom: space(3);
     
     .slider {
         .ant-slider-rail {
@@ -16,8 +16,8 @@
 
         .ant-slider-handle {
             background-color: $range-handle-color;
-            border: none;
-            box-shadow: 0 0 5px $color-box-shadow;;
+            border          : none;
+            box-shadow      : 0 0 5px $color-box-shadow;;
         }
     }
 }

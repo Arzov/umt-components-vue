@@ -1,12 +1,10 @@
 <template>
     <div class="umt-component umt-collapsible-request-header">
-        <a-row type="flex" justify="space-around" align="middle" :gutter="12">
+        <a-row type="flex" justify="space-around" align="middle" :gutter="24">
             <!-- TEAM AVATAR -->
-            <a-col :span="4" class="avatar-section">
-                <center>
-                    <umt-avatar v-if="type === 'team'" color="violet" icon="team-profile" size="large" :src="picture" />
-                    <umt-avatar v-else icon="avatar" color="green" size="large" :src="picture" />
-                </center>
+            <a-col class="avatar-section">
+                <umt-avatar v-if="type === 'team'" color="violet" icon="team-profile" size="large" :src="picture" />
+                <umt-avatar v-else icon="avatar" color="green" size="large" :src="picture" />
             </a-col>
 
             <a-col class="team-name">
@@ -16,8 +14,10 @@
     </div>
 </template>
 
+
 <script>
     export default {
+
         name: 'UmtCollapsibleRequestHeader',
 
 

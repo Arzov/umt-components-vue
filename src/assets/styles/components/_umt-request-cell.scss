@@ -1,38 +1,42 @@
 .umt-request-cell {
 
     background-color: $request-cell-bkg-color;
-    padding         : space(4) space(3);
+    padding         : space(1) space(2);
     box-shadow      : $box-shadow-dir $color-box-shadow;
-    margin-bottom   : 20px;
-    min-height      : space(17);
+    margin-bottom   : space(3);
+    min-height      : space(8);
     overflow-x      : auto;
+    display         : flex;
+    justify-content : center;
 
     & > div {
-        flex-wrap: nowrap;
+
+        width       : 100%;
+        flex-wrap   : nowrap;
 
         .avatar-section {
-            min-width: fit-content;
 
-            center {
-                min-width: fit-content;
-            }
+            min-width: fit-content;
 
             .ant-avatar-lg {
                 min-width: 40px;
             }
+
         }
 
         .info {
+
             min-width: 50px;
             flex-grow: 1;
 
             span {
                 @extend %ellipsis;
             }
-    
+
         }
-    
+
         .button {
+
             min-width   : 50px;
             box-sizing  : content-box;
 
@@ -40,6 +44,7 @@
                 margin-bottom   : 0;
                 width           : 100%;
             }
+
         }
 
     }

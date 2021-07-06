@@ -2,14 +2,12 @@
 
     <div class="umt-component umt-transfer-cell">
 
-        <a-row type="flex" justify="space-around" align="middle" :gutter="12">
+        <a-row type="flex" justify="space-around" align="middle" :gutter="24">
 
             <!-- TEAM AVATAR -->
 
-            <a-col :span="4" class="avatar-section">
-                <center>
-                    <umt-avatar icon="team-profile" color="violet" size="large" :src="team.picture" />
-                </center>
+            <a-col class="avatar-section">
+                <umt-avatar icon="team-profile" color="violet" size="large" :src="team.picture" />
             </a-col>
 
 
@@ -29,10 +27,8 @@
 
             <!-- USER AVATAR -->
 
-            <a-col :span="4" class="avatar-section">
-                <center>
-                    <umt-avatar icon="avatar" size="large" :src="user.picture" />
-                </center>
+            <a-col class="avatar-section user">
+                <umt-avatar icon="avatar" size="large" :src="user.picture" />
             </a-col>
 
         </a-row>

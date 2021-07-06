@@ -29,9 +29,11 @@
             </div>
 
         </div>
+
     </div>
 
 </template>
+
 
 <script>
     export default {
@@ -49,7 +51,7 @@
             defaultCollapsed: {
                 required: false,
                 type: Boolean,
-                default: false,
+                default: true,
             },
 
             maxHeight: {
@@ -126,5 +128,6 @@
                 }
             }
         }
+
     }
 </script>

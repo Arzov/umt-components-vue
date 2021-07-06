@@ -2,14 +2,12 @@
 
     <div class="umt-component umt-request-cell">
 
-        <a-row type="flex" justify="space-around" align="middle" :gutter="12">
+        <a-row type="flex" justify="space-around" align="middle" :gutter="24">
 
             <!-- AVATAR -->
 
-            <a-col :span="4" class="avatar-section">
-                <center>
-                    <umt-avatar icon="team-profile" color="violet" size="large" :src="team.picture" />
-                </center>
+            <a-col class="avatar-section">
+                <umt-avatar icon="team-profile" color="violet" size="large" :src="team.picture" />
             </a-col>
 
 
@@ -24,11 +22,9 @@
             <!-- BUTTON -->
 
             <a-col class="button">
-                <center>
-                    <umt-button type="border" size="small" shape="round" @click="onClick">
-                        SOLICITAR
-                    </umt-button>
-                </center>
+                <umt-button type="border" size="small" shape="round" @click="onClick">
+                    SOLICITAR
+                </umt-button>
             </a-col>
 
         </a-row>

@@ -1,18 +1,18 @@
 .umt-collapsible {
 
-    margin-bottom   : space(5);
-    transition      : transform 0.3s,
-                      box-shadow 0.3s;
+    margin-bottom   : space(3);
+    transition      : transform 0.3s, box-shadow 0.3s;
 
     & > .header {
 
-        background-color    : $collapsible-bkg-header-color;
-        box-shadow          : $box-shadow-dir $color-box-shadow;
-        padding             : space(4) space(3);
-        overflow            : auto;
-        cursor              : pointer;
-        min-height          : space(17);
-        flex-wrap           : nowrap;
+        background-color: $collapsible-bkg-header-color;
+        box-shadow      : $box-shadow-dir $color-box-shadow;
+        padding         : space(1) space(2);
+        cursor          : pointer;
+        min-height      : space(8);
+        overflow-x      : auto;
+        display         : flex;
+        justify-content : center;
 
         .title-section {
             flex-grow: 1;
@@ -26,12 +26,14 @@
         .button .anticon {
             color: $color-font;
         }
+
     }
 
     & > .body {
 
         -ms-overflow-style  : none;
         scrollbar-width     : none;
+
         &::-webkit-scrollbar {
             display: none;
         }
@@ -39,18 +41,18 @@
         overflow    : auto;
         position    : relative;
         opacity     : 1;
-        transition  : max-height 0.2s ease-in-out,
-                      opacity 0.2s 0.3s ease-in;
+        transition  : max-height 0.2s ease-in-out, opacity 0.2s 0.3s ease-in;
 
         .body-content-wrapper {
             padding-top : space(2);
             box-sizing  : border-box;
         }
+
     }
 
     &[umt-collapsed] > .body {
         opacity     : 0;
-        transition  : opacity 0.2s ease-in,
-                      max-height 0.3s 0.2s ease-in-out;
+        transition  : opacity 0.2s ease-in, max-height 0.3s 0.2s ease-in-out;
     }
+
 }

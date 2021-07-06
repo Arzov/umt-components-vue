@@ -2,22 +2,22 @@
 
     <div class="umt-component umt-patch-cell">
 
-        <a-row type="flex" justify="space-around" align="middle" :gutter="12">
+        <a-row type="flex" justify="space-around" align="middle" :gutter="24">
 
             <!-- TEAMS AVATAR -->
 
-            <a-col :span="4" class="avatar-section">
+            <a-col class="avatar-section">
                 <center>
                     <umt-avatar icon="team-profile" color="violet" :src="match.picture1" />
                     <h3 class="team-name">{{ match.name1 }}</h3>
                 </center>
             </a-col>
 
-            <a-col>
+            <a-col :span="1">
                 <center><h2>-</h2></center>
             </a-col>
 
-            <a-col :span="4" class="avatar-section">
+            <a-col class="avatar-section">
                 <center>
                     <umt-avatar icon="team-profile" color="violet" :src="match.picture2" />
                     <h3 class="team-name">{{ match.name2 }}</h3>
@@ -45,11 +45,9 @@
             <!-- BUTTON -->
 
             <a-col class="button">
-                <center>
-                    <umt-button type="border" size="small" shape="round" @click="onClick">
-                        UNIRSE
-                    </umt-button>
-                </center>
+                <umt-button type="border" size="small" shape="round" @click="onClick">
+                    UNIRSE
+                </umt-button>
             </a-col>
 
         </a-row>

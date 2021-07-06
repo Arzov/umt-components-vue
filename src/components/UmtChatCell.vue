@@ -2,11 +2,11 @@
 
     <div class="umt-component umt-chat-cell" :umt-active="active" @click="onClick">
 
-        <a-row type="flex" justify="space-around" align="middle" :gutter="12">
+        <a-row type="flex" justify="space-around" align="middle" :gutter="24">
 
             <!-- AVATAR -->
 
-            <a-col :span="4" class="avatar-section">
+            <a-col class="avatar-section">
                 <center>
                     <umt-avatar icon="team-profile" color="violet" size="large" :src="team.picture" />
                 </center>
@@ -24,10 +24,8 @@
             <!-- DATETIME -->
 
             <a-col class="datetime">
-                <center>
-                    <span>{{ _date }}</span>
-                    <span>{{ _time }}</span>
-                </center>
+                <span>{{ _date }}</span>
+                <span>{{ _time }}</span>
             </a-col>
 
         </a-row>

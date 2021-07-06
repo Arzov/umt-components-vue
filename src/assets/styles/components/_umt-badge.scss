@@ -45,7 +45,7 @@ $umt-badge-colors: (
                 opacity         : 0;
                 box-shadow      : $box-shadow-dir $color-box-shadow;
                 transition      : opacity 0.3s;
-                border-radius   : 25px;
+                border-radius   : space(3);
             }
 
             &[umt-checked] {
@@ -72,16 +72,20 @@ $umt-badge-colors: (
 .umt-badge {
 
     background-color: $color-background;
-    border-radius   : 25px;
+    border-radius   : space(3);
 
     .badge {
 
-        border-radius   : 25px;
-        padding         : 0.393rem 12px 0.393rem 12px;
-        min-width       : 50px;
+        border-radius   : space(3);
+        padding         : space(1) space(2);
+        line-height     : 1rem;
         box-sizing      : border-box;
         text-align      : center;
         cursor          : pointer;
+        min-height      : space(4);
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
 
         @include umt-badge-create-colors;
 

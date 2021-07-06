@@ -4,25 +4,19 @@
 
         <!-- AVATAR + INFO -->
 
-        <div v-if="_type == SKELETON_TYPES[0]">
+        <a-row v-if="_type == SKELETON_TYPES[0]" type="flex" justify="space-around" align="middle" :gutter="24">
 
-            <a-row type="flex" justify="space-around" align="middle" :gutter="12">
-
-                <a-col :span="4">
-                    <center>
-                        <a-avatar size="large" class="loading-avatar" />
-                    </center>
-                </a-col>
+            <a-col class="avatar-section">
+                <a-avatar size="large" class="loading-avatar" />
+            </a-col>
 
 
-                <a-col class="info">
-                    <span><div class="loading-text title" /></span>
-                    <span><div class="loading-text" /></span>
-                </a-col>
+            <a-col class="info">
+                <span><div class="loading-text title" /></span>
+                <span><div class="loading-text" /></span>
+            </a-col>
 
-            </a-row>
-
-        </div>
+        </a-row>
 
 
         <!-- ONLY INFO -->

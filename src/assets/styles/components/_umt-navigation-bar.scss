@@ -1,19 +1,19 @@
 .umt-navigation-bar {
 
     background-color: $navigation-bar-bkg-color;
-    padding         : 20px;
-    min-height      : space(17);
+    padding         : space(1);
+    min-height      : space(8);
 
 
     &[umt-position="bottom"] {
         box-shadow: 0 -5px 5px $color-box-shadow;
-        margin-top: 20px;
+        margin-top: space(3);
     }
 
 
     &[umt-position="top"] {
         box-shadow      : 0 5px 5px $color-box-shadow;
-        margin-bottom   : 20px;
+        margin-bottom   : space(3);
     }
 
 
@@ -28,7 +28,7 @@
         img {
             width           : 1.5rem;
             display         : block;
-            margin-bottom   : 0.35rem;
+            margin-bottom   : 0.3rem;
         }
 
         .tab-name {

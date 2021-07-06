@@ -2,17 +2,17 @@
 
     <div class="umt-component umt-request-list">
 
-        <a-row type="flex" justify="space-around" align="middle" :gutter="12">
+        <a-row type="flex" justify="space-around" align="middle" :gutter="24">
 
             <!-- AVATAR -->
 
-            <a-col v-if="type === 'team'" :span="4" class="avatar-section">
+            <a-col v-if="type === 'team'" class="avatar-section">
                 <center>
                     <umt-avatar icon="team-profile" color="violet" size="large" :src="team.picture" />
                 </center>
             </a-col>
 
-            <a-col v-if="type === 'match'" :span="4" class="avatar-section">
+            <a-col v-if="type === 'match'" class="avatar-section">
                 <center>
                     <umt-avatar icon="team-profile" color="violet" :src="match.picture1" />
                 </center>
@@ -22,7 +22,7 @@
                 <center><h2>-</h2></center>
             </a-col>
 
-            <a-col v-if="type === 'match'" :span="4" class="avatar-section">
+            <a-col v-if="type === 'match'" class="avatar-section">
                 <center>
                     <umt-avatar icon="team-profile" color="violet" :src="match.picture2" />
                 </center>
@@ -47,15 +47,11 @@
             <!-- BUTTONS -->
 
             <a-col v-if="inbound" class="accept">
-                <center>
-                    <umt-button type="icon" size="small" color="green" icon="check" @click="emitAccept" />
-                </center>
+                <umt-button type="icon" size="small" color="green" icon="check" @click="emitAccept" />
             </a-col>
 
             <a-col class="reject">
-                <center>
-                    <umt-button type="icon" size="small" color="violet" icon="x" @click="emitReject" />
-                </center>
+                <umt-button type="icon" size="small" color="violet" icon="x" @click="emitReject" />
             </a-col>
 
         </a-row>

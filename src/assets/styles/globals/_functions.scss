@@ -63,7 +63,7 @@ $_precision: 10;
 
 // space
 
-$space-factor: 4px;
+$space-factor: 8px;
 
 @function space($factor) {
     @return $space-factor * $factor

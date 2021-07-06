@@ -2,7 +2,7 @@
     box-shadow      : $box-shadow-dir $color-box-shadow;
     border          : none;
     border-radius   : 0;
-    height          : 3rem;
+    min-height      : space(5);
     width           : 100%;
     position        : relative;
 }
@@ -12,7 +12,7 @@
 
     & > span:nth-child(1) {
         grid-area   : radio;
-        padding     : 0.3em 1em 0.3em 0.3em;
+        padding     : space(1) space(2);
         align-self  : center;
 
         &::after {
@@ -43,7 +43,7 @@
 
     & > span:nth-child(2) {
         grid-area   : label;
-        padding     : 0.3em 0.3em 0.3em 1em;
+        padding     : space(1) space(2);
         align-self  : center;
     }
 
@@ -53,7 +53,7 @@
 .umt-radio-selector {
 
     background      : $radio-selector-bkg-color-1;
-    margin-bottom   : 20px;
+    margin-bottom   : space(3);
 
     .ant-radio-group {
         display                 : grid;

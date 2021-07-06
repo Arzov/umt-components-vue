@@ -2,17 +2,17 @@
 
     <div class="umt-component umt-chat-list" :umt-active="active" @click="onClick">
 
-        <a-row type="flex" justify="space-around" align="middle" :gutter="12">
+        <a-row type="flex" justify="space-around" align="middle" :gutter="24">
 
             <!-- AVATAR -->
 
-            <a-col v-if="type === 'team'" :span="4" class="avatar-section">
+            <a-col v-if="type === 'team'" class="avatar-section">
                 <center>
                     <umt-avatar icon="team-profile" color="violet" size="large" :src="team.picture" />
                 </center>
             </a-col>
 
-            <a-col v-if="type === 'match'" :span="4" class="avatar-section">
+            <a-col v-if="type === 'match'" class="avatar-section">
                 <center>
                     <umt-avatar icon="team-profile" color="violet" :src="match.picture1" />
                 </center>
@@ -22,7 +22,7 @@
                 <center><h2>-</h2></center>
             </a-col>
 
-            <a-col v-if="type === 'match'" :span="4" class="avatar-section">
+            <a-col v-if="type === 'match'" class="avatar-section">
                 <center>
                     <umt-avatar icon="team-profile" color="violet" :src="match.picture2" />
                 </center>
@@ -45,10 +45,8 @@
             <!-- DATETIME -->
 
             <a-col class="datetime">
-                <center>
-                    <span>{{ _date }}</span>
-                    <span>{{ _time }}</span>
-                </center>
+                <span>{{ _date }}</span>
+                <span>{{ _time }}</span>
             </a-col>
 
         </a-row>
