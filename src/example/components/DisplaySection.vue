@@ -275,12 +275,24 @@
                 <p class="sec"></p>
                 <umt-collapsible>
 
-                    <umt-collapsible-request-header slot="header" name="EQUIPO" :request-count="1" />
+                    <umt-collapsible-request-header slot="header" name="EQUIPO" :request-count="2" />
 
                     <div slot="body">
                         <umt-chat-list
                             :team="{
-                                name    : 'equipo',
+                                name    : 'equipo1',
+                                picture : '',
+                                chat    : {
+                                    messages: []
+                                }
+                            }"
+                            :active="activeChatList"
+                            type="team"
+                            @click="activeChatList = !activeChatList"
+                        />
+                        <umt-chat-list
+                            :team="{
+                                name    : 'equipo2',
                                 picture : '',
                                 chat    : {
                                     messages: []
@@ -325,6 +337,8 @@
                     @reject="reject"
                 />
             </div>
+
+            <br>
 
         </div>
 

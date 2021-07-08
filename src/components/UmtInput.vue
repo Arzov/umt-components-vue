@@ -20,8 +20,8 @@
             <img :src="_srcEye" />
         </div>
 
-        <div v-if="type == 'search'" class="search-icon">
-            <img :src="_srcSearch" @click="onClick('search')" />
+        <div v-if="type == 'search'" class="search-icon" @click="onClick('search')">
+            <img :src="_srcSearch" />
         </div>
 
     </div>
