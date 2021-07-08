@@ -2,7 +2,7 @@
 
     <div class="umt-component umt-navigation-bar" :umt-position="position">
 
-        <a-row type="flex" justify="space-around">
+        <a-row type="flex" justify="space-around" align="middle">
 
             <a-col v-for="tab in tabs" :key="tab.key" class="tab" @click.native="setClick(tab.key)">
 

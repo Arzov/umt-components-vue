@@ -16,6 +16,7 @@
         color           : $date-picker-font-color;
         min-height      : space(5);
         display         : flex;
+        align-items     : center;
 
         svg {
             color: $input-font-color;

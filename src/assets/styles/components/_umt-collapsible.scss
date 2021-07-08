@@ -13,6 +13,8 @@
         overflow-x      : auto;
         display         : flex;
         justify-content : center;
+        z-index         : 1;
+        position        : relative;
 
         .title-section {
             flex-grow: 1;
@@ -33,6 +35,7 @@
 
         -ms-overflow-style  : none;
         scrollbar-width     : none;
+        z-index             : 0;
 
         &::-webkit-scrollbar {
             display: none;
@@ -44,7 +47,6 @@
         transition  : max-height 0.2s ease-in-out, opacity 0.2s 0.3s ease-in;
 
         .body-content-wrapper {
-            padding-top : space(2);
             box-sizing  : border-box;
         }
 
