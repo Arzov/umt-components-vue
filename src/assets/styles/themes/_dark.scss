@@ -152,6 +152,11 @@ $variable: (
 
     'request-list-border-color': rgba($color-main-2, 0.2),
 
+
+    // list
+
+    'list-border-color': rgba($color-main-2, 0.2),
+
 );
 
 @include setTheme($config, $variable);
