@@ -33,6 +33,7 @@ import { default as UmtChatList } from "./src/components/UmtChatList.vue";
 import { default as UmtCollapsible } from "./src/components/UmtCollapsible.vue";
 import { default as UmtCollapsibleRequestHeader } from "./src/components/UmtCollapsibleRequestHeader.vue";
 import { default as UmtRequestList } from "./src/components/UmtRequestList.vue";
+import { default as UmtList } from "./src/components/UmtList.vue";
 
 const components = [
     UmtThemeProvider,
@@ -61,7 +62,8 @@ const components = [
     UmtChatList,
     UmtCollapsible,
     UmtCollapsibleRequestHeader,
-    UmtRequestList
+    UmtRequestList,
+    UmtList
 ]
 
 const UmtComponents = {
@@ -113,7 +115,8 @@ export {
     UmtChatList,
     UmtCollapsible,
     UmtCollapsibleRequestHeader,
-    UmtRequestList
+    UmtRequestList,
+    UmtList
 };
 
 export default UmtComponents;
