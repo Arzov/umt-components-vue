@@ -338,6 +338,35 @@
                 />
             </div>
 
+            <div>
+                <p class="sec">Type: user | Inbound: true</p>
+                <umt-request-list
+                    :user="{
+                        firstName   : 'jugador',
+                        picture     : ''
+                    }"
+                    :inbound="true"
+                    type="user"
+                    @accept="accept"
+                    @reject="reject"
+                />
+            </div>
+
+            <br>
+
+            <p><i>UmtList</i></p>
+
+            <div>
+                <p class="sec">Type: user</p>
+                <umt-list
+                    :user="{
+                        firstName   : 'jugador',
+                        picture     : ''
+                    }"
+                    type="user"
+                />
+            </div>
+
             <br>
 
         </div>

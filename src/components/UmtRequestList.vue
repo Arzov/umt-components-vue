@@ -28,6 +28,12 @@
                 </center>
             </a-col>
 
+            <a-col v-if="type === 'user'" class="avatar-section">
+                <center>
+                    <umt-avatar icon="avatar" color="green" size="large" :src="user.picture" />
+                </center>
+            </a-col>
+
 
             <!-- CONTENT -->
 
@@ -39,6 +45,12 @@
 
             <a-col v-if="type === 'match'" class="info">
                 <span><b>{{ match.name1.toUpperCase() }} / {{ match.name2.toUpperCase() }}</b></span>
+                <span v-if="inbound"><i>Aceptar solicitud</i></span>
+                <span v-else><i>Solicitud enviada</i></span>
+            </a-col>
+
+            <a-col v-if="type === 'user'" class="info">
+                <span><b>{{ user.firstName.toUpperCase() }}</b></span>
                 <span v-if="inbound"><i>Aceptar solicitud</i></span>
                 <span v-else><i>Solicitud enviada</i></span>
             </a-col>
@@ -75,6 +87,11 @@
             },
 
             match: {
+                required: false,
+                type    : Object
+            },
+
+            user: {
                 required: false,
                 type    : Object
             },
